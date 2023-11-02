@@ -1,7 +1,7 @@
 # Pizza-Stop-MIlestone-Project-3
 ## Back End Development Project
 
-For my third milestone project I have designed and developed a website using HTML, CSS and Materialize and a back end application using Python, Flask and MongoDB. The purpose of the site is to bring Pizza lovers together to share dough recipes, topping combinations and side dishes. Users are able to create a user profile to upload, amend and delete their own recipes whilst being able to add other users uploads, but preventing them from deleting or amending them unless they have super-user privileges.
+For my third milestone project I have designed and developed a website using HTML, CSS and Materialize and a back end application using Python, Flask and MongoDB. The purpose of the site is to bring Pizza lovers together to share dough recipes, topping combinations and side dishes. Users are able to create a user profile to upload, amend and delete their own recipes whilst being able to add other users uploads to their recipe collection, but preventing them from deleting or amending them unless they have super-user privileges.
 
 ![Visual Representation]()
 
@@ -13,15 +13,18 @@ For my third milestone project I have designed and developed a website using HTM
 ### User Stories
 - First Time Visitor
 
-    - 
+    - As a first time visitor, I would like to be able to understand the purpose of the website.
+    - As a first time visitor, I would like to register for a free account.
 
 - Returning Visitor
 
-    - 
+    - As a returning visitor, I would like to be able to browse the recipes already added.
+    - As a returning visitor, I would like to be able to add existing recipes to my own collection.
+    - As a returning visitor, I would like to be able to create, amend or delete recipes.
 
 - Website Administrator
 
-    - 
+    - As the website administrator, I would like to be able to manage the list of users registered to the site.
 
 ### Color Scheme
 The colors selected for the color palette 
