@@ -14,8 +14,51 @@
     <title>Pizza Stop</title>
 </head>
 <body>
+
+    <!-- Main navigation -->
+
+    <header>
+        <!-- Main nav bar -->
+        <nav class="nav-extended text-shadow teal darken-3">
+            <div class="nav-wrapper">
+                <a href="{{ url_for('get_recipes') }}" class="brand-logo">Pizza Stop!</a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="{{ url_for('get_recipes') }}">Home</a></li>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">Recipes</a></li>
+                    <li><a href="#">New Recipe</a></li>
+                    <li><a href="#">Manage Categories</a></li>
+                    <li><a href="#">Manage Recipes</a></li>
+                    <li><a href="#">Log In</a></li>
+                    <li><a href="#">Log Out</a></li>
+                    <li><a href="#">Register</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Mobile nav bar -->
+        <ul class="sidenav" id="mobile-demo">
+            <li><h4 class="center-align text-teal text-darken-3">Pizza Stop!</h4></li>
+            <li><a href="{{ url_for('get_recipes') }}">Home</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Recipes</a></li>
+            <li><a href="#">New Recipe</a></li>
+            <li><a href="#">Manage Categories</a></li>
+            <li><a href="#">Manage Recipes</a></li>
+            <li><a href="#">Log In</a></li>
+            <li><a href="#">Log Out</a></li>
+            <li><a href="#">Register</a></li>
+        </ul>
+    </header>
+
+    <!-- Main content area -->
+
     {% block content %}
     {% endblock %}
+
+    <!-- Footer -->
+
+    <!-- Javascript -->
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" 
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
@@ -24,5 +67,6 @@
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
     {% block scripts %}
     {% endblock %}
+
 </body>
 </html>
