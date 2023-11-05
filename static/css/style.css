@@ -26,3 +26,23 @@ body {
 .flashes h4 {
     line-height: 2;
 }
+
+.card {
+    width: 300px;
+    height: 400px;
+}
+
+.card-image {
+    width: 300px;
+    height: 200px;
+}
+
+.card-action {
+    width: 300px;
+    height: 54px;
+}
+
+.card-content {
+    width: 300px;
+    height: 132px;
+}
