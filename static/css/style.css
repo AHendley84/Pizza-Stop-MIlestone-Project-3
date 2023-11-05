@@ -1,3 +1,15 @@
+/** Pins footer to the bottom **/
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+/** End **/
+
 .brand-logo {
     margin-left: 10px;
 }
