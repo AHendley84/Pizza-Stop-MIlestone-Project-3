@@ -51,10 +51,24 @@
         </ul>
     </header>
 
-    <!-- Main content area -->
+    <!-- Area to display flash messages to the user -->
+    <section>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="row flashes">
+                        <h4 class="teal lighten-3 teal-text darken-4-text center-align">{{ message }}</h4>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    </section>
 
-    {% block content %}
-    {% endblock %}
+    <!-- Main content area -->
+    <main class="container">
+        {% block content %}
+        {% endblock %}
+    </main>
 
     <!-- Footer -->
     <footer class="page-footer text-shadow teal darken-3">
