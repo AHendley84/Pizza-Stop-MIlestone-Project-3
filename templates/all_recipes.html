@@ -1,21 +1,23 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <div class="col s12 m7">
+    <div class="col s12 recipe-repo">
         <div class="row">
             {% for recipe in recipes %}
-            <div class="card">
-                <div class="card-image">
-                    <img src="{{ recipe.recipe_image }}">
-                    <span class="card-title text-shadow"><strong>{{ recipe.recipe_name }}</strong></span>
-                </div>
-                <div class="card-content">
-                    <p><strong>Created By:</strong> {{ recipe.recipe_submitted_by }}</p>
-                    <p><strong>Category:</strong> {{ recipe.recipe_category }}</p>
-                    <p><strong>Serves:</strong> {{ recipe.recipe_serves }}</p>
-                </div>
-                <div class="card-action">
-                    <a href="#">View Recipe</a>
+            <div class="col">
+                <div class="card hoverable">
+                    <div class="card-image">
+                        <img src="{{ recipe.recipe_image }}">
+                        <span class="card-title text-shadow"><strong>{{ recipe.recipe_name }}</strong></span>
+                    </div>
+                    <div class="card-content">
+                        <p><strong>Created By:</strong> {{ recipe.recipe_submitted_by }}</p>
+                        <p><strong>Category:</strong> {{ recipe.recipe_category }}</p>
+                        <p><strong>Serves:</strong> {{ recipe.recipe_serves }}</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#">View Recipe</a>
+                    </div>
                 </div>
             </div>
             {% endfor %}
