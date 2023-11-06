@@ -40,7 +40,7 @@
         </nav>
         <!-- Mobile nav bar -->
         <ul class="sidenav" id="mobile-demo">
-            <li><h4 class="center-align text-teal text-darken-3">Pizza Stop!</h4></li>
+            <li><h4 class="center-align teal-text text-darken-3">Pizza Stop!</h4></li>
             <li><a href="{{ url_for('home') }}">Home</a></li>
             {% if session.user %}
                 <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
