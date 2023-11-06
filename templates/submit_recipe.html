@@ -11,13 +11,67 @@
                         <div class="row">
                             <div class="input-field col s12">
                                 <input id="recipe_name" name="recipe_name" type="text" class="form-label">
-                                <label for="recipe_name">Recipe Name</label>
+                                <label for="recipe_name"><i class="fa-solid fa-signature"></i> Recipe Name</label>
                             </div>
                             <div class="input-field col s12">
-                                <input id="submission_name" name="submission_name" type="text" class="form-label">
-                                <label for="submission_name">Submitted By</label>
+                                <input id="submittedBy" name="submittedBy" type="text" class="form-label">
+                                <label for="submittedBy"><i class="fa-solid fa-user"></i> Submitted By</label>
                             </div>
-                            
+                            <div class="input-field col s12">
+                                <select class="form-select form-control" name="category">
+                                    <option selected></i> Select A Category</option>
+                                    <option value="dough">Dough</option>
+                                    <option value="toppings">Toppings</option>
+                                    <option value="sideDish">Side Dish</option>
+                                    <option value="dips">Dips</option>
+                                    <option value="pizzaSauce">Pizza Sauce</option>
+                                </select>
+                                <label for="category">Category</label>
+                            </div>
+                            <div class="input-field col s12">
+                                <input id="serves" name="serves" type="text" class="form-label">
+                                <label for="serves"><i class="fa-solid fa-users"></i> Serves</label>
+                            </div>
+                            <div class="input-field col s12">
+                                <input id="prepTime" name="prepTime" type="text" class="form-label">
+                                <label for="prepTime"><i class="fa-solid fa-hourglass-start"></i> Preparation Time</label>
+                            </div>
+                            <div class="input-field col s12">
+                                <input id="cookTime" name="cookTime" type="text" class="form-label">
+                                <label for="cookTime"><i class="fa-solid fa-hourglass-end"></i> Cook Time</label>
+                            </div>
+                            <div class="input-field col s12">
+                                <textarea id="description" class="form-label materialize-textarea"></textarea>
+                                <label for="description"><i class="fa-solid fa-pencil"></i> Description</label>
+                            </div>
+                            <div class="col s12">
+                                <div class="ingredientList">
+                                    <div class="input-field ingredientDiv">
+                                        <input id="ingredients" name="ingredients" type="text" class="form-label">
+                                        <label for="ingredients"><i class="fa-solid fa-carrot"></i> Ingredient</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button type="button" class="waves-effect waves-light btn" id="addIngredientsBtn"><i class="fa-solid fa-plus"></i> Add Ingredient</button>
+                            </div>
+                            <div class="col s12">
+                                <div class="methodList">
+                                    <div class="input-field methodDiv">
+                                        <input id="method" name="method" type="text" class="form-label">
+                                        <label for="method"><i class="fa-solid fa-kitchen-set"></i> Method</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button type="button" class="waves-effect waves-light btn" id="addMethodBtn"><i class="fa-solid fa-plus"></i> Add Another Step</button>
+                            </div>
+                            <br>
+                            <div class="col-12 center-align">
+                                <button class="btn waves-effect waves-light" type="submit" name="action">
+                                    <i class="fa-regular fa-paper-plane"></i> Submit Recipe</i>
+                                </button>
+                            </div>
                         </div>
                     </form>
                 </div>
