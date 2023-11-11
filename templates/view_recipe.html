@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="row">
+        <div class="col s12 m8 offset-m2">
+            <div class="card-panel">
+                <div class="row">
+                        <!-- Recipe Name display -->
+                        <div class="row">
+                            <div class="col s12">
+                                <h3>{{ recipe_id.recipe_name }}</h3>
+                            </div>
+                        </div>
+                        <!-- recipe by display -->
+                        <div class="row">
+                            <div class="col s12">
+                                <p><strong>Recipe By:</strong> {{ recipe_id.recipe_submitted_by }}</p>
+                                <p><strong>Category:</strong> {{ recipe_id.recipe_category }}</p>
+                                <p><strong>Serves:</strong> {{ recipe_id.recipe_serves }}</p>
+                                <p><strong>Preparation Time:</strong> {{ recipe_id.recipe_prep_time }}</p>
+                                <p><strong>Cook Time:</strong> {{ recipe_id.recipe_cook_time }}</p>
+                            </div>
+                        </div>
+                        <!-- description display -->
+                        <div class="row">
+                            <div class="col s12">
+                                <h5>Description:</h5>
+                                <p>{{ recipe_id.recipe_description }}</p>
+                            </div>
+                        </div>
+                        <!-- ingredient display -->
+                        <div class="row">
+                            <div class="col s12">
+                                <h5>Ingredients:</h5>
+                                <p>{{ recipe_id.recipe_ingredients }}</p>
+                            </div>
+                        </div>
+                        <!-- method display -->
+                        <div class="row">
+                            <div class="col s12">
+                                <h5>Method:</h5>
+                                <p>{{ recipe_id.recipe_method }}</p>
+                            </div>
+                        </div>
+                        <!-- Edit button -->
+                        <div class="row">
+                            <div class="col-12 center-align">
+                                <button class="btn waves-effect waves-light text-shadow" type="submit">
+                                    <i class="fa-regular fa-edit"></i> Edit Recipe</i>
+                                </button>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

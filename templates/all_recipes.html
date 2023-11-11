@@ -19,7 +19,7 @@
                         <p><strong>Serves:</strong> {{ recipe.recipe_serves }}</p>
                     </div>
                     <div class="card-action">
-                        <a href="#">View Recipe</a>
+                        <a href="{{ url_for('view_recipe', recipe_repository_id=recipe._id) }}">View Recipe</a>
                     </div>
                 </div>
             </div>
