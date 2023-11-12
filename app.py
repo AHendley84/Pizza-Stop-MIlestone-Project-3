@@ -135,7 +135,7 @@ def view_recipe(recipe_repository_id):
 @app.route("/edit_recipe/<recipe_repository_id>", methods=["GET", "POST"])
 def edit_recipe(recipe_repository_id):
     if request.method == "POST":
-        submit_recipe = {
+        submit = {
             "recipe_name": request.form.get("recipe_name"),
             "recipe_category": request.form.get("recipe_category"),
             "recipe_serves": request.form.get("recipe_serves"),
@@ -146,8 +146,9 @@ def edit_recipe(recipe_repository_id):
             "recipe_method": request.form.getlist("recipe_method"),
             "recipe_image": request.form.get("recipe_image")
         }
-        mongo.db.recipe_repository.replace_one({"_id": ObjectId(recipe_repository_id)}, submit_recipe)
+        mongo.db.recipe_repository.replace_one({"_id": ObjectId(recipe_repository_id)}, submit)
         flash("Recipe Successfully Updated")
+        return redirect(url_for('get_recipes'))
 
     recipe_id = mongo.db.recipe_repository.find_one({"_id": ObjectId(recipe_repository_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
