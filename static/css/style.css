@@ -50,3 +50,8 @@ body {
 .btn-flat {
     margin: 5px;
 }
+
+li {
+    padding-left: 10px;
+    padding-bottom: 2px;
+}

@@ -12,7 +12,8 @@
                         <div class="row">
                             <div class="input-field col s12">
                                 <i class="fa-solid fa-signature prefix teal-text text-darken-3 text-shadow"></i>
-                                <input id="recipe_name" name="recipe_name" type="text" minlength="5" maxlength="100" class="form-label">
+                                <input id="recipe_name" name="recipe_name" type="text" minlength="5" maxlength="100" 
+                                    class="form-label" value="{{ recipe_id.recipe_name }}">
                                 <label for="recipe_name">Recipe Name</label>
                             </div>
                         </div>
@@ -21,9 +22,13 @@
                             <div class="input-field col s12">
                                 <i class="fa-solid fa-list prefix teal-text text-darken-3 text-shadow"></i>
                                 <select class="form-select form-control" name="recipe_category" required>
-                                    <option disabled selected></i> Select A Category</option>
+                                    <option disabled></i> Select A Category</option>
                                     {% for category in categories %}
-                                        <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                                        {% if category.category_name == recipe_id.recipe_category %}
+                                            <option value="{{ category.category_name }}" selected>{{ category.category_name }}</option>
+                                        {% else %}
+                                            <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                                        {% endif %}
                                     {% endfor %}
                                 </select>
                                 <label for="recipe_category">Category</label>
@@ -33,7 +38,8 @@
                         <div class="row">
                             <div class="input-field col s12">
                                 <i class="fa-solid fa-users prefix teal-text text-darken-3 text-shadow"></i> 
-                                <input id="recipe_serves" name="recipe_serves" type="text" minlength="5" maxlength="100" class="form-label">
+                                <input id="recipe_serves" name="recipe_serves" type="text" minlength="5" maxlength="100" 
+                                    class="form-label" value="{{ recipe_id.recipe_serves }}">
                                 <label for="recipe_serves">Serves</label>
                             </div>
                         </div>
@@ -41,7 +47,8 @@
                         <div class="row">
                             <div class="input-field col s12">
                                 <i class="fa-solid fa-hourglass-start prefix teal-text text-darken-3 text-shadow"></i>
-                                <input id="recipe_prep_time" name="recipe_prep_time" type="text" minlength="5" maxlength="50" class="form-label">
+                                <input id="recipe_prep_time" name="recipe_prep_time" type="text" minlength="5" maxlength="50" 
+                                    class="form-label" value="{{ recipe_id.recipe_prep_time }}">
                                 <label for="recipe_prep_time">Preparation Time</label>
                             </div>
                         </div>
@@ -49,7 +56,8 @@
                         <div class="row">
                             <div class="input-field col s12">
                                 <i class="fa-solid fa-hourglass-end prefix teal-text text-darken-3 text-shadow"></i>
-                                <input id="recipe_cook_time" name="recipe_cook_time" type="text" minlength="5" maxlength="50" class="form-label">
+                                <input id="recipe_cook_time" name="recipe_cook_time" type="text" minlength="5" maxlength="50" 
+                                    class="form-label" value="{{ recipe_id.recipe_cook_time }}">
                                 <label for="recipe_cook_time">Cook Time</label>
                             </div>
                         </div>
@@ -57,7 +65,9 @@
                         <div class="row">
                             <div class="input-field col s12">
                                 <i class="fa-solid fa-pencil prefix teal-text text-darken-3 text-shadow"></i>
-                                <textarea id="recipe_description" minlength="5" maxlength="500" class="form-label materialize-textarea"></textarea>
+                                <textarea id="recipe_description" minlength="5" maxlength="500" class="form-label materialize-textarea">
+                                    {{- recipe_id.recipe_description -}}
+                                </textarea>
                                 <label for="recipe_description">Description</label>
                             </div>
                         </div>
@@ -67,7 +77,8 @@
                                 <div class="ingredientList">
                                     <div class="input-field ingredientDiv">
                                         <i class="fa-solid fa-carrot prefix teal-text text-darken-3 text-shadow"></i>
-                                        <input id="recipe_ingredients" name="recipe_ingredients" type="text" minlength="5" maxlength="200" class="form-label">
+                                        <input id="recipe_ingredients" name="recipe_ingredients" type="text" minlength="5" 
+                                            maxlength="200" class="form-label">
                                         <label for="recipe_ingredients"> Ingredients</label>
                                     </div>
                                 </div>
@@ -87,7 +98,8 @@
                                 <div class="methodList">                                    
                                     <div class="input-field methodDiv">
                                         <i class="fa-solid fa-kitchen-set prefix teal-text text-darken-3 text-shadow"></i>
-                                        <input id="recipe_method" name="recipe_method" type="text" minlength="5" maxlength="200" class="form-label">
+                                        <input id="recipe_method" name="recipe_method" type="text" minlength="5" maxlength="200" 
+                                            class="form-label">
                                         <label for="recipe_method">Method</label>
                                     </div>
                                 </div>
@@ -105,7 +117,8 @@
                         <div class="row">
                             <div class="input-field col s12">
                                 <i class="fa-solid fa-image prefix teal-text text-darken-3 text-shadow"></i>
-                                <input id="recipe_image" name="recipe_image" type="text" class="form-label">
+                                <input id="recipe_image" name="recipe_image" type="text" class="form-label" 
+                                    value="{{ recipe_id.recipe_image }}">
                                 <label for="recipe_image">Recipe Image (URL)</label>
                             </div>
                         </div>
@@ -117,7 +130,8 @@
                                 </a>
                             </div>
                             <div class="col-6 center-align">
-                                <a class="waves-effect waves-red btn-flat" href="{{ url_for('view_recipe', recipe_repository_id=recipe_id._id) }}">
+                                <a class="waves-effect waves-red btn-flat" 
+                                    href="{{ url_for('view_recipe', recipe_repository_id=recipe_id._id) }}">
                                     <i class="fa-regular fa-edit"></i> Cancel Changes</i>
                                 </a>
                             </div>

@@ -31,14 +31,22 @@
                         <div class="row">
                             <div class="col s12">
                                 <h5>Ingredients:</h5>
-                                <p>{{ recipe_id.recipe_ingredients }}</p>
+                                <ol>
+                                {% for ingredient in recipe_id.recipe_ingredients %}
+                                    <li>{{ ingredient[0:] }}</li>
+                                {% endfor %}
+                                </ol>
                             </div>
                         </div>
                         <!-- method display -->
                         <div class="row">
                             <div class="col s12">
                                 <h5>Method:</h5>
-                                <p>{{ recipe_id.recipe_method }}</p>
+                                <ol>
+                                {% for method in recipe_id.recipe_method %}
+                                    <li>{{ method[0:] }}</li>
+                                {% endfor %}
+                                </ol>
                             </div>
                         </div>
                         <!-- Edit button -->

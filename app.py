@@ -129,7 +129,6 @@ def submit_recipe():
 @app.route("/view_recipe/<recipe_repository_id>")
 def view_recipe(recipe_repository_id):
     recipe_id = mongo.db.recipe_repository.find_one({"_id": ObjectId(recipe_repository_id)})
-
     return render_template("view_recipe.html", recipe_id=recipe_id)
 
 
