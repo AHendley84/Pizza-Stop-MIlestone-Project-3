@@ -53,11 +53,14 @@
                         <div class="row">
                             <div class="col-12 center-align">
                                 {% if session.user|lower == recipe_id.recipe_submitted_by|lower %}
-                                    <a class="waves-effect waves-teal btn-flat" href="{{ url_for('edit_recipe', recipe_repository_id=recipe_id._id) }}">
-                                        <i class="fa-regular fa-edit"></i> Edit Recipe</i>
+                                    <a class="waves-effect waves-green darken-4 btn-flat" href="{{ url_for('edit_recipe', recipe_repository_id=recipe_id._id) }}">
+                                        <i class="fa-regular fa-edit"></i> Edit</i>
+                                    </a>
+                                    <a class="waves-effect waves-red accent-4 btn-flat" href="{{ url_for('delete_recipe', recipe_repository_id=recipe_id._id) }}">
+                                        <i class="fa-solid fa-trash"></i> Delete</i>
                                     </a>
                                 {% endif %}
-                            <a class="waves-effect waves-teal btn-flat" href="{{ url_for('get_recipes') }}">
+                            <a class="waves-effect waves-light-blue darken-4 btn-flat" href="{{ url_for('get_recipes') }}">
                                 <i class="fa-solid fa-person-walking-arrow-loop-left"></i> Back</i>
                             </a>
                             </div>
