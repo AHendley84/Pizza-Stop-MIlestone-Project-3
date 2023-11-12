@@ -47,9 +47,6 @@ body {
     height: 132px;
 }
 
-@media only screen and (max-width: 600px) {
-    .recipe-repo {
-        width: 90%;
-        margin: auto;
-    }
+.btn-flat {
+    margin: 5px;
 }

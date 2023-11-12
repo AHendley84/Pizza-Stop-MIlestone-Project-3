@@ -133,12 +133,11 @@ def view_recipe(recipe_repository_id):
     return render_template("view_recipe.html", recipe_id=recipe_id)
 
 
-#@app.route("/edit_recipe/<recipe_repository_id>", methods=["GET", "POST"])
-#def edit_recipe(recipe_repository_id):
-#    recipe = mongo.db.recipe_repository.find_one({"_id": ObjectId(recipe_repository_id)})
-
-#    categories = mongo.db.categories.find().sort("category_name", 1)
-#    return render_template("edit_recipe.html", recipe=recipe, categories=categories)
+@app.route("/edit_recipe/<recipe_repository_id>", methods=["GET", "POST"])
+def edit_recipe(recipe_repository_id):
+    recipe_id = mongo.db.recipe_repository.find_one({"_id": ObjectId(recipe_repository_id)})
+    categories = mongo.db.categories.find().sort("category_name", 1)
+    return render_template("edit_recipe.html", recipe_id=recipe_id, categories=categories)
 
 
 if __name__ == "__main__":

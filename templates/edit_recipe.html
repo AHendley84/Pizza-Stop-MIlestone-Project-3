@@ -4,10 +4,10 @@
         <div class="col s12 m8 offset-m2">
             <div class="card-panel">
                 <h3 class="center-align teal-text text-darken-4">
-                    Edit A Recipe
+                    Edit Recipe
                 </h3>
                 <div class="row">
-                    <form class="col s12" method="POST" action="{{ url_for('edit_recipe', recipe_repository_id=recipe._id) }}">
+                    <form class="col s12" method="POST" action="{{ url_for('edit_recipe', recipe_repository_id=recipe_id._id) }}">
                         <!-- Recipe Name -->
                         <div class="row">
                             <div class="input-field col s12">
@@ -111,10 +111,15 @@
                         </div>
                         <!-- submit button -->
                         <div class="row">
-                            <div class="col-12 center-align">
-                                <button class="btn waves-effect waves-light text-shadow" type="submit">
-                                    <i class="fa-regular fa-edit"></i> Edit Recipe</i>
-                                </button>
+                            <div class="col-6 center-align">
+                                <a class="waves-effect waves-teal btn-flat" href="">
+                                    <i class="fa-regular fa-edit"></i> Save Changes</i>
+                                </a>
+                            </div>
+                            <div class="col-6 center-align">
+                                <a class="waves-effect waves-red btn-flat" href="{{ url_for('view_recipe', recipe_repository_id=recipe_id._id) }}">
+                                    <i class="fa-regular fa-edit"></i> Cancel Changes</i>
+                                </a>
                             </div>
                         </div>
                     </form>
