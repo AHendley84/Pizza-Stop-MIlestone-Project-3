@@ -52,9 +52,14 @@
                         <!-- Edit button -->
                         <div class="row">
                             <div class="col-12 center-align">
-                                <a class="waves-effect waves-teal btn-flat" href="{{ url_for('edit_recipe', recipe_repository_id=recipe_id._id) }}">
-                                    <i class="fa-regular fa-edit"></i> Edit Recipe</i>
-                                </a>
+                                {% if session.user|lower == recipe_id.recipe_submitted_by|lower %}
+                                    <a class="waves-effect waves-teal btn-flat" href="{{ url_for('edit_recipe', recipe_repository_id=recipe_id._id) }}">
+                                        <i class="fa-regular fa-edit"></i> Edit Recipe</i>
+                                    </a>
+                                {% endif %}
+                            <a class="waves-effect waves-teal btn-flat" href="{{ url_for('get_recipes') }}">
+                                <i class="fa-solid fa-person-walking-arrow-loop-left"></i> Back</i>
+                            </a>
                             </div>
                         </div>
                 </div>

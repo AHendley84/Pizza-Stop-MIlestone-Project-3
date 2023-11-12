@@ -38,7 +38,7 @@
                         <div class="row">
                             <div class="input-field col s12">
                                 <i class="fa-solid fa-users prefix teal-text text-darken-3 text-shadow"></i> 
-                                <input id="recipe_serves" name="recipe_serves" type="text" minlength="5" maxlength="100" 
+                                <input id="recipe_serves" name="recipe_serves" type="text" minlength="1" maxlength="100" 
                                     class="form-label" value="{{ recipe_id.recipe_serves }}">
                                 <label for="recipe_serves">Serves</label>
                             </div>
@@ -133,8 +133,6 @@
                                 <button class="btn waves-effect waves-light btn-flat" type="submit">
                                     <i class="fa-regular fa-edit"></i> Save Changes</i>
                                 </button>
-                            </div>
-                            <div class="col-6 center-align">
                                 <a class="btn waves-effect waves-red btn-flat" 
                                     href="{{ url_for('view_recipe', recipe_repository_id=recipe_id._id) }}">
                                     <i class="fa-regular fa-edit"></i> Cancel Changes</i>

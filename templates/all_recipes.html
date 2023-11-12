@@ -19,7 +19,14 @@
                         <p><strong>Serves:</strong> {{ recipe.recipe_serves }}</p>
                     </div>
                     <div class="card-action">
-                        <a href="{{ url_for('view_recipe', recipe_repository_id=recipe._id) }}">View Recipe</a>
+                        <a class="waves-effect waves-teal btn" 
+                            href="{{ url_for('view_recipe', recipe_repository_id=recipe._id) }}">
+                            <i class="fa-solid fa-eye"></i> View
+                        </a>
+                        <a class="waves-effect waves-teal btn" 
+                        href="#">
+                        <i class="fa-solid fa-square-plus"></i> Add
+                    </a>
                     </div>
                 </div>
             </div>

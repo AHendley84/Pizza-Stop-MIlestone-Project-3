@@ -144,7 +144,8 @@ def edit_recipe(recipe_repository_id):
             "recipe_description": request.form.get("recipe_description"),
             "recipe_ingredients": request.form.getlist("recipe_ingredients"),
             "recipe_method": request.form.getlist("recipe_method"),
-            "recipe_image": request.form.get("recipe_image")
+            "recipe_image": request.form.get("recipe_image"),
+            "recipe_submitted_by": session["user"]
         }
         mongo.db.recipe_repository.replace_one({"_id": ObjectId(recipe_repository_id)}, submit)
         flash("Recipe Successfully Updated")
