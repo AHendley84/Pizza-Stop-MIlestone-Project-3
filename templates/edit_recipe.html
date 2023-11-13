@@ -13,7 +13,7 @@
                             <div class="input-field col s12">
                                 <i class="fa-solid fa-signature prefix teal-text text-darken-3 text-shadow"></i>
                                 <input id="recipe_name" name="recipe_name" type="text" minlength="5" maxlength="100" 
-                                    class="form-label" value="{{ recipe_id.recipe_name }}">
+                                    class="form-label validate" value="{{ recipe_id.recipe_name }}">
                                 <label for="recipe_name">Recipe Name</label>
                             </div>
                         </div>
@@ -21,7 +21,7 @@
                         <div class="row">
                             <div class="input-field col s12">
                                 <i class="fa-solid fa-list prefix teal-text text-darken-3 text-shadow"></i>
-                                <select class="form-select form-control" name="recipe_category" required>
+                                <select class="form-select form-control validate" name="recipe_category" required>
                                     <option disabled></i> Select A Category</option>
                                     {% for category in categories %}
                                         {% if category.category_name == recipe_id.recipe_category %}
@@ -39,7 +39,7 @@
                             <div class="input-field col s12">
                                 <i class="fa-solid fa-users prefix teal-text text-darken-3 text-shadow"></i> 
                                 <input id="recipe_serves" name="recipe_serves" type="text" minlength="1" maxlength="100" 
-                                    class="form-label" value="{{ recipe_id.recipe_serves }}">
+                                    class="form-label validate" value="{{ recipe_id.recipe_serves }}">
                                 <label for="recipe_serves">Serves</label>
                             </div>
                         </div>
@@ -48,7 +48,7 @@
                             <div class="input-field col s12">
                                 <i class="fa-solid fa-hourglass-start prefix teal-text text-darken-3 text-shadow"></i>
                                 <input id="recipe_prep_time" name="recipe_prep_time" type="text" minlength="5" maxlength="50" 
-                                    class="form-label" value="{{ recipe_id.recipe_prep_time }}">
+                                    class="form-label" validate value="{{ recipe_id.recipe_prep_time }}">
                                 <label for="recipe_prep_time">Preparation Time</label>
                             </div>
                         </div>
@@ -57,7 +57,7 @@
                             <div class="input-field col s12">
                                 <i class="fa-solid fa-hourglass-end prefix teal-text text-darken-3 text-shadow"></i>
                                 <input id="recipe_cook_time" name="recipe_cook_time" type="text" minlength="5" maxlength="50" 
-                                    class="form-label" value="{{ recipe_id.recipe_cook_time }}">
+                                    class="form-label validate" value="{{ recipe_id.recipe_cook_time }}">
                                 <label for="recipe_cook_time">Cook Time</label>
                             </div>
                         </div>
@@ -66,7 +66,7 @@
                             <div class="input-field col s12">
                                 <i class="fa-solid fa-pencil prefix teal-text text-darken-3 text-shadow"></i>
                                 <textarea id="recipe_description" name="recipe_description" minlength="5" 
-                                    maxlength="500" class="form-label materialize-textarea">
+                                    maxlength="1000" class="form-label materialize-textarea validate">
                                     {{- recipe_id.recipe_description -}}
                                 </textarea>
                                 <label for="recipe_description">Description</label>
@@ -80,7 +80,7 @@
                                     <div class="input-field ingredientDiv">
                                         <i class="fa-solid fa-carrot prefix teal-text text-darken-3 text-shadow"></i>
                                         <input id="recipe_ingredients" name="recipe_ingredients" type="text" minlength="5" 
-                                            maxlength="200" class="form-label" value="{{ ingredient[0:] }}">
+                                            maxlength="200" class="form-label validate" value="{{ ingredient[0:] }}">
                                         <label for="recipe_ingredients"> Ingredients</label>
                                     </div>
                                 {% endfor %}
@@ -103,7 +103,7 @@
                                     <div class="input-field methodDiv">
                                         <i class="fa-solid fa-kitchen-set prefix teal-text text-darken-3 text-shadow"></i>
                                         <input id="recipe_method" name="recipe_method" type="text" minlength="5" maxlength="400" 
-                                            class="form-label" value="{{ method[0:] }}">
+                                            class="form-label validate" value="{{ method[0:] }}">
                                         <label for="recipe_method">Method</label>
                                     </div>
                                 {% endfor %}
@@ -122,7 +122,7 @@
                         <div class="row">
                             <div class="input-field col s12">
                                 <i class="fa-solid fa-image prefix teal-text text-darken-3 text-shadow"></i>
-                                <input id="recipe_image" name="recipe_image" type="text" class="form-label" 
+                                <input id="recipe_image" name="recipe_image" type="text" class="form-label validate" 
                                     value="{{ recipe_id.recipe_image }}">
                                 <label for="recipe_image">Recipe Image (URL)</label>
                             </div>
