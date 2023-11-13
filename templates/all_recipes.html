@@ -12,11 +12,10 @@
                     <div class="input-field col s12 m8">
                         <i class="fa-solid fa-magnifying-glass prefix teal-text darken-4"></i>
                         <input type="text" name="query" id="query" minlength="2" class="validate" required>
-                        <label for="query">Search Recipes</label>
+                        <label for="query">Search</label>
                     </div>
                     <div class="col s12 m4">
                         <button type="submit" class="btn-flat teal darken-4 text-shadow white-text">
-                            <i class="fa-brands fa-golang centre white-text"></i>
                             Search
                         </button>
                         <a href="{{ url_for('get_recipes') }}" class="red btn text-shadow">Reset</a>
@@ -26,7 +25,7 @@
         </div>
 
         {% if recipes|length > 0 %}
-        <div class="row justify-content-center">
+        <div class="row">
             {% for recipe in recipes %}
             <div class="col">
                 <div class="card hoverable">
