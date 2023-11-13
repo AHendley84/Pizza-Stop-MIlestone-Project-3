@@ -1,6 +1,7 @@
 $(document).ready(function(){
     $(".sidenav").sidenav({edge: "right"});
     $('select').formSelect();
+    $('.modal').modal();
 
     /** Validation for Materialize drop down */
     validateMaterializeSelect();

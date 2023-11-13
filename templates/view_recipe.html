@@ -56,9 +56,21 @@
                                     <a class="waves-effect waves-green darken-4 btn-flat" href="{{ url_for('edit_recipe', recipe_repository_id=recipe_id._id) }}">
                                         <i class="fa-regular fa-edit"></i> Edit</i>
                                     </a>
-                                    <a class="waves-effect waves-red accent-4 btn-flat" href="{{ url_for('delete_recipe', recipe_repository_id=recipe_id._id) }}">
-                                        <i class="fa-solid fa-trash"></i> Delete</i>
-                                    </a>
+                                    <button data-target="{{ recipe_id._id }}" class="btn waves-effect waves-red accent-4 btn-flat modal-trigger"><i class="fa-solid fa-trash"></i> Delete</i></button>
+                                    <!-- Modal Structure -->
+                                    <div id="{{ recipe_id._id }}" class="modal">
+                                        <div class="modal-content">
+                                            <p>Are you sure you want to delete this Recipe? Once completed it cannot be undone.</p>
+                                        </div>
+                                            <div class="modal-footer">
+                                                <a href="{{ url_for('delete_recipe', recipe_repository_id=recipe_id._id) }}" class="modal-close btn-small red accent-4 white-text text-shadow">
+                                                        Delete
+                                            </a>
+                                                    <a href="{{ url_for('view_recipe', recipe_repository_id=recipe_id._id) }}" class="modal-close btn-small blue-grey-text text-lighten-5 blue-grey darken-3 text-shadow">
+                                                            Cancel
+                                                    </a>
+                                        </div>
+                                    </div>
                                 {% endif %}
                             <a class="waves-effect waves-light-blue darken-4 btn-flat" href="{{ url_for('get_recipes') }}">
                                 <i class="fa-solid fa-person-walking-arrow-loop-left"></i> Back</i>
