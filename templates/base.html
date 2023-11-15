@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
         crossorigin="anonymous" referrerpolicy="no-referrer" type="text/css"/>
@@ -26,7 +28,7 @@
                 <ul class="right hide-on-med-and-down">
                     <li><a href="{{ url_for('home') }}">Home</a></li>
                     {% if session.user %}
-                        <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
+                        <li><a href="{{ url_for('profile', username=session['user']) }}">{{ username.capitalize() }}'s Profile</a></li>
                         <li><a href="{{ url_for('get_recipes') }}">Recipes Library</a></li>
                         <li><a href="{{ url_for('submit_recipe') }}">Add Recipe</a></li>
                         <li><a href="{{ url_for('my_recipes') }}">My Recipes</a></li>

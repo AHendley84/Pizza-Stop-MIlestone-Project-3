@@ -1,11 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
 
+    <!-- Page Title -->
     <div class="col s12 recipe-repo">
         <h3 class="center-align teal-text text-darken-4">
             My Recipes
         </h3>
 
+        <!-- Code to display each of the user in session generated recipes -->
         <div class="row">
             {% for recipe in recipes %}
                 {% if session.user|lower == recipe.recipe_submitted_by|lower %}

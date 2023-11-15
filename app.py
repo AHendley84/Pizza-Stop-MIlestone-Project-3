@@ -17,24 +17,28 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
+# Render home template
 @app.route("/")
 @app.route("/home")
 def home():
     return render_template("home.html")
 
 
+# Render all recipes to user
 @app.route("/get_recipes")
 def get_recipes():
     recipes = list(mongo.db.recipe_repository.find())
     return render_template("all_recipes.html", recipes=recipes)
 
 
+# Render user recipes to user
 @app.route("/my_recipes")
 def my_recipes():
     recipes = list(mongo.db.recipe_repository.find())
     return render_template("my_recipes.html", recipes=recipes)
 
 
+# Search function
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")
@@ -42,6 +46,7 @@ def search():
     return render_template("all_recipes.html", recipes=recipes)
 
 
+# Register for an account
 @app.route("/register", methods=["GET", "post"])
 def register():
     if request.method == "POST":
@@ -67,6 +72,7 @@ def register():
     return render_template("register.html")
 
 
+# Log an existing user in
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
@@ -96,6 +102,7 @@ def login():
     return render_template("login.html")
 
 
+# Display user from db
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
     # obtain the session user's username from the db
@@ -108,6 +115,7 @@ def profile(username):
     return redirect(url_for("login"))
 
 
+# Log user out
 @app.route("/logout")
 def logout():
     # remove user from session cookies
@@ -116,6 +124,7 @@ def logout():
     return redirect(url_for("login"))
 
 
+# Submit a recipe to the db
 @app.route("/submit_recipe", methods=["GET", "POST"])
 def submit_recipe():
     if request.method == "POST":
@@ -139,12 +148,14 @@ def submit_recipe():
     return render_template("submit_recipe.html", categories=categories)
 
 
+# View a specific recipe in full from the db
 @app.route("/view_recipe/<recipe_repository_id>")
 def view_recipe(recipe_repository_id):
     recipe_id = mongo.db.recipe_repository.find_one({"_id": ObjectId(recipe_repository_id)})
     return render_template("view_recipe.html", recipe_id=recipe_id)
 
 
+# Edit a specific recipe from the db
 @app.route("/edit_recipe/<recipe_repository_id>", methods=["GET", "POST"])
 def edit_recipe(recipe_repository_id):
     if request.method == "POST":
@@ -169,6 +180,7 @@ def edit_recipe(recipe_repository_id):
     return render_template("edit_recipe.html", recipe_id=recipe_id, categories=categories)
 
 
+# Delete a recipe from the db
 @app.route("/delete_recipe/<recipe_repository_id>")
 def delete_recipe(recipe_repository_id):
     mongo.db.recipe_repository.delete_one({"_id": ObjectId(recipe_repository_id)})

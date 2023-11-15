@@ -1,11 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
-
+    <!-- Page Header -->
     <div class="col s12 recipe-repo">
         <h3 class="center-align teal-text text-darken-4">
             All Recipes
         </h3>
-
+        <!-- Search function -->
         <div class="row card-panel teal lighten-5">
             <form action="{{ url_for('search') }}" method="post" class="col s12">
                 <div class="row valign-wrapper center-align">
@@ -24,6 +24,7 @@
             </form>
         </div>
 
+        <!-- Code to display each of the recipes as a card -->
         {% if recipes|length > 0 %}
         <div class="row">
             {% for recipe in recipes %}
