@@ -10,4 +10,39 @@
         </div>
     </div>
 
+    <!-- Code to display each of the active users favorite recipes as a card -->
+    {% if favorites|length > 0 %}
+    <div class="row s12 m10 l10">
+        {% for favorite in favorites %}
+        <div class="col">
+            <div class="card hoverable">
+                <div class="card-image">
+                    <img src="{{ recipe.recipe_image }}">
+                    <span class="card-title text-shadow"><strong>{{ recipe.recipe_name }}</strong></span>
+                </div>
+                <div class="card-content">
+                    <p><strong>Created By:</strong> {{ recipe.recipe_submitted_by }}</p>
+                    <p><strong>Category:</strong> {{ recipe.recipe_category }}</p>
+                    <p><strong>Serves:</strong> {{ recipe.recipe_serves }}</p>
+                </div>
+                <div class="card-action">
+                    <a class="waves-effect waves-teal red accent-4 btn" 
+                        href="{{ url_for('view_recipe', recipe_repository_id=recipe._id) }}">
+                        <i class="fa-solid fa-eye"></i> View
+                    </a>
+                    <a class="waves-effect waves-teal green darken-4 btn" 
+                    href="{{ url_for('add_to_favorites', recipe_repository_id=recipe._id) }}">
+                    <i class="fa-solid fa-square-plus"></i> Add
+                </a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% else %}
+    <h3 class="center-align red-text text-darken-4">
+        No Recipes Found
+    </h3>
+    {% endif %}
+</div>
 {% endblock %}
