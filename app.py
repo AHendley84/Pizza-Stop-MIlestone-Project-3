@@ -107,10 +107,17 @@ def login():
 def profile(username):
     # obtain the session user's username from the db
     username = mongo.db.users.find_one(
-        {"username": session["user"]})["username"]
+        {"username": session["user"]})
+    
+    fav = []
+
+    for obj in username["favorites"]:
+        recipe = mongo.db.recipe_repository.find_one({"_id": obj})
+        fav.append(recipe)
+
 
     if session["user"]:
-        return render_template("profile.html", username=username)
+        return render_template("profile.html", username=username, fav=fav)
 
     return redirect(url_for("login"))
 

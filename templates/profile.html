@@ -4,7 +4,7 @@
         <div class="col s12 m8 offset-m2">
             <div class="card-panel">
                 <h3 class="center-align teal-text text-darken-4">
-                    {{ username.capitalize() }}'s Profile
+                    {{ username.username.capitalize() }}'s Profile
                 </h3>
             </div>
         </div>
@@ -16,9 +16,9 @@
             Favorite Recipes
         </h3>
     </div>
-    {% if favorites|length > 0 %}
+    {% if fav|length > 0 %}
     <div class="row s12 m10 l10">
-        {% for favorite in favorites %}
+        {% for recipe in fav %}
         <div class="col">
             <div class="card hoverable">
                 <div class="card-image">
@@ -36,7 +36,7 @@
                         <i class="fa-solid fa-eye"></i> View
                     </a>
                     <a class="waves-effect waves-teal green darken-4 btn" 
-                    href="{{ url_for('delete_from_favorites', recipe_repository_id=recipe._id) }}">
+                    href="#">
                     <i class="fa-solid fa-square-plus"></i> Add
                 </a>
                 </div>
