@@ -207,8 +207,11 @@ def add_to_favorites(recipe_repository_id):
     return redirect(url_for('get_recipes'))
 
 
+# Add function to view favorite recipes in profile page
+
+
 #Untested feature
-@app.route('/delete_from_favorites/<recipe_id>')
+@app.route("/delete_from_favorites/<recipe_id>")
 def delete_from_favorites(recipe_repository_id):
     user_profile = mongo.db.users.find_one(
         {'username': session['user'].lower()})

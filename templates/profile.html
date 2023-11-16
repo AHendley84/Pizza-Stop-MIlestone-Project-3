@@ -11,6 +11,11 @@
     </div>
 
     <!-- Code to display each of the active users favorite recipes as a card -->
+    <div class="card-panel">
+        <h3 class="center-align teal-text text-darken-4">
+            Favorite Recipes
+        </h3>
+    </div>
     {% if favorites|length > 0 %}
     <div class="row s12 m10 l10">
         {% for favorite in favorites %}
@@ -31,7 +36,7 @@
                         <i class="fa-solid fa-eye"></i> View
                     </a>
                     <a class="waves-effect waves-teal green darken-4 btn" 
-                    href="{{ url_for('add_to_favorites', recipe_repository_id=recipe._id) }}">
+                    href="{{ url_for('delete_from_favorites', recipe_repository_id=recipe._id) }}">
                     <i class="fa-solid fa-square-plus"></i> Add
                 </a>
                 </div>
