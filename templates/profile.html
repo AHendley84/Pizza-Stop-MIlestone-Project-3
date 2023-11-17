@@ -33,15 +33,11 @@
                 <div class="card-action">
                     <a class="waves-effect waves-teal red accent-4 btn" 
                         href="{{ url_for('view_recipe', recipe_repository_id=recipe._id) }}">
-                        <i class="fa-solid fa-eye"></i> 
+                        <i class="fa-solid fa-eye"></i> View
                     </a>
                     <a class="waves-effect waves-teal green darken-4 btn" 
-                    href="#">
-                        <i class="fa-solid fa-square-plus"></i> 
-                    </a>
-                    <a class="waves-effect waves-teal green darken-4 btn" 
-                    href="#">
-                        <i class="fa-solid fa-trash"></i> 
+                    href="{{ url_for('delete_from_favorites', user_profile=recipe_id._id) }}">
+                        <i class="fa-solid fa-trash"></i> Delete
                     </a>
                 </div>
             </div>
