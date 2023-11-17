@@ -58,9 +58,11 @@ def register():
             flash("Username already exists, please try another")
             return redirect(url_for("register"))
 
+        # creates new profile and empty favorites array
         register = {
             "username": request.form.get("username").lower(),
-            "password": generate_password_hash(request.form.get("password"))
+            "password": generate_password_hash(request.form.get("password")),
+            "favorites": request.form.get("favorites", [])
         }
         mongo.db.users.insert_one(register)
 
@@ -109,6 +111,7 @@ def profile(username):
     username = mongo.db.users.find_one(
         {"username": session["user"]})
     
+    # load favorite recipes for session user
     fav = []
 
     for obj in username["favorites"]:
@@ -120,6 +123,37 @@ def profile(username):
         return render_template("profile.html", username=username, fav=fav)
 
     return redirect(url_for("login"))
+
+
+# Add recipe to a favorites array held under the users profile
+@app.route("/add_to_favorites/<recipe_repository_id>", methods=["GET", "POST"])
+def add_to_favorites(recipe_repository_id):
+    if session["user"]:
+        current_user = {'username': session['user'].lower()}
+        favorite_recipes = mongo.db.users.find_one(current_user)["favorites"]
+        if ObjectId(recipe_repository_id) in favorite_recipes:
+            flash("This recipe is already in your favorites")
+            return redirect(url_for("get_recipes"))
+        user_profile = mongo.db.users.find_one(
+            {'username': session['user'].lower()})
+        mongo.db.users.update_one(
+            user_profile, {"$push": {"favorites": ObjectId(
+                recipe_repository_id)}})
+        flash("Recipe added to favorites")
+        return redirect(url_for('get_recipes'))
+    return redirect(url_for('get_recipes'))
+
+
+#Untested feature
+@app.route("/delete_from_favorites/<recipe_id>")
+def delete_from_favorites(recipe_repository_id):
+    user_profile = mongo.db.users.find_one(
+        {'username': session['user'].lower()})
+    mongo.db.users.update_one(
+        user_profile, {"$pull": {"favorites": ObjectId(
+            recipe_repository_id)}})
+    flash("Recipe removed from favorites")
+    return redirect(url_for('url_for("profile"), username=session["user"]'))
 
 
 # Log user out
@@ -193,40 +227,6 @@ def delete_recipe(recipe_repository_id):
     mongo.db.recipe_repository.delete_one({"_id": ObjectId(recipe_repository_id)})
     flash("Recipe Successfully Removed")
     return redirect(url_for('get_recipes'))
-
-
-# Add recipe to a favorites array held under the users profile
-@app.route("/add_to_favorites/<recipe_repository_id>", methods=["GET", "POST"])
-def add_to_favorites(recipe_repository_id):
-    if session["user"]:
-        current_user = {'username': session['user'].lower()}
-        favorite_recipes = mongo.db.users.find_one(current_user)["favorites"]
-        if ObjectId(recipe_repository_id) in favorite_recipes:
-            flash("This recipe is already in your favorites")
-            return redirect(url_for("get_recipes"))
-        user_profile = mongo.db.users.find_one(
-            {'username': session['user'].lower()})
-        mongo.db.users.update_one(
-            user_profile, {"$push": {"favorites": ObjectId(
-                recipe_repository_id)}})
-        flash("Recipe added to favorites")
-        return redirect(url_for('get_recipes'))
-    return redirect(url_for('get_recipes'))
-
-
-# Add function to view favorite recipes in profile page
-
-
-#Untested feature
-@app.route("/delete_from_favorites/<recipe_id>")
-def delete_from_favorites(recipe_repository_id):
-    user_profile = mongo.db.users.find_one(
-        {'username': session['user'].lower()})
-    mongo.db.users.update_one(
-        user_profile, {"$pull": {"favorites": ObjectId(
-            recipe_repository_id)}})
-    flash("Recipe removed from favorites")
-    return redirect(url_for('url_for("profile"), username=session["user"]'))
 
 
 if __name__ == "__main__":
