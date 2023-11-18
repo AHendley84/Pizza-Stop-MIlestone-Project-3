@@ -10,17 +10,14 @@ body {
   }
 /** End **/
 
-.logo-container {
-    object-fit: contain;
-    overflow: hidden;
+.nav-extended {
+    min-height: 175px;
 }
 
 .logo {
     width: 175px;
     height: 175px;
-    margin: 0;
     object-fit: contain;
-    overflow: hidden;
 }
 
 .brand-logo {
@@ -67,4 +64,9 @@ body {
 li {
     padding-left: 10px;
     padding-bottom: 2px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: white;
 }

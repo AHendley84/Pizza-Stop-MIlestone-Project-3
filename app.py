@@ -110,6 +110,9 @@ def profile(username):
     # obtain the session user's username from the db
     username = mongo.db.users.find_one(
         {"username": session["user"]})
+
+    # count the number of recipes favorited by the session user
+    fav_count = len(username.get('favorites', []))
     
     # load favorite recipes for session user
     fav = []
@@ -120,7 +123,7 @@ def profile(username):
 
 
     if session["user"]:
-        return render_template("profile.html", username=username, fav=fav)
+        return render_template("profile.html", username=username, fav=fav, fav_count=fav_count)
 
     return redirect(url_for("login"))
 
