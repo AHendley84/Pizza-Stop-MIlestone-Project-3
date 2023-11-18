@@ -6,9 +6,6 @@
                 <h3 class="center-align teal-text text-darken-4">
                     {{ username.username.capitalize() }}'s Profile
                 </h3>
-                <h4 class="left teal-text text-darken-4">
-                    Recipes favorited: {{ fav_count }}
-                </h4>
             </div>
         </div>
     </div>
@@ -18,6 +15,9 @@
         <h3 class="center-align teal-text text-darken-4">
             Favorite Recipes
         </h3>
+        <h4 class="center-align teal-text text-darken-4">
+            Recipes favorited: {{ fav_count }}
+        </h4>
     </div>
     {% if fav|length > 0 %}
     <div class="row s12 m10 l10">
