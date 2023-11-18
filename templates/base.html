@@ -23,7 +23,11 @@
         <!-- Main nav bar -->
         <nav class="nav-extended text-shadow teal darken-3">
             <div class="nav-wrapper">
-                <a href="{{ url_for('home') }}" class="brand-logo">Pizza Stop!</a>
+                <div class="col logo-container">
+                    <a href="{{ url_for('home') }}" class="brand-logo">
+                        <img src="{{ url_for('static', filename='images/ps_logo_transparent.png') }}" alt="Pizza Stop! Craft Your Slice of Perfection" class="logo">
+                    </a>
+                </div>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="{{ url_for('home') }}">Home</a></li>

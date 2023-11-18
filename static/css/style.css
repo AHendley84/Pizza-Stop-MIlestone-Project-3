@@ -10,6 +10,19 @@ body {
   }
 /** End **/
 
+.logo-container {
+    object-fit: contain;
+    overflow: hidden;
+}
+
+.logo {
+    width: 175px;
+    height: 175px;
+    margin: 0;
+    object-fit: contain;
+    overflow: hidden;
+}
+
 .brand-logo {
     margin-left: 10px;
 }
