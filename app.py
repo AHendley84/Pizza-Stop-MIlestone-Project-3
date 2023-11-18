@@ -145,16 +145,15 @@ def add_to_favorites(recipe_repository_id):
 
 
 #Untested feature
-@app.route("/delete_from_favorites/<recipe_id>")
-def delete_from_favorites(recipe_id):
-    recipe_id = mongo.db.recipe_repository.find_one({"_id": ObjectId(recipe_id)})
+@app.route('/delete_from_favorites/<recipe_repository_id>')
+def delete_from_favorites(recipe_repository_id):
     user_profile = mongo.db.users.find_one(
         {'username': session['user'].lower()})
     mongo.db.users.update_one(
         user_profile, {"$pull": {"favorites": ObjectId(
-            recipe_id)}})
+            recipe_repository_id)}})
     flash("Recipe removed from favorites")
-    return redirect(url_for('url_for("profile"), username=session["user"]'))
+    return redirect(url_for("profile", username=session["user"]))
 
 
 # Log user out
