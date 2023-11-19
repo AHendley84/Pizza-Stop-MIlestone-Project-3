@@ -8,17 +8,19 @@
         <!-- Search function -->
         <div class="row card-panel teal lighten-5">
             <form action="{{ url_for('search') }}" method="post" class="col s12">
-                <div class="row valign-wrapper center-align">
+                <div class="row valign-wrapper right-align">
                     <div class="input-field col s12 m8">
-                        <i class="fa-solid fa-magnifying-glass prefix teal-text darken-4"></i>
+                        <i class="fa-solid fa-magnifying-glass prefix teal-text darken-4" title="Search"></i>
                         <input type="text" name="query" id="query" minlength="2" class="validate" required>
                         <label for="query">Search</label>
                     </div>
                     <div class="col s12 m4">
-                        <button type="submit" class="btn-flat teal darken-4 text-shadow white-text">
-                            Search
+                        <button type="submit" class="btn-flat teal darken-4 text-shadow white-text" title="Search">
+                            <i class="fa-solid fa-magnifying-glass-arrow-right"></i>
                         </button>
-                        <a href="{{ url_for('get_recipes') }}" class="red btn text-shadow">Reset</a>
+                        <a href="{{ url_for('get_recipes') }}" class="red btn text-shadow" title="Reset">
+                            <i class="fa-solid fa-rotate-left"></i>
+                        </a>
                     </div>
                 </div>
             </form>
@@ -40,13 +42,13 @@
                         <p><strong>Serves:</strong> {{ recipe.recipe_serves }}</p>
                     </div>
                     <div class="card-action">
-                        <a class="waves-effect waves-teal red accent-4 btn" 
+                        <a class="waves-effect waves-teal red accent-4 btn" title="View"
                             href="{{ url_for('view_recipe', recipe_repository_id=recipe._id) }}">
-                            <i class="fa-solid fa-eye"></i> View
+                            <i class="fa-solid fa-eye"></i>
                         </a>
-                        <a class="waves-effect waves-teal green darken-4 btn" 
-                        href="{{ url_for('add_to_favorites', recipe_repository_id=recipe._id) }}">
-                        <i class="fa-solid fa-square-plus"></i> Add
+                        <a class="waves-effect waves-teal green darken-4 btn" title="Add to Favorites"
+                            href="{{ url_for('add_to_favorites', recipe_repository_id=recipe._id) }}">
+                        <i class="fa-solid fa-heart"></i>
                     </a>
                     </div>
                 </div>
