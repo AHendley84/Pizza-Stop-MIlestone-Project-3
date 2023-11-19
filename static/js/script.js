@@ -33,7 +33,7 @@ $(document).ready(function(){
     }
   });
 
-/** JavaScript to operate the add another ingredient */
+/** JavaScript to operate the add and remove ingredient  */
 let addIngredientsBtn = document.getElementById('addIngredientsBtn');
 let ingredientList = document.querySelector('.ingredientList');
 let ingredientDiv = document.querySelectorAll('.ingredientDiv')[0];
@@ -52,7 +52,7 @@ removeIngredientsBtn.addEventListener('click', function(){
     }
 });
 
-/** JavaScript to operate the add another method step */
+/** JavaScript to operate the and remove method */
 let addMethodBtn = document.getElementById('addMethodBtn');
 let methodList = document.querySelector('.methodList');
 let methodDiv = document.querySelectorAll('.methodDiv')[0];
@@ -62,4 +62,11 @@ addMethodBtn.addEventListener('click', function(){
   let inputMethod = newMethod.getElementsByTagName('input')[0];
   inputMethod.value = '';
   methodList.appendChild(newMethod);
+});
+
+removeMethodBtn.addEventListener('click', function(){
+    let methods = methodList.querySelectorAll('.methodDiv');
+    if (methods.length > 1) {
+        methodList.removeChild(methods[methods.length - 1]);
+    }
 });
