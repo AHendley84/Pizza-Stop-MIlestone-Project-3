@@ -45,6 +45,13 @@ addIngredientsBtn.addEventListener('click', function(){
   ingredientList.appendChild(newIngredients);
 });
 
+removeIngredientsBtn.addEventListener('click', function(){
+    let ingredients = ingredientList.querySelectorAll('.ingredientDiv');
+    if (ingredients.length > 1) {
+        ingredientList.removeChild(ingredients[ingredients.length - 1]);
+    }
+});
+
 /** JavaScript to operate the add another method step */
 let addMethodBtn = document.getElementById('addMethodBtn');
 let methodList = document.querySelector('.methodList');
