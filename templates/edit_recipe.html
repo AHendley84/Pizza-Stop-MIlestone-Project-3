@@ -91,10 +91,10 @@
                         <!-- add another ingredient button -->
                         <div class="row">
                             <div class="col-12">
-                                <button type="button" class="waves-effect waves-light btn" id="addIngredientsBtn" title="Add Ingredient">
+                                <button type="button" class="waves-effect waves-light btn btn-radius" id="addIngredientsBtn" title="Add Ingredient">
                                     <i class="fa-solid fa-plus"></i>
                                 </button>
-                                <button type="button" class="waves-effect waves-light btn" id="removeIngredientsBtn" title="Remove Ingredient">
+                                <button type="button" class="waves-effect waves-light btn btn-radius" id="removeIngredientsBtn" title="Remove Ingredient">
                                     <i class="fa-solid fa-minus"></i>
                                 </button>
                             </div>
@@ -117,10 +117,10 @@
                         <!-- add another method step button -->
                         <div class="row">
                             <div class="col-12">
-                                <button type="button" class="waves-effect waves-light btn" id="addMethodBtn" title="Add Method">
+                                <button type="button" class="waves-effect waves-light btn btn-radius" id="addMethodBtn" title="Add Method">
                                     <i class="fa-solid fa-plus"></i>
                                 </button>
-                                <button type="button" class="waves-effect waves-light btn" id="removeMethodBtn" title="Remove Method">
+                                <button type="button" class="waves-effect waves-light btn btn-radius" id="removeMethodBtn" title="Remove Method">
                                     <i class="fa-solid fa-minus"></i>
                                 </button>
                             </div>
@@ -134,13 +134,13 @@
                                 <label for="recipe_image">Recipe Image (URL)</label>
                             </div>
                         </div>
-                        <!-- submit button -->
+                        <!-- submit and cancel buttons -->
                         <div class="row">
                             <div class="col-6 center-align">
-                                <button class="btn waves-effect waves-light btn-flat" type="submit">
+                                <button class="btn waves-effect waves-light btn-flat btn-radius" type="submit">
                                     <i class="fa-regular fa-edit"></i> Save Changes</i>
                                 </button>
-                                <a class="btn waves-effect waves-red btn-flat" 
+                                <a class="btn waves-effect waves-red btn-flat btn-radius" 
                                     href="{{ url_for('view_recipe', recipe_repository_id=recipe_id._id) }}">
                                     <i class="fa-regular fa-edit"></i> Cancel Changes</i>
                                 </a>

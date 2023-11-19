@@ -10,13 +10,9 @@ body {
   }
 /** End **/
 
-.nav-extended {
-    min-height: 175px;
-}
-
 .logo {
-    width: 175px;
-    height: 175px;
+    width: 125px;
+    height: 125px;
     object-fit: contain;
 }
 
@@ -69,4 +65,18 @@ li {
 .footer-links a {
     text-decoration: none;
     color: white;
+}
+
+.home-logo {
+    width: 275px;
+    height: 275px;
+    object-position: 0 0;
+}
+
+.logo-container {
+    padding: 0;
+}
+
+.btn-radius {
+    border-radius: 15px;
 }
