@@ -9,7 +9,7 @@
 
         <!-- Code to display each of the user in session generated recipes -->
         <div class="row">
-            {% for recipe in recipes %}
+            {% for recipe in recipes|reverse %}
                 {% if session.user|lower == recipe.recipe_submitted_by|lower %}
                     <div class="col">
                         <div class="card hoverable card-radius">

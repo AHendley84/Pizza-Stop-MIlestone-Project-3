@@ -21,7 +21,7 @@
     </div>
     {% if fav|length > 0 %}
     <div class="row s12 m10 l10">
-        {% for recipe in fav %}
+        {% for recipe in fav|reverse %}
         <div class="col">
             <div class="card hoverable card-radius">
                 <div class="card-image">
