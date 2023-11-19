@@ -10,6 +10,14 @@ body {
   }
 /** End **/
 
+.bumper {
+    padding-top: 50px;
+}
+
+.nav-bumper {
+    padding: 20px;
+}
+
 .logo-container {
     position: relative;
     /* Add any other styles you want for the container */

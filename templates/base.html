@@ -21,7 +21,7 @@
 
     <header>
         <!-- Main nav bar -->
-        <nav class="nav-extended text-shadow teal darken-3">
+        <nav class="nav-extended text-shadow teal darken-4">
             <div class="nav-wrapper">
                 <a href="{{ url_for('home') }}" class="text-shadow white-text brand-logo center-align">
                     PIZZA STOP!
@@ -40,6 +40,8 @@
                         <li><a href="{{ url_for('register') }}">Register</a></li>
                     {% endif %}
                 </ul>
+            </div>
+            <div class="nav-bumper teal darken-3">
             </div>
         </nav>
         <!-- Mobile nav bar -->
@@ -73,7 +75,7 @@
     </section>
 
     <!-- Main content area -->
-    <main class="container">
+    <main class="">
         {% block content %}
         {% endblock %}
     </main>
