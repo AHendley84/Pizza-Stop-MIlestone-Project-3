@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
     <div class="row">
-        <div class="col s12 m8 offset-m2">
-            <div class="card-panel">
+        <div class="col s12 m10 offset-m1">
+            <div class="card-panel card-radius">
                 <!-- Page Title -->
                 <h3 class="center-align teal-text text-darken-4">
                     Edit Recipe
@@ -79,7 +79,6 @@
                                 <div class="ingredientList">
                                 {% for ingredient in recipe_id.recipe_ingredients %}
                                     <div class="input-field ingredientDiv">
-                                        <i class="fa-solid fa-carrot prefix teal-text text-darken-3 text-shadow"></i>
                                         <input id="recipe_ingredients" name="recipe_ingredients" type="text" minlength="5" 
                                             maxlength="200" class="form-label validate" value="{{ ingredient[0:] }}">
                                         <label for="recipe_ingredients"> Ingredients</label>
@@ -105,7 +104,6 @@
                                 <div class="methodList">
                                 {% for method in recipe_id.recipe_method %}                                                                 
                                     <div class="input-field methodDiv">
-                                        <i class="fa-solid fa-kitchen-set prefix teal-text text-darken-3 text-shadow"></i>
                                         <input id="recipe_method" name="recipe_method" type="text" minlength="5" maxlength="400" 
                                             class="form-label validate" value="{{ method[0:] }}">
                                         <label for="recipe_method">Method</label>
@@ -137,12 +135,12 @@
                         <!-- submit and cancel buttons -->
                         <div class="row">
                             <div class="col-6 center-align">
-                                <button class="btn waves-effect waves-light btn-flat btn-radius" type="submit">
-                                    <i class="fa-regular fa-edit"></i> Save Changes</i>
+                                <button class="btn waves-effect waves-light btn-radius" type="submit">
+                                    <i class="fa-regular fa-edit"></i> Save</i>
                                 </button>
-                                <a class="btn waves-effect waves-red btn-flat btn-radius" 
+                                <a class="btn waves-effect waves-red btn-radius" 
                                     href="{{ url_for('view_recipe', recipe_repository_id=recipe_id._id) }}">
-                                    <i class="fa-regular fa-edit"></i> Cancel Changes</i>
+                                    <i class="fa-regular fa-edit"></i> Cancel</i>
                                 </a>
                             </div>
                         </div>

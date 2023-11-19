@@ -80,3 +80,7 @@ li {
 .btn-radius {
     border-radius: 15px;
 }
+
+.card-radius {
+    border-radius: 10px;
+}

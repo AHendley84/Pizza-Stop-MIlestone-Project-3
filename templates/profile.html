@@ -2,7 +2,7 @@
 {% block content %}
     <div class="row">
         <div class="col s12 m8 offset-m2">
-            <div class="card-panel">
+            <div class="card-panel card-radius">
                 <h3 class="center-align teal-text text-darken-4">
                     {{ username.username.capitalize() }}'s Profile
                 </h3>
@@ -11,7 +11,7 @@
     </div>
 
     <!-- Code to display each of the active users favorite recipes as a card -->
-    <div class="card-panel">
+    <div class="card-panel card-radius">
         <h3 class="center-align teal-text text-darken-4">
             Favorite Recipes
         </h3>
@@ -23,7 +23,7 @@
     <div class="row s12 m10 l10">
         {% for recipe in fav %}
         <div class="col">
-            <div class="card hoverable">
+            <div class="card hoverable card-radius">
                 <div class="card-image">
                     <img src="{{ recipe.recipe_image }}">
                     <span class="card-title text-shadow"><strong>{{ recipe.recipe_name }}</strong></span>
@@ -48,11 +48,11 @@
                         </div>
                             <div class="modal-footer">
                                 <a href="{{ url_for('delete_from_favorites', recipe_repository_id=recipe._id) }}" class="modal-close btn-small red accent-4 white-text text-shadow btn-radius">
-                                        Delete
-                            </a>
-                                    <a href="{{ url_for('profile', username=session['user']) }}" class="modal-close btn-small blue-grey-text text-lighten-5 blue-grey darken-3 text-shadow btn-radius">
-                                            Cancel
-                                    </a>
+                                    Delete
+                                </a>
+                                <a href="{{ url_for('profile', username=session['user']) }}" class="modal-close btn-small blue-grey-text text-lighten-5 blue-grey darken-3 text-shadow btn-radius">
+                                    Cancel
+                                </a>
                         </div>
                     </div>
                 </div>

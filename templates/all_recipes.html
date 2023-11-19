@@ -6,8 +6,8 @@
             All Recipes
         </h3>
         <!-- Search function -->
-        <div class="row card-panel teal lighten-5">
-            <form action="{{ url_for('search') }}" method="post" class="col s12">
+        <div class="row card-panel teal lighten-5 card-radius s10 offset-s1">
+            <form action="{{ url_for('search') }}" method="post" class="col">
                 <div class="row valign-wrapper right-align">
                     <div class="input-field col s12 m8">
                         <i class="fa-solid fa-magnifying-glass prefix teal-text darken-4" title="Search"></i>
@@ -30,18 +30,18 @@
         {% if recipes|length > 0 %}
         <div class="row">
             {% for recipe in recipes %}
-            <div class="col s12 m6 l4 xl3">
-                <div class="card hoverable">
+            <div class="col s12 m6 l4">
+                <div class="card hoverable card-radius">
                     <div class="card-image">
                         <img src="{{ recipe.recipe_image }}">
                         <span class="card-title text-shadow"><strong>{{ recipe.recipe_name }}</strong></span>
                     </div>
-                    <div class="card-content">
+                    <div class="card-content card-radius">
                         <p><strong>Created By:</strong> {{ recipe.recipe_submitted_by.capitalize() }}</p>
                         <p><strong>Category:</strong> {{ recipe.recipe_category }}</p>
                         <p><strong>Serves:</strong> {{ recipe.recipe_serves }}</p>
                     </div>
-                    <div class="card-action">
+                    <div class="card-action card-radius">
                         <a class="waves-effect waves-teal red accent-4 btn btn-radius left" title="View"
                             href="{{ url_for('view_recipe', recipe_repository_id=recipe._id) }}">
                             <i class="fa-solid fa-eye"></i>
