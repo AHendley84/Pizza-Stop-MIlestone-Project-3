@@ -10,10 +10,15 @@ body {
   }
 /** End **/
 
-.logo {
-    width: 125px;
-    height: 125px;
-    object-fit: contain;
+.logo-container {
+    position: relative;
+    /* Add any other styles you want for the container */
+}
+
+.logo-container img.home-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Maintains aspect ratio */
 }
 
 .brand-logo {
@@ -83,4 +88,8 @@ li {
 
 .card-radius {
     border-radius: 10px;
+}
+
+.intro-text, p {
+    text-align: justify;
 }
