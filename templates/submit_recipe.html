@@ -1,17 +1,19 @@
 {% extends "base.html" %}
 {% block content %}
-    <div class="row">
+    <div class="row bumper">
         <div class="col s12 m8 offset-m2">
-            <div class="card-panel card-radius">
-                <h3 class="center-align teal-text text-darken-4">
-                    Submit A Recipe
+            <div class="card-panel teal darken-3 card-radius">
+                <h3 class="center-align white-text submit-header">
+                    Submit Recipe
                 </h3>
+            </div>
+            <div class="card-panel card-radius">
                 <div class="row">
                     <form class="col s12" method="POST" action="{{ url_for('submit_recipe') }}">
                         <!-- Recipe Name -->
                         <div class="row">
                             <div class="input-field col s12">
-                                <i class="fa-solid fa-signature prefix teal-text text-darken-3 text-shadow"></i>
+                                <i class="fa-solid fa-signature prefix teal-text text-lighten-1"></i>
                                 <input id="recipe_name" name="recipe_name" type="text" 
                                     minlength="5" maxlength="100" class="form-label validate">
                                 <label for="recipe_name">Recipe Name</label>
@@ -20,7 +22,7 @@
                         <!-- category selector -->
                         <div class="row">
                             <div class="input-field col s12">
-                                <i class="fa-solid fa-list prefix teal-text text-darken-3 text-shadow"></i>
+                                <i class="fa-solid fa-list prefix teal-text text-lighten-1"></i>
                                 <select class="form-select form-control validate" name="recipe_category" required>
                                     <option disabled selected></i> Select A Category</option>
                                     {% for category in categories %}
@@ -33,7 +35,7 @@
                         <!-- Serves input -->
                         <div class="row">
                             <div class="input-field col s12">
-                                <i class="fa-solid fa-users prefix teal-text text-darken-3 text-shadow"></i> 
+                                <i class="fa-solid fa-users prefix teal-text text-lighten-1"></i> 
                                 <input id="recipe_serves" name="recipe_serves" type="text" 
                                     minlength="1" maxlength="100" class="form-label validate">
                                 <label for="recipe_serves">Serves</label>
@@ -42,7 +44,7 @@
                         <!-- prep time input -->
                         <div class="row">
                             <div class="input-field col s12">
-                                <i class="fa-solid fa-hourglass-start prefix teal-text text-darken-3 text-shadow"></i>
+                                <i class="fa-solid fa-hourglass-start prefix teal-text text-lighten-1"></i>
                                 <input id="recipe_prep_time" name="recipe_prep_time" type="text" 
                                     minlength="5" maxlength="100" class="form-label validate">
                                 <label for="recipe_prep_time">Preparation Time</label>
@@ -51,7 +53,7 @@
                         <!-- cook time input -->
                         <div class="row">
                             <div class="input-field col s12">
-                                <i class="fa-solid fa-hourglass-end prefix teal-text text-darken-3 text-shadow"></i>
+                                <i class="fa-solid fa-hourglass-end prefix teal-text text-lighten-1"></i>
                                 <input id="recipe_cook_time" name="recipe_cook_time" type="text" 
                                 minlength="5" maxlength="50" class="form-label validate">
                                 <label for="recipe_cook_time">Cook Time</label>
@@ -60,7 +62,7 @@
                         <!-- description input -->
                         <div class="row">
                             <div class="input-field col s12">
-                                <i class="fa-solid fa-pencil prefix teal-text text-darken-3 text-shadow"></i>
+                                <i class="fa-solid fa-pencil prefix teal-text text-lighten-1"></i>
                                 <textarea id="recipe_description" name="recipe_description" 
                                     minlength="5" maxlength="1000" class="form-label materialize-textarea validate"></textarea>
                                 <label for="recipe_description">Description</label>
@@ -81,10 +83,10 @@
                         <!-- add and remove ingredient button -->
                         <div class="row">
                             <div class="col-12">
-                                <button type="button" class="waves-effect waves-light btn btn-radius" id="addIngredientsBtn" title="Add Ingredient">
+                                <button type="button" class="waves-effect waves-light btn btn-radius green darken-4" id="addIngredientsBtn" title="Add Ingredient">
                                     <i class="fa-solid fa-plus"></i>
                                 </button>
-                                <button type="button" class="waves-effect waves-light btn btn-radius" id="removeIngredientsBtn" title="Remove Ingredient">
+                                <button type="button" class="waves-effect waves-light btn btn-radius red darken-4" id="removeIngredientsBtn" title="Remove Ingredient">
                                     <i class="fa-solid fa-minus"></i>
                                 </button>
                             </div>
@@ -104,10 +106,10 @@
                         <!-- add and remove method button -->
                         <div class="row">
                             <div class="col-12">
-                                <button type="button" class="waves-effect waves-light btn btn-radius" id="addMethodBtn" title="Add Method">
+                                <button type="button" class="waves-effect waves-light btn btn-radius green darken-4" id="addMethodBtn" title="Add Method Step">
                                     <i class="fa-solid fa-plus"></i>
                                 </button>
-                                <button type="button" class="waves-effect waves-light btn btn-radius" id="removeMethodBtn" title="Remove Method">
+                                <button type="button" class="waves-effect waves-light btn btn-radius red darken-4" id="removeMethodBtn" title="Remove Method Step">
                                     <i class="fa-solid fa-minus"></i>
                                 </button>
                             </div>
@@ -115,7 +117,7 @@
                         <!-- recipe image input -->
                         <div class="row">
                             <div class="input-field col s12">
-                                <i class="fa-solid fa-image prefix teal-text text-darken-3 text-shadow"></i>
+                                <i class="fa-solid fa-image prefix teal-text text-lighten-1"></i>
                                 <input id="recipe_image" name="recipe_image" type="text" class="form-label validate">
                                 <label for="recipe_image">Recipe Image (URL)</label>
                             </div>
@@ -123,8 +125,9 @@
                         <!-- submit button -->
                         <div class="row">
                             <div class="col-12 center-align">
-                                <button class="btn waves-effect waves-light text-shadow btn-radius" type="submit">
-                                    <i class="fa-regular fa-paper-plane"></i> Submit</i>
+                                <button class="btn waves-effect waves-light text-shadow btn-radius green darken-4" type="submit" title="Submit">
+                                    <i class="fa-regular fa-paper-plane"></i>
+                                    Submit
                                 </button>
                             </div>
                         </div>

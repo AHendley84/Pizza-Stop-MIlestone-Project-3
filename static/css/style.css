@@ -116,7 +116,7 @@ nav .sidenav-trigger {
 }
 /** End profile **/
 
-/** All recipes template**/
+/** All recipes template **/
 .all-recipes-header {
     font-family: 'Bebas Neue', sans-serif;
 }
@@ -138,6 +138,12 @@ nav .sidenav-trigger {
     margin-bottom: 0;
 }
 /** End all recipes **/
+
+/** Submit recipe template **/
+.submit-header {
+    font-family: 'Bebas Neue', sans-serif;
+}
+/** End submit recipes **/
 
 .card {
     width: 300px;
