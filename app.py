@@ -128,7 +128,7 @@ def profile(username):
     return redirect(url_for("login"))
 
 
-# Add recipe to a favorites array held under the users profile
+# Add recipe to a favorites array under the users profile
 @app.route("/add_to_favorites/<recipe_repository_id>", methods=["GET", "POST"])
 def add_to_favorites(recipe_repository_id):
     if session["user"]:
@@ -147,7 +147,7 @@ def add_to_favorites(recipe_repository_id):
     return redirect(url_for('get_recipes'))
 
 
-#Untested feature
+# Delete a recipe from the favorites array under the user profile.
 @app.route('/delete_from_favorites/<recipe_repository_id>')
 def delete_from_favorites(recipe_repository_id):
     user_profile = mongo.db.users.find_one(

@@ -62,12 +62,12 @@
     </header>
 
     <!-- Area to display flash messages to the user -->
-    <section>
+    <section class="container">
         {% with messages = get_flashed_messages() %}
             {% if messages %}
                 {% for message in messages %}
-                    <div class="row flashes">
-                        <h4 class="teal lighten-3 teal-text darken-4-text center-align">{{ message }}</h4>
+                    <div class="row flashes card-panel teal lighten-3 card-radius s8 m6 l4">
+                        <p class=" teal-text darken-4-text center-align flash-message">{{ message }}</p>
                     </div>
                 {% endfor %}
             {% endif %}

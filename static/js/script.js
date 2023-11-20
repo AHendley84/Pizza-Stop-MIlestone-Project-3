@@ -2,8 +2,14 @@ $(document).ready(function(){
     $(".sidenav").sidenav({edge: "right"});
     $('select').formSelect();
     $('.modal').modal();
+    // Function to clear flashed messages after 5 seconds (5000 milliseconds)
+    setTimeout(function() {
+        $('.flashes').fadeOut('slow', function() {
+            $(this).remove();
+        });
+    }, 5000);
 
-    /** Validation for Materialize drop down */
+    // Validation for Materialize drop down
     validateMaterializeSelect();
     function validateMaterializeSelect() {
         let classValid = { "border-bottom": "1px solid #4caf50", "box-shadow": "0 1px 0 0 #4caf50" };
@@ -33,7 +39,7 @@ $(document).ready(function(){
     }
   });
 
-/** JavaScript to operate the add and remove ingredient  */
+// JavaScript to operate the add and remove ingredient
 let addIngredientsBtn = document.getElementById('addIngredientsBtn');
 let ingredientList = document.querySelector('.ingredientList');
 let ingredientDiv = document.querySelectorAll('.ingredientDiv')[0];
@@ -52,7 +58,7 @@ removeIngredientsBtn.addEventListener('click', function(){
     }
 });
 
-/** JavaScript to operate the and remove method */
+// JavaScript to operate the and remove method
 let addMethodBtn = document.getElementById('addMethodBtn');
 let methodList = document.querySelector('.methodList');
 let methodDiv = document.querySelectorAll('.methodDiv')[0];
