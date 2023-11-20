@@ -1,23 +1,28 @@
 {% extends "base.html" %}
 {% block content %}
-    <div class="row">
+    <div class="row bumper">
         <div class="col s12 m8 offset-m2">
-            <div class="card-panel card-radius">
-                <h3 class="center-align teal-text text-darken-4">
+            <div class="card-panel card-radius teal darken-3">
+                <h3 class="center-align white-text profile-user-header">
                     {{ username.username.capitalize() }}'s Profile
                 </h3>
+                <p class="profile-p center-align white-text">
+                    Recipes favorited: {{ fav_count }}
+                </p>
+                <p class="center-align white-text">
+                    Recipes created: {{ created_count }}
+                </p>
             </div>
         </div>
     </div>
 
     <!-- Code to display each of the active users favorite recipes as a card -->
-    <div class="card-panel card-radius">
-        <h3 class="center-align teal-text text-darken-4">
-            Favorite Recipes
-        </h3>
-        <h4 class="center-align teal-text text-darken-4">
-            Recipes favorited: {{ fav_count }}
-        </h4>
+    <div class="col s12 m8 offset-m2">
+        <div class="card-panel card-radius teal darken-1">
+            <h3 class="center-align white-text profile-user-header">
+                Favorite Recipes
+            </h3>
+        </div>
     </div>
     {% if fav|length > 0 %}
     <div class="row s12 m10 l10">
