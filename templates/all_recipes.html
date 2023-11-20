@@ -1,24 +1,26 @@
 {% extends "base.html" %}
 {% block content %}
     <!-- Page Header -->
-    <div class="col s12 recipe-repo">
-        <h3 class="center-align teal-text text-darken-4">
-            All Recipes
-        </h3>
+    <div class="col s12 recipe-repo bumper">
+        <div class="card-panel card-radius teal darken-3">
+            <h3 class="center-align white-text all-recipes-header">
+                All Recipes
+            </h3>
+        </div>
         <!-- Search function -->
-        <div class="row card-panel teal lighten-5 card-radius s10 offset-s1">
+        <div class="row card-panel teal lighten-3 card-radius s10 offset-s1 search-container">
             <form action="{{ url_for('search') }}" method="post" class="col">
-                <div class="row valign-wrapper right-align">
+                <div class="row valign-wrapper right-align search-box">
                     <div class="input-field col s12 m8">
-                        <i class="fa-solid fa-magnifying-glass prefix teal-text darken-4" title="Search"></i>
+                        <i class="fa-solid fa-magnifying-glass prefix white-text text-shadow search-icon" title="Search"></i>
                         <input type="text" name="query" id="query" minlength="2" class="validate" required>
-                        <label for="query">Search</label>
+                        <label class="white-text search-label" for="query">SEARCH</label>
                     </div>
                     <div class="col s12 m4">
                         <button type="submit" class="btn-flat teal darken-4 text-shadow white-text btn-radius" title="Search">
                             <i class="fa-solid fa-magnifying-glass-arrow-right"></i>
                         </button>
-                        <a href="{{ url_for('get_recipes') }}" class="red btn text-shadow btn-radius" title="Reset">
+                        <a href="{{ url_for('get_recipes') }}" class="red darken-4 btn text-shadow btn-radius" title="Reset">
                             <i class="fa-solid fa-rotate-left"></i>
                         </a>
                     </div>

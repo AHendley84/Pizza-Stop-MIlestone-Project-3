@@ -79,7 +79,7 @@ nav .sidenav-trigger {
     text-decoration: none;
     color: white;
 }
-/** End base template **/
+/** End base **/
 
 /** Home template **/
 .bumper {
@@ -103,7 +103,7 @@ nav .sidenav-trigger {
     text-align: justify;
     font-size: 16px;
 }
-/** End home template **/
+/** End home **/
 
 /** Profile template **/
 .profile-user-header {
@@ -112,9 +112,32 @@ nav .sidenav-trigger {
 
 .profile-p {
     font-family: 'Ubuntu', sans-serif;
-    font-size: 16px;
+    font-size: 18px;
 }
-/** End profile template **/
+/** End profile **/
+
+/** All recipes template**/
+.all-recipes-header {
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.search-label {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+}
+
+.search-container {
+    padding: 1px;
+}
+
+.search-icon {
+    padding-right: 15px;
+}
+
+.search-box {
+    margin-bottom: 0;
+}
+/** End all recipes **/
 
 .card {
     width: 300px;
