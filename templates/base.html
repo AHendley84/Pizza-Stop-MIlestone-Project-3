@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
     {% block styles %}
     {% endblock %}
-    <title>Pizza Stop</title>
+    <title>PIZZA STOP</title>
 </head>
 <body>
 
@@ -21,10 +21,10 @@
 
     <header>
         <!-- Main nav bar -->
-        <nav class="nav-extended text-shadow teal darken-4">
+        <nav class="nav-extended teal darken-4">
             <div class="nav-wrapper">
-                <a href="{{ url_for('home') }}" class="text-shadow white-text brand-logo center-align">
-                    PIZZA STOP!
+                <a href="{{ url_for('home') }}" class="white-text brand-logo center-align base-header">
+                    PIZZA STOP
                 </a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
                 <ul class="right hide-on-med-and-down center-align">
@@ -45,8 +45,8 @@
             </div>
         </nav>
         <!-- Mobile nav bar -->
-        <ul class="sidenav" id="mobile-demo">
-            <li><h4 class="center-align teal-text text-darken-3">PIZZA STOP!</h4></li>
+        <ul class="sidenav base-header" id="mobile-demo">
+            <li><h4 class="center-align teal-text text-darken-3">PIZZA STOP</h4></li>
             <li><a href="{{ url_for('home') }}">Home</a></li>
             {% if session.user %}
                 <li><a href="{{ url_for('profile', username=session['user']) }}">{{ session['user'].capitalize() }}'s Profile</a></li>
@@ -81,16 +81,15 @@
     </main>
 
     <!-- Footer -->
-    <footer class="page-footer text-shadow teal darken-3">
+    <footer class="page-footer teal darken-3">
         <div class="container">
             <div class="row">
                 <div class="col l6 s12">
-                    <h5 class="white-text">Footer Content</h5>
-                    <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.
+                    <p class="white-text footer-slogan center-align">"Craft Your Slice of Perfection"
                     </p>
                 </div>
                 <div class="col l4 offset-l2 s12">
-                    <h5 class="white-text">Links</h5>
+                    <h5 class="white-text footer-header">Links</h5>
                     <ul class="footer-links">
                         <li><a href="{{ url_for('home') }}">Home</a></li>
                         {% if session.user %}
@@ -108,8 +107,8 @@
             </div>
         </div>
         <div class="footer-copyright teal darken-4">
-            <div class="container social-media">
-                © 2023 Pizza Stop!
+            <div class="container social-media footer-header">
+                © 2023 Pizza Stop
                 <a class="grey-text text-lighten-4 right" href="#!"><i class="fa-brands fa-facebook"></i> </a>
                 <a class="grey-text text-lighten-4 right" href="#!"><i class="fa-brands fa-instagram"></i> </a>
                 <a class="grey-text text-lighten-4 right" href="#!"><i class="fa-brands fa-linkedin"></i> </a>

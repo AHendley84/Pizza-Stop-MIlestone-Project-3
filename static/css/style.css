@@ -1,5 +1,6 @@
-/** Imported fonts **/
+/** Import fonts **/
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+/** End import **/
 
 /** Pins footer to the bottom **/
 body {
@@ -11,26 +12,74 @@ body {
   main {
     flex: 1 0 auto;
   }
-/** End **/
+/** End footer pin **/
+
+/** Styling **/
+.btn-radius {
+    border-radius: 15px;
+}
+
+.card-radius {
+    border-radius: 10px;
+}
+/** End styling **/
+
+/** Base template **/
+.base-header, h4 {
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.base-header li a {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 18px;
+}
 
 .flash-message {
-    font-family: 'Ubuntu', sans-serif;
     font-weight: bold;
     font-size: 22px;
     margin: 5px 5px 5px 5px;
-}
-
-.bumper {
-    padding-top: 50px;
 }
 
 .nav-bumper {
     padding: 20px;
 }
 
+.social-media i {
+    padding-right: 15px;
+    font-size: 20px;
+}
+
+.text-shadow {
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+}
+
+.footer-header {
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.footer-slogan {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
+}
+
+.footer-links a {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+    color: white;
+}
+/** End base template **/
+
+/** Home template **/
+.bumper {
+    padding-top: 10px;
+}
+
 .logo-container {
     position: relative;
-    padding: 20px;
+    padding: 5px;
+    background: rgb(38,166,154);
+    background: radial-gradient(circle, rgba(38,166,154,1) 0%, rgba(0,77,64,1) 100%);
 }
 
 .logo-container img.home-logo {
@@ -39,22 +88,11 @@ body {
     object-fit: contain;
 }
 
-.brand-logo {
-    margin-left: 10px;
+.intro-text, p {
+    text-align: justify;
+    font-size: 16px;
 }
-
-.text-shadow {
-    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
-}
-
-.social-media i {
-    padding-right: 15px;
-    font-size: 20px;
-}
-
-.flashes h4 {
-    line-height: 2;
-}
+/** End home template **/
 
 .card {
     width: 300px;
@@ -76,34 +114,7 @@ body {
     height: 132px;
 }
 
-.btn-flat {
-    margin: 5px;
-}
-
 li {
     padding-left: 10px;
     padding-bottom: 2px;
-}
-
-.footer-links a {
-    text-decoration: none;
-    color: white;
-}
-
-.home-logo {
-    width: 275px;
-    height: 275px;
-    object-position: 0 0;
-}
-
-.btn-radius {
-    border-radius: 15px;
-}
-
-.card-radius {
-    border-radius: 10px;
-}
-
-.intro-text, p {
-    text-align: justify;
 }
