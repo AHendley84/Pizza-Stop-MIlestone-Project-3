@@ -160,7 +160,7 @@ def delete_from_favorites(recipe_repository_id):
         user_profile, {"$pull": {"favorites": ObjectId(
             recipe_repository_id)}})
     flash("Recipe removed from favorites")
-    return redirect(url_for("profile", username=session["user"]))
+    return redirect(request.referrer)
 
 
 # Log user out
@@ -212,7 +212,7 @@ def edit_recipe(recipe_repository_id):
         # Check if the user in session matches the user who submitted the recipe
         if session.get("user") != recipe.get("recipe_submitted_by"):
             flash("You are not authorized to edit this recipe.")
-            return redirect(url_for('get_recipes'))
+            return redirect(request.referrer)
         
         submit = {
             "recipe_name": request.form.get("recipe_name"),
@@ -229,12 +229,12 @@ def edit_recipe(recipe_repository_id):
 
         mongo.db.recipe_repository.replace_one({"_id": ObjectId(recipe_repository_id)}, submit)
         flash("Recipe Successfully Updated")
-        return redirect(url_for('get_recipes'))
+        return redirect(request.referrer)
 
     recipe = mongo.db.recipe_repository.find_one({"_id": ObjectId(recipe_repository_id)})
     if session.get("user") != recipe.get("recipe_submitted_by"):
         flash("You are not authorised to edit this recipe.")
-        return redirect(url_for('get_recipes'))
+        return redirect(request.referrer)
 
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("edit_recipe.html", recipe_id=recipe, categories=categories)
