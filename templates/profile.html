@@ -3,7 +3,7 @@
     <div class="row bumper">
         <div class="col s12 m8 offset-m2">
             <div class="card-panel card-radius teal darken-3">
-                <h3 class="center-align white-text profile-user-header">
+                <h3 class="center-align white-text profile-header">
                     {{ username.username.capitalize() }}'s Profile
                 </h3>
                 <p class="profile-p center-align white-text">
@@ -17,6 +17,7 @@
     </div>
 
     <!-- Code to display each of the active users favorite recipes as a card -->
+    {% if fav|length > 0 %}
     <div class="col s12 m8 offset-m2">
         <div class="card-panel card-radius teal darken-1">
             <h3 class="center-align white-text profile-header">
@@ -24,7 +25,6 @@
             </h3>
         </div>
     </div>
-    {% if fav|length > 0 %}
     <div class="row s12 m10 l10">
         {% for recipe in fav|reverse %}
         <div class="col">
@@ -69,7 +69,7 @@
     <div class="row">
         <div class="card-panel red darken-4 card-radius profile-header">
             <h3 class="center-align white-text">
-                No Recipes Found
+                No Recipes Favorited
             </h3>
         </div>
     </div>
