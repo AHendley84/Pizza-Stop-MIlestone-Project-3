@@ -31,19 +31,19 @@
             <div class="card hoverable card-radius">
                 <div class="card-image">
                     <img src="{{ recipe.recipe_image }}">
-                    <span class="card-title text-shadow"><strong>{{ recipe.recipe_name }}</strong></span>
+                    <span class="card-title text-shadow recipe-name">{{ recipe.recipe_name }}</span>
                 </div>
                 <div class="card-content">
-                    <p><strong>Created By:</strong> {{ recipe.recipe_submitted_by }}</p>
+                    <p><strong>Created By:</strong> {{ recipe.recipe_submitted_by.capitalize() }}</p>
                     <p><strong>Category:</strong> {{ recipe.recipe_category }}</p>
                     <p><strong>Serves:</strong> {{ recipe.recipe_serves }}</p>
                 </div>
                 <div class="card-action">
-                    <a class="waves-effect waves-teal red accent-4 btn btn-radius" title="View"
+                    <a class="waves-effect waves-teal blue accent-4 btn btn-radius left" title="View"
                         href="{{ url_for('view_recipe', recipe_repository_id=recipe._id) }}">
                         <i class="fa-solid fa-eye"></i>
                     </a>
-                    <button data-target="{{ recipe._id }}" class="btn waves-effect waves-red accent-4 btn-flat modal-trigger btn-radius" title="Delete">
+                    <button data-target="{{ recipe._id }}" class="btn waves-effect red darken-4 modal-trigger btn-radius right" title="Delete">
                         <i class="fa-solid fa-trash"></i></i>
                     </button>
                     <!-- Modal Structure -->
@@ -55,7 +55,7 @@
                                 <a href="{{ url_for('delete_from_favorites', recipe_repository_id=recipe._id) }}" class="modal-close btn-small red accent-4 white-text text-shadow btn-radius">
                                     Delete
                                 </a>
-                                <a href="{{ url_for('profile', username=session['user']) }}" class="modal-close btn-small blue-grey-text text-lighten-5 blue-grey darken-3 text-shadow btn-radius">
+                                <a href="{{ url_for('profile', username=session['user']) }}" class="modal-close btn-small blue-grey-text text-lighten-5 green darken-4 text-shadow btn-radius">
                                     Cancel
                                 </a>
                         </div>

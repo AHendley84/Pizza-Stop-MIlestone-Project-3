@@ -154,6 +154,13 @@ nav .sidenav-trigger {
 }
 /** End submit recipes **/
 
+/** My recipes template **/
+.recipe-repo {
+    font-family: 'Bebas Neue', sans-serif;
+}
+/** End my recipes **/
+
+/** Cards **/
 .card {
     width: 300px;
     height: 400px;
@@ -173,6 +180,22 @@ nav .sidenav-trigger {
     width: 300px;
     height: 132px;
 }
+
+.card .card-title {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.card .card-content p {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
+}
+
+
+/** End cards **/
+
+
 
 li {
     padding-left: 10px;

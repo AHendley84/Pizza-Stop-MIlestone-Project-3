@@ -140,15 +140,15 @@ def add_to_favorites(recipe_repository_id):
         favorite_recipes = mongo.db.users.find_one(current_user)["favorites"]
         if ObjectId(recipe_repository_id) in favorite_recipes:
             flash("This recipe is already in your favorites")
-            return redirect(url_for("get_recipes"))
+            return redirect(request.referrer)
         user_profile = mongo.db.users.find_one(
             {'username': session['user'].lower()})
         mongo.db.users.update_one(
             user_profile, {"$push": {"favorites": ObjectId(
                 recipe_repository_id)}})
         flash("Recipe added to favorites")
-        return redirect(url_for('get_recipes'))
-    return redirect(url_for('get_recipes'))
+        return redirect(request.referrer)
+    return redirect(request.referrer)
 
 
 # Delete a recipe from the favorites array under the user profile.
@@ -245,7 +245,7 @@ def edit_recipe(recipe_repository_id):
 def delete_recipe(recipe_repository_id):
     mongo.db.recipe_repository.delete_one({"_id": ObjectId(recipe_repository_id)})
     flash("Recipe Successfully Removed")
-    return redirect(url_for('get_recipes'))
+    return redirect(request.referrer)
 
 
 if __name__ == "__main__":
