@@ -19,7 +19,7 @@
     <!-- Code to display each of the active users favorite recipes as a card -->
     <div class="col s12 m8 offset-m2">
         <div class="card-panel card-radius teal darken-1">
-            <h3 class="center-align white-text profile-user-header">
+            <h3 class="center-align white-text profile-header">
                 Favorite Recipes
             </h3>
         </div>
@@ -66,9 +66,13 @@
         {% endfor %}
     </div>
     {% else %}
-    <h3 class="center-align red-text text-darken-4">
-        No Recipes Found
-    </h3>
+    <div class="row">
+        <div class="card-panel red darken-4 card-radius profile-header">
+            <h3 class="center-align white-text">
+                No Recipes Found
+            </h3>
+        </div>
+    </div>
     {% endif %}
 </div>
 {% endblock %}
