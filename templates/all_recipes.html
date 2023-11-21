@@ -44,11 +44,11 @@
                         <p><strong>Serves:</strong> {{ recipe.recipe_serves }}</p>
                     </div>
                     <div class="card-action card-radius">
-                        <a class="waves-effect waves-teal red accent-4 btn btn-radius left" title="View"
+                        <a class="waves-effect waves-teal blue accent-4 btn btn-radius left" title="View"
                             href="{{ url_for('view_recipe', recipe_repository_id=recipe._id) }}">
                             <i class="fa-solid fa-eye"></i>
                         </a>
-                        <a class="waves-effect waves-teal green darken-4 btn btn-radius right" title="Add to Favorites"
+                        <a class="waves-effect waves-teal red darken-4 btn btn-radius right" title="Add to Favorites"
                             href="{{ url_for('add_to_favorites', recipe_repository_id=recipe._id) }}">
                             <i class="fa-solid fa-heart"></i>
                         </a>
