@@ -143,6 +143,15 @@ nav .sidenav-trigger {
 .submit-header {
     font-family: 'Bebas Neue', sans-serif;
 }
+
+.submit-button {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 18px;
+}
+
+.submit-padding {
+    padding-right: 10px;
+}
 /** End submit recipes **/
 
 .card {
