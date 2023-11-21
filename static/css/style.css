@@ -160,6 +160,12 @@ nav .sidenav-trigger {
 }
 /** End my recipes **/
 
+/** View recipes template **/
+.card-radius .row {
+    margin: 0;
+}
+/** End view recipes **/
+
 /** Cards **/
 .card {
     width: 300px;
@@ -191,7 +197,6 @@ nav .sidenav-trigger {
     font-family: 'Ubuntu', sans-serif;
     font-size: 16px;
 }
-
 
 /** End cards **/
 
