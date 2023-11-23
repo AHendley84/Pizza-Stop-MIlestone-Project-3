@@ -7,15 +7,15 @@
             </h3>
         </div>
         <!-- Search function -->
-        <div class="row card-panel teal lighten-3 card-radius">
+        <div class="row card-panel teal lighten-3 card-radius s8 offset-s2 center">
             <form action="{{ url_for('search') }}" method="post" class="col s12">
                 <div class="row valign-wrapper center-align search-box">
-                    <div class="input-field col s8 m8">
+                    <div class="input-field col s6 m8 l8">
                         <i class="fa-solid fa-magnifying-glass prefix white-text text-shadow search-icon" title="Search"></i>
                         <input type="text" name="query" id="query" minlength="2" class="validate" required>
                         <label class="white-text search-label" for="query">SEARCH</label>
                     </div>
-                    <div class="col s4 m4">
+                    <div class="col s6 m4 l4">
                         <button type="submit" class="btn-flat teal darken-4 text-shadow white-text btn-radius" title="Search">
                             <i class="fa-solid fa-magnifying-glass-arrow-right"></i>
                         </button>
@@ -31,9 +31,9 @@
         {% if recipes|length > 0 %}
         <div class="row">
             {% for recipe in recipes|reverse %}
-            <div class="col">
+            <div class="col s12 m6 l3 center">
                 <div class="card hoverable card-radius">
-                    <div class="card-image s6 offset-3">
+                    <div class="card-image">
                         <img src="{{ recipe.recipe_image }}">
                         <span class="card-title text-shadow"><strong>{{ recipe.recipe_name }}</strong></span>
                     </div>
@@ -61,5 +61,4 @@
                 No Recipes Found
             </h3>
         {% endif %}
-
 {% endblock %}

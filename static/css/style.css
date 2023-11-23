@@ -55,7 +55,6 @@ body {
     font-family: 'Ubuntu', sans-serif;
     font-size: 16px;
 }
-
 /** End cards **/
 
 /** Base template **/
@@ -136,6 +135,10 @@ nav .sidenav-trigger {
 .intro-text, p {
     text-align: justify;
     font-size: 16px;
+}
+
+.home-login, a {
+    align-items: center;
 }
 /** End home **/
 
