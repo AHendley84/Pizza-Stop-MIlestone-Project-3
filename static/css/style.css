@@ -24,6 +24,40 @@ body {
 }
 /** End styling **/
 
+/** Cards **/
+.card {
+    width: 300px;
+    height: 400px;
+}
+
+.card-image {
+    width: 300px;
+    height: 200px;
+}
+
+.card-action {
+    width: 300px;
+    height: 54px;
+}
+
+.card-content {
+    width: 300px;
+    height: 132px;
+}
+
+.card .card-title {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.card .card-content p {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
+}
+
+/** End cards **/
+
 /** Base template **/
 nav .brand-logo {
     font-family: 'Bebas Neue', sans-serif;
@@ -166,41 +200,33 @@ nav .sidenav-trigger {
 }
 /** End view recipes **/
 
-/** Cards **/
-.card {
-    width: 300px;
-    height: 400px;
+/** Edit recipe template **/
+.edit-header {
+    font-family: 'Bebas Neue', sans-serif;
+}
+/** End edit recipe **/
+
+/** Login template **/
+.login-header {
+    font-family: 'Bebas Neue', sans-serif;
 }
 
-.card-image {
-    width: 300px;
-    height: 200px;
-}
-
-.card-action {
-    width: 300px;
-    height: 54px;
-}
-
-.card-content {
-    width: 300px;
-    height: 132px;
-}
-
-.card .card-title {
+.login-register {
     font-family: 'Ubuntu', sans-serif;
-    font-size: 26px;
     font-weight: bold;
 }
+/** End login **/
 
-.card .card-content p {
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 16px;
+/** Register template **/
+.register-header {
+    font-family: 'Bebas Neue', sans-serif;
 }
 
-/** End cards **/
-
-
+.register-login {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+}
+/** End register **/
 
 li {
     padding-left: 10px;

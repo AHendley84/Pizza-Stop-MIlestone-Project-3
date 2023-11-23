@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
-    <h3 class="center-align">Log In</h3>
+    <div class="card-panel card-radius teal darken-3">
+        <h3 class="center-align white-text text-shadow login-header">Log In</h3>
+    </div>
     <div class="row">
         <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('login') }}">
             <div class="card-panel card-radius">
@@ -26,8 +28,8 @@
                 </div>
                 <!-- Log in button -->
                 <div class="row center-align">
-                    <button class="btn waves-effect waves-light text-shadow teal darken-4 btn-radius" type="submit" name="action">Log In
-                        <i class="fas fa-paper-plane right"></i>
+                    <button class="btn waves-effect waves-light text-shadow green darken-4 btn-radius" type="submit" name="action">
+                        <i class="fa-solid fa-right-to-bracket"></i>
                     </button>
                 </div>
             </div>
@@ -36,8 +38,8 @@
 
     <!-- Link to register if not done so already -->
     <div class="row">
-        <div class="col s12 center-align">
-            Not yet registered? <a href="{{ url_for('register') }}" class="teal-text text-darken-3">Register for an account here!</a>
+        <div class="col s12 center-align login-register">
+            Not yet registered? <a href="{{ url_for('register') }}" class="teal-text text-darken-3">Register for an account!</a>
         </div>
     </div>
 
