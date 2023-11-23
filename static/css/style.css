@@ -26,22 +26,22 @@ body {
 
 /** Cards **/
 .card {
-    width: 300px;
+    width: 250px;
     height: 400px;
 }
 
-.card-image {
-    width: 300px;
+.card .card-image img {
+    width: 250px;
     height: 200px;
 }
 
 .card-action {
-    width: 300px;
+    width: 250px;
     height: 54px;
 }
 
 .card-content {
-    width: 300px;
+    width: 250px;
     height: 132px;
 }
 
@@ -238,5 +238,13 @@ li {
 }
 
 @media only screen and (max-width: 600px) {
+
+}
+
+@media only screen and (max-width: 992px) {
+
+}
+
+@media only screen and (max-width: 1200px) {
 
 }
