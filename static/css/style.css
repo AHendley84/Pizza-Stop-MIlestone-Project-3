@@ -171,6 +171,7 @@ nav .sidenav-trigger {
 .search-box {
     margin-bottom: 0;
 }
+
 /** End all recipes **/
 
 /** Submit recipe template **/
@@ -231,4 +232,8 @@ nav .sidenav-trigger {
 li {
     padding-left: 10px;
     padding-bottom: 2px;
+}
+
+@media only screen and (max-width: 600px) {
+
 }
