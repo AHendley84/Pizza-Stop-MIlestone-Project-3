@@ -199,6 +199,29 @@ nav .sidenav-trigger {
 /** End my recipes **/
 
 /** View recipes template **/
+.view-container {
+    padding: 0;
+    position: relative;
+    margin: 0;
+}
+
+.view-recipe-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0;
+}
+
+.view-container h3 {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
 .card-radius .row {
     margin: 0;
 }
