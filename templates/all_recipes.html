@@ -29,12 +29,12 @@
 
         <!-- Code to display each of the recipes as a card -->
         {% if recipes|length > 0 %}
-            <div class="row center">
+            <div class="row">
                 {% for recipe in recipes|reverse %}
                     <div class="col card-container">
                         <div class="card hoverable card-radius">
                             <div class="card-image">
-                                <img src="{{ recipe.recipe_image }}">
+                                <img src="{{ recipe.recipe_image }}" class="card-radius">
                                 <span class="card-title text-shadow"><strong>{{ recipe.recipe_name }}</strong></span>
                             </div>
                             <div class="card-content card-radius">
