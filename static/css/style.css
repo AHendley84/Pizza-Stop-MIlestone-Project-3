@@ -55,17 +55,32 @@ body {
     font-family: 'Ubuntu', sans-serif;
     font-size: 16px;
 }
+
+.align-right {
+    padding-left: 2vw;
+}
 /** End cards **/
 
 /** Base template **/
-nav .brand-logo {
+.nav-wrapper .brand-logo {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 48px;
-    margin-top: 30px;
+    margin: 0;
+    padding-top: 30px;
 }
 
-nav .sidenav-trigger {
-    margin-top: 30px;
+.nav-wrapper ul {
+    padding-top: 30px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+}
+
+.nav .brand-logo a {
+    padding-left: 0px;
+}
+
+.sidenav-trigger i {
+    padding-top: 30px;
 }
 
 .nav-extended {
@@ -266,13 +281,16 @@ li {
 }
 
 @media only screen and (min-width: 600px) {
-    
+
 }
 
-@media only screen and (max-width: 992px) {
-
+@media only screen and (min-width: 992px) {
+    .nav-wrapper .brand-logo {
+        padding-left: 30px;
+    }
 }
 
 @media only screen and (max-width: 1200px) {
+
 
 }
