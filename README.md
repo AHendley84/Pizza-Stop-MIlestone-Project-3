@@ -1,9 +1,9 @@
-# Pizza-Stop-MIlestone-Project-3
+# Pizza-Stop-Milestone-Project-3
 ## Back End Development Project
 
 For my third milestone project I have designed and developed a website using HTML, CSS and JavaScript, Python, Flask and MongoDB. The purpose of the site is to bring Pizza lovers together to share dough recipes, topping combinations and side dishes. Users are able to create a user profile to upload, amend and delete their own recipes whilst being able to add other users uploads to their recipe collection, but preventing them from deleting or amending them.
 
-![Visual Representation]()
+![Visual Representation](static/documentation/visual-pizza-stop.png)
 
 [Live version of the site](https://pizza-stop-5bc4c092c1c7.herokuapp.com/)
 
@@ -15,6 +15,7 @@ For my third milestone project I have designed and developed a website using HTM
 
     - As a first time visitor, I would like to be able to understand the purpose of the website.
     - As a first time visitor, I would like to register for a free account.
+    - As a first time visitor, start browsing the existing recipes.
 
 - Returning Visitor
 
