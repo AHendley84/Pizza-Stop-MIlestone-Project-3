@@ -50,8 +50,8 @@ Each link contains wireframes for mobile, tablet and desktop.
 ---
 ## Features
 ---
-### Index/Home Page
-The Index/Home Page is the introduction to the game that provides an explanation on how to play, how the cards are dealt and what you need to win the game.
+### Home/Base Page
+The Home/Base Page is the introduction to the website, providing an insight into its purpose and providing the user the option to login or register. It consists of two separate pages, the base and the home pages.
 
 ![Index/Home page image]()
 
