@@ -28,21 +28,25 @@ For my third milestone project I have designed and developed a website using HTM
     - As the website administrator, I would like to be able to manage the list of users registered to the site.
 
 ### Color Scheme
-The colors selected for the color palette 
+The colors selected for the color palette are based on the Materialize color palette, specifically the teal palette:
 
-![Color Palette]()
+![Color Palette](static/documentation/color-palette.png)
 
 
 ### Typography
-Google Fonts was used to import the 'Russo One' and the 'Exo 2' fonts into the style.css file for use across all pages.
+Google Fonts was used to import the 'Bebas Neue' and the 'Ubuntu' fonts into the style.css file for use across all pages.
 
 ### Wireframes
 Each link contains wireframes for mobile, tablet and desktop.
-- [Home/Index]()
-- [Game Page]()
-- [Player Win Page]()
-- [Computer Win Page]()
-- [404 Page Page]()
+- [Home/Base]()
+- [Register]()
+- [Login]()
+- [Profile]()
+- [Recipes Library]()
+- [Add Recipe]()
+- [My Recipes]()
+- [View Recipe]()
+- [Edit Recipe]()
 ---
 ## Features
 ---
