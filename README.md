@@ -73,18 +73,29 @@ The Register page is where new users can go to sign up for an account.
 ### Login Page
 Similar to the Register page in styling, the Login page allows an existing user to log into the service and then directs the user to the profile page.
 
-![Login Page image]()
+![Login page image]()
 
 ### Profile Page
-The Profile page displays the in session users name, the number of recipes they have favorited and the number of recipes they have created.
+The Profile page displays the in session users name, the number of recipes they have favorited and the number of recipes they have created. It also shows each recipe favorited in card form
 
-![Score card and message board image]()
+![Profile page image]()
 
-### Player / Computer Win Pages
-Two individual pages to tell the player if they have won or if the computer has one. There is a button on each page to take you back into the game to play another round!
+### Recipes Library page
+The Recipes Library page displays all recipes in the db in card form. Each card has two buttons, one to view the recipe in full and the other to add to the in session users favorite list.
 
-![Player win page image]()
-![Computer win page image]()
+![Recipes Library page image]()
+
+### Add Recipe page
+The Add Recipe page allows an active user that is signed in to submit their own recipes. They can input the title, assign it to one of the categories, provide times for preparation and cooking, number of people served, a description of the recipe, the ingredients with the option of adding or removing items as necessary, the method steps which also allows the option of adding or removing steps as necessary and the option to provide a web link to an image.
+
+![Add Recipe page image]()
+
+### My Recipes page
+The My Recipes page displays all user in session created recipes in card form with the same two buttons from the recipes library page, one to view the recipe in full and the other to add to the in session users favorite list.
+
+###
+
+###
 
 ### 404 Page
 A custom 404 page has been created and assigned via GitHub to load whenever a non-existent page is requested.
