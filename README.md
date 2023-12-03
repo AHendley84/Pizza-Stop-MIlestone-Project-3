@@ -50,28 +50,33 @@ Each link contains wireframes for mobile, tablet and desktop.
 ---
 ## Features
 ---
-### Home/Base Page
-The Home/Base Page is the introduction to the website, providing an insight into its purpose and providing the user the option to login or register. It consists of two separate pages, the base and the home pages.
+### Home Page
+The Home Page is the introduction to the website, providing an insight into its purpose and providing the user the option to login or register.
 
-![Index/Home page image]()
+![Home page image]()
+
+### Nav bar
+The navigation bar is situated at the top of the page on all pages. It changes from a toggle button to a row of options on large screens. Once logged in more options are availabe to the user.
+
+![Nav Bar image]()
 
 ### Footer
-The footer is present on each page and provides links to my social media profiles.
+The footer is present on each page displays the websites slogan and also displays the same menu options as the header with links to social media profiles.
 
 ![Footer image]()
 
-### Game Page
-The game page is where all the elements come together for the game to be played out.
+### Register Page
+The Register page is where new users can go to sign up for an account.
 
-![Game page image]()
+![Register page image]()
 
-### Card Table
-The card table comprises of the active card for the player and the computer and also contains the scorecard and game progress message board.
+### Login Page
+Similar to the Register page in styling, the Login page allows an existing user to log into the service and then directs the user to the profile page.
 
-![Card table image]()
+![Login Page image]()
 
-### Scorecard and game progress message board.
-The score card displays the number of card held by the player and the computer. The message board displays an initital message to confirm the game has started and will then display who won the previous round or if it was a tie.
+### Profile Page
+The Profile page displays the in session users name, the number of recipes they have favorited and the number of recipes they have created.
 
 ![Score card and message board image]()
 
