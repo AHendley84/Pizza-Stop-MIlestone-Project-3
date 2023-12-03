@@ -93,9 +93,17 @@ The Add Recipe page allows an active user that is signed in to submit their own 
 ### My Recipes page
 The My Recipes page displays all user in session created recipes in card form with the same two buttons from the recipes library page, one to view the recipe in full and the other to add to the in session users favorite list.
 
-###
+![My Recipes page image]()
 
-###
+### View Recipe page
+The View Recipe page takes the recipe and displays it full screen for the user. If the user in session created the recipe, they can choose to edit the recipe or if so delete the recipe entierly. Prior to deletion the user is advised that this is nothing they can't undo this action before requiring user input before proceeding with or cancelling the request to delete.
+
+![View Recipe page image]()
+
+### Edit Recipe page
+THe Edit Recipe page allows the user who has created the recipe to be able to edit the recipe with the ability to amend each item within the db, similar to the create recipe page.
+
+![Edit Recipe page image]()
 
 ### 404 Page
 A custom 404 page has been created and assigned via GitHub to load whenever a non-existent page is requested.
@@ -109,17 +117,20 @@ A custom 404 page has been created and assigned via GitHub to load whenever a no
 - [HTML5](https://en.wikipedia.org/wiki/HTML5)
 - [CSS](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
 - [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+- [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
 
 ### Frameworks, Libraries and Programs Used
 - [Balsamiq](https://balsamiq.com/) was used for pre-visualisation of the pages.
 - [Google Fonts](https://fonts.google.com/) was used to import the the 'Russo One' and 'Exo 2' fonts into the style.css file.
 - [Font Awesome](https://fontawesome.com/) was utilised for icons used on the site for the social media icons.
-- [Bootstrap](https://getbootstrap.com/docs/4.3/getting-started/introduction/) was used for responsive grids, table and button elements.
-- [Git](https://git-scm.com/) was used for version control. I utilised the CLI terminal in GitPod & codeanywhere to commit and push to GitHub.
+- [Materialize](https://materializecss.com/) was used for responsive grids, navigation elements, cards, CSS and button elements.
+- [Git](https://git-scm.com/) was used for version control. I utilised the CLI terminal in Visual Studio to commit and push to GitHub.
 - [Visual Studio Code](https://code.visualstudio.com/) was used as the development enviroment to develop the site.
 - [GitHub](https://github.com/) was used as the repository for the project after being pushed from GitPod.
-- [TinyPNG](https://tinypng.com/) used for image compression.
-- [Adobe Color](https://color.adobe.com/create/color-wheel) used to produce the color palette image in the README.
+- [Heroku](https://www.heroku.com/) was used to deploy the python application.
+- [Flask](https://flask.palletsprojects.com/en/3.0.x/) the micro web framework written in Python.
+- [Jinja](https://jinja.palletsprojects.com/) the web template engine for the Python programming language
+- [Adobe Express](https://www.adobe.com/express/create/logo) used to produce the website image.
 
 ---
 ## Testing
