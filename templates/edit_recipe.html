@@ -1,155 +1,161 @@
 {% extends "base.html" %}
 {% block content %}
-    <div class="row">
-        <div class="col s12 m10 offset-m1">
-            <div class="card-panel teal darken-3 card-radius">
-                <!-- Page Title -->
-                <h3 class="center-align white-text edit-header">
-                    Edit Recipe
-                </h3>
-            </div>
-                <div class="row">
-                    <form class="col s12" method="POST" action="{{ url_for('edit_recipe', recipe_repository_id=recipe_id._id) }}">
-                        <div class="card-panel card-radius">
-                        <!-- Recipe Name -->
-                        <div class="row">
-                            <div class="input-field col s12">
-                                <i class="fa-solid fa-signature prefix teal-text text-lighten-1"></i>
-                                <input id="recipe_name" name="recipe_name" type="text" minlength="5" maxlength="100" 
-                                    class="form-label validate" value="{{ recipe_id.recipe_name }}">
-                                <label for="recipe_name">Recipe Name</label>
-                            </div>
+<div class="row">
+    <div class="col s12 m10 offset-m1">
+        <div class="card-panel teal darken-3 card-radius">
+            <!-- Page Title -->
+            <h3 class="center-align white-text edit-header">
+                Edit Recipe
+            </h3>
+        </div>
+        <div class="row">
+            <form class="col s12" method="POST"
+                action="{{ url_for('edit_recipe', recipe_repository_id=recipe_id._id) }}">
+                <div class="card-panel card-radius">
+                    <!-- Recipe Name -->
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="fa-solid fa-signature prefix teal-text text-lighten-1"></i>
+                            <input id="recipe_name" name="recipe_name" type="text" minlength="5" maxlength="100"
+                                class="form-label validate" value="{{ recipe_id.recipe_name }}">
+                            <label for="recipe_name">Recipe Name</label>
                         </div>
-                        <!-- category selector -->
-                        <div class="row">
-                            <div class="input-field col s12">
-                                <i class="fa-solid fa-list prefix teal-text text-lighten-1"></i>
-                                <select class="form-select form-control validate" name="recipe_category" required>
-                                    <option disabled></i> Select A Category</option>
-                                    {% for category in categories %}
-                                        {% if category.category_name == recipe_id.recipe_category %}
-                                            <option value="{{ category.category_name }}" selected>{{ category.category_name }}</option>
-                                        {% else %}
-                                            <option value="{{ category.category_name }}">{{ category.category_name }}</option>
-                                        {% endif %}
-                                    {% endfor %}
-                                </select>
-                                <label for="recipe_category">Category</label>
-                            </div>
+                    </div>
+                    <!-- category selector -->
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="fa-solid fa-list prefix teal-text text-lighten-1"></i>
+                            <select class="form-select form-control validate" name="recipe_category" required>
+                                <option disabled></i> Select A Category</option>
+                                {% for category in categories %}
+                                {% if category.category_name == recipe_id.recipe_category %}
+                                <option value="{{ category.category_name }}" selected>{{ category.category_name }}
+                                </option>
+                                {% else %}
+                                <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                                {% endif %}
+                                {% endfor %}
+                            </select>
+                            <label for="recipe_category">Category</label>
                         </div>
-                        <!-- Serves input -->
-                        <div class="row">
-                            <div class="input-field col s12">
-                                <i class="fa-solid fa-users prefix teal-text text-lighten-1"></i> 
-                                <input id="recipe_serves" name="recipe_serves" type="text" minlength="1" maxlength="100" 
-                                    class="form-label validate" value="{{ recipe_id.recipe_serves }}">
-                                <label for="recipe_serves">Serves</label>
-                            </div>
+                    </div>
+                    <!-- Serves input -->
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="fa-solid fa-users prefix teal-text text-lighten-1"></i>
+                            <input id="recipe_serves" name="recipe_serves" type="text" minlength="1" maxlength="100"
+                                class="form-label validate" value="{{ recipe_id.recipe_serves }}">
+                            <label for="recipe_serves">Serves</label>
                         </div>
-                        <!-- prep time input -->
-                        <div class="row">
-                            <div class="input-field col s12">
-                                <i class="fa-solid fa-hourglass-start prefix teal-text text-lighten-1"></i>
-                                <input id="recipe_prep_time" name="recipe_prep_time" type="text" minlength="5" maxlength="50" 
-                                    class="form-label" validate value="{{ recipe_id.recipe_prep_time }}">
-                                <label for="recipe_prep_time">Preparation Time</label>
-                            </div>
+                    </div>
+                    <!-- prep time input -->
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="fa-solid fa-hourglass-start prefix teal-text text-lighten-1"></i>
+                            <input id="recipe_prep_time" name="recipe_prep_time" type="text" minlength="5"
+                                maxlength="50" class="form-label" validate value="{{ recipe_id.recipe_prep_time }}">
+                            <label for="recipe_prep_time">Preparation Time</label>
                         </div>
-                        <!-- cook time input -->
-                        <div class="row">
-                            <div class="input-field col s12">
-                                <i class="fa-solid fa-hourglass-end prefix teal-text text-lighten-1"></i>
-                                <input id="recipe_cook_time" name="recipe_cook_time" type="text" minlength="5" maxlength="50" 
-                                    class="form-label validate" value="{{ recipe_id.recipe_cook_time }}">
-                                <label for="recipe_cook_time">Cook Time</label>
-                            </div>
+                    </div>
+                    <!-- cook time input -->
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="fa-solid fa-hourglass-end prefix teal-text text-lighten-1"></i>
+                            <input id="recipe_cook_time" name="recipe_cook_time" type="text" minlength="5"
+                                maxlength="50" class="form-label validate" value="{{ recipe_id.recipe_cook_time }}">
+                            <label for="recipe_cook_time">Cook Time</label>
                         </div>
-                        <!-- description input -->
-                        <div class="row">
-                            <div class="input-field col s12">
-                                <i class="fa-solid fa-pencil prefix teal-text text-lighten-1"></i>
-                                <textarea id="recipe_description" name="recipe_description" minlength="5" 
-                                    maxlength="1000" class="form-label materialize-textarea validate">
+                    </div>
+                    <!-- description input -->
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="fa-solid fa-pencil prefix teal-text text-lighten-1"></i>
+                            <textarea id="recipe_description" name="recipe_description" minlength="5" maxlength="1000"
+                                class="form-label materialize-textarea validate">
                                     {{- recipe_id.recipe_description -}}
                                 </textarea>
-                                <label for="recipe_description">Description</label>
-                            </div>
+                            <label for="recipe_description">Description</label>
                         </div>
-                        <!-- ingredient input -->
-                        <div class="row">
-                            <div class="col s12">
-                                <div class="ingredientList">
+                    </div>
+                    <!-- ingredient input -->
+                    <div class="row">
+                        <div class="col s12">
+                            <div class="ingredientList">
                                 {% for ingredient in recipe_id.recipe_ingredients %}
-                                    <div class="input-field ingredientDiv">
-                                        <input id="recipe_ingredients" name="recipe_ingredients" type="text" minlength="5" 
-                                            maxlength="200" class="form-label validate" value="{{ ingredient[0:] }}">
-                                        <label for="recipe_ingredients"> Ingredients</label>
-                                    </div>
-                                {% endfor %}
+                                <div class="input-field ingredientDiv">
+                                    <input id="recipe_ingredients" name="recipe_ingredients" type="text" minlength="5"
+                                        maxlength="200" class="form-label validate" value="{{ ingredient[0:] }}">
+                                    <label for="recipe_ingredients"> Ingredients</label>
                                 </div>
-                            </div>
-                        </div>
-                        <!-- add another ingredient button -->
-                        <div class="row">
-                            <div class="col-12">
-                                <button type="button" class="btn btn-radius green darken-4" id="addIngredientsBtn" title="Add Ingredient">
-                                    <i class="fa-solid fa-plus"></i>
-                                </button>
-                                <button type="button" class="btn btn-radius red darken-4" id="removeIngredientsBtn" title="Remove Ingredient">
-                                    <i class="fa-solid fa-minus"></i>
-                                </button>
-                            </div>
-                        </div>
-                        <!-- method input -->
-                        <div class="row">
-                            <div class="col s12">
-                                <div class="methodList">
-                                {% for method in recipe_id.recipe_method %}                                                                 
-                                    <div class="input-field methodDiv">
-                                        <input id="recipe_method" name="recipe_method" type="text" minlength="5" maxlength="400" 
-                                            class="form-label validate" value="{{ method[0:] }}">
-                                        <label for="recipe_method">Method</label>
-                                    </div>
                                 {% endfor %}
-                                </div>
-                            </div>
-                        </div>
-                        <!-- add another method step button -->
-                        <div class="row">
-                            <div class="col-12">
-                                <button type="button" class="btn btn-radius green darken-4" id="addMethodBtn" title="Add Method">
-                                    <i class="fa-solid fa-plus"></i>
-                                </button>
-                                <button type="button" class="btn btn-radius red darken-4" id="removeMethodBtn" title="Remove Method">
-                                    <i class="fa-solid fa-minus"></i>
-                                </button>
-                            </div>
-                        </div>
-                        <!-- recipe image input -->
-                        <div class="row">
-                            <div class="input-field col s12">
-                                <i class="fa-solid fa-image prefix teal-text text-lighten-1"></i>
-                                <input id="recipe_image" name="recipe_image" type="text" class="form-label validate" 
-                                    value="{{ recipe_id.recipe_image }}">
-                                <label for="recipe_image">Recipe Image (URL)</label>
-                            </div>
-                        </div>
-                        <!-- submit and cancel buttons -->
-                        <div class="row">
-                            <div class="col-6 center-align">
-                                <button class="btn btn-radius green darken-4 left" type="submit" title="Save">
-                                    <i class="fa-solid fa-floppy-disk"></i>
-                                </button>
-                                <a class="btn btn-radius red darken-4 right" 
-                                    href="{{ url_for('view_recipe', recipe_repository_id=recipe_id._id) }}" title="Cancel">
-                                    <i class="fa-solid fa-xmark"></i>
-                                </a>
                             </div>
                         </div>
                     </div>
-                    </form>
+                    <!-- add another ingredient button -->
+                    <div class="row">
+                        <div class="col-12">
+                            <button type="button" class="btn btn-radius green darken-4" id="addIngredientsBtn"
+                                title="Add Ingredient">
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+                            <button type="button" class="btn btn-radius red darken-4" id="removeIngredientsBtn"
+                                title="Remove Ingredient">
+                                <i class="fa-solid fa-minus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- method input -->
+                    <div class="row">
+                        <div class="col s12">
+                            <div class="methodList">
+                                {% for method in recipe_id.recipe_method %}
+                                <div class="input-field methodDiv">
+                                    <input id="recipe_method" name="recipe_method" type="text" minlength="5"
+                                        maxlength="400" class="form-label validate" value="{{ method[0:] }}">
+                                    <label for="recipe_method">Method</label>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                    <!-- add another method step button -->
+                    <div class="row">
+                        <div class="col-12">
+                            <button type="button" class="btn btn-radius green darken-4" id="addMethodBtn"
+                                title="Add Method">
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+                            <button type="button" class="btn btn-radius red darken-4" id="removeMethodBtn"
+                                title="Remove Method">
+                                <i class="fa-solid fa-minus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- recipe image input -->
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="fa-solid fa-image prefix teal-text text-lighten-1"></i>
+                            <input id="recipe_image" name="recipe_image" type="text" class="form-label validate"
+                                value="{{ recipe_id.recipe_image }}">
+                            <label for="recipe_image">Recipe Image (URL)</label>
+                        </div>
+                    </div>
+                    <!-- submit and cancel buttons -->
+                    <div class="row">
+                        <div class="col-6 center-align">
+                            <button class="btn btn-radius green darken-4 left" type="submit" title="Save">
+                                <i class="fa-solid fa-floppy-disk"></i>
+                            </button>
+                            <a class="btn btn-radius red darken-4 right"
+                                href="{{ url_for('view_recipe', recipe_repository_id=recipe_id._id) }}" title="Cancel">
+                                <i class="fa-solid fa-xmark"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
+            </form>
         </div>
     </div>
+</div>
 
 {% endblock %}

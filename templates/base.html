@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
-        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
-        crossorigin="anonymous" referrerpolicy="no-referrer" type="text/css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
         type="text/css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
     {% block styles %}
     {% endblock %}
     <title>PIZZA STOP</title>
 </head>
+
 <body>
 
     <!-- Main navigation -->
@@ -30,31 +32,35 @@
                 <ul class="right hide-on-med-and-down center-align">
                     <li><a href="{{ url_for('home') }}">Home</a></li>
                     {% if session.user %}
-                        <li><a href="{{ url_for('profile', username=session['user']) }}">{{ session['user'].capitalize() }}'s Profile</a></li>
-                        <li><a href="{{ url_for('get_recipes') }}">Recipes Library</a></li>
-                        <li><a href="{{ url_for('submit_recipe') }}">Add Recipe</a></li>
-                        <li><a href="{{ url_for('my_recipes') }}">My Recipes</a></li>
-                        <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+                    <li><a href="{{ url_for('profile', username=session['user']) }}">{{ session['user'].capitalize()
+                            }}'s Profile</a></li>
+                    <li><a href="{{ url_for('get_recipes') }}">Recipes Library</a></li>
+                    <li><a href="{{ url_for('submit_recipe') }}">Add Recipe</a></li>
+                    <li><a href="{{ url_for('my_recipes') }}">My Recipes</a></li>
+                    <li><a href="{{ url_for('logout') }}">Log Out</a></li>
                     {% else %}
-                        <li><a href="{{ url_for('login') }}">Log In</a></li>
-                        <li><a href="{{ url_for('register') }}">Register</a></li>
+                    <li><a href="{{ url_for('login') }}">Log In</a></li>
+                    <li><a href="{{ url_for('register') }}">Register</a></li>
                     {% endif %}
                 </ul>
             </div>
         </nav>
         <!-- Mobile nav bar -->
         <ul class="sidenav base-header" id="mobile-demo">
-            <li><h4 class="center-align teal-text text-darken-3">PIZZA STOP</h4></li>
+            <li>
+                <h4 class="center-align teal-text text-darken-3">PIZZA STOP</h4>
+            </li>
             <li><a href="{{ url_for('home') }}">Home</a></li>
             {% if session.user %}
-                <li><a href="{{ url_for('profile', username=session['user']) }}">{{ session['user'].capitalize() }}'s Profile</a></li>
-                <li><a href="{{ url_for('get_recipes') }}">Recipes Library</a></li>
-                <li><a href="{{ url_for('submit_recipe') }}">Add Recipe</a></li>
-                <li><a href="{{ url_for('my_recipes') }}">My Recipes</a></li>
-                <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+            <li><a href="{{ url_for('profile', username=session['user']) }}">{{ session['user'].capitalize() }}'s
+                    Profile</a></li>
+            <li><a href="{{ url_for('get_recipes') }}">Recipes Library</a></li>
+            <li><a href="{{ url_for('submit_recipe') }}">Add Recipe</a></li>
+            <li><a href="{{ url_for('my_recipes') }}">My Recipes</a></li>
+            <li><a href="{{ url_for('logout') }}">Log Out</a></li>
             {% else %}
-                <li><a href="{{ url_for('login') }}">Log In</a></li>
-                <li><a href="{{ url_for('register') }}">Register</a></li>
+            <li><a href="{{ url_for('login') }}">Log In</a></li>
+            <li><a href="{{ url_for('register') }}">Register</a></li>
             {% endif %}
         </ul>
     </header>
@@ -62,13 +68,13 @@
     <!-- Area to display flash messages to the user -->
     <section class="container bumper">
         {% with messages = get_flashed_messages() %}
-            {% if messages %}
-                {% for message in messages %}
-                    <div class="row flashes card-panel teal lighten-4 card-radius s8 m6 l4">
-                        <p class=" teal-text darken-4-text center-align flash-message">{{ message }}</p>
-                    </div>
-                {% endfor %}
-            {% endif %}
+        {% if messages %}
+        {% for message in messages %}
+        <div class="row flashes card-panel teal lighten-4 card-radius s8 m6 l4">
+            <p class=" teal-text darken-4-text center-align flash-message">{{ message }}</p>
+        </div>
+        {% endfor %}
+        {% endif %}
         {% endwith %}
     </section>
 
@@ -91,14 +97,15 @@
                     <ul class="footer-links">
                         <li><a href="{{ url_for('home') }}">Home</a></li>
                         {% if session.user %}
-                            <li><a href="{{ url_for('profile', username=session['user']) }}">{{ session['user'].capitalize() }}'s Profile</a></li>
-                            <li><a href="{{ url_for('get_recipes') }}">Recipes Library</a></li>
-                            <li><a href="{{ url_for('submit_recipe') }}">Add Recipe</a></li>
-                            <li><a href="{{ url_for('my_recipes') }}">My Recipes</a></li>
-                            <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+                        <li><a href="{{ url_for('profile', username=session['user']) }}">{{ session['user'].capitalize()
+                                }}'s Profile</a></li>
+                        <li><a href="{{ url_for('get_recipes') }}">Recipes Library</a></li>
+                        <li><a href="{{ url_for('submit_recipe') }}">Add Recipe</a></li>
+                        <li><a href="{{ url_for('my_recipes') }}">My Recipes</a></li>
+                        <li><a href="{{ url_for('logout') }}">Log Out</a></li>
                         {% else %}
-                            <li><a href="{{ url_for('login') }}">Log In</a></li>
-                            <li><a href="{{ url_for('register') }}">Register</a></li>
+                        <li><a href="{{ url_for('login') }}">Log In</a></li>
+                        <li><a href="{{ url_for('register') }}">Register</a></li>
                         {% endif %}
                     </ul>
                 </div>
@@ -115,13 +122,13 @@
     </footer>
     <!-- Javascript -->
 
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" 
-        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
     {% block scripts %}
     {% endblock %}
 
 </body>
+
 </html>

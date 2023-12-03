@@ -1,31 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!-- Stylesheets -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
-            integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
-            crossorigin="anonymous" referrerpolicy="no-referrer" type="text/css"/>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" 
-            type="text/css">
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
-        <title>PIZZA STOP - Whoops!</title>
-    </head>
-    <body>
-        <main class="container fourohfour-page center-align">
-            <div class="card-panel card-radius teal teal-darken-4 white-text text-shadow">
-                <img src="{{ url_for('static', filename='images/ps_logo_transparent.png') }}" alt="Pizza Stop! Craft Your Slice of Perfection" class="fourohfour-logo">
-                <h3>Sorry - The page you're looking for doesn't exist!</h3>
-                <h4>Get yourself back on track by clicking the button below</h4>
-                <a href="{{ url_for('home') }}" class="fourohfour-btn btn btn-radius green darken-4">Home</a>
-            </div>
-        </main>
-        <script src="https://code.jquery.com/jquery-3.7.1.min.js" 
-        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
-        crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-        <script src="{{ url_for('static', filename='js/script.js') }}"></script>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+        type="text/css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
+    <title>PIZZA STOP - Whoops!</title>
+</head>
+
+<body>
+    <main class="container fourohfour-page center-align">
+        <div class="card-panel card-radius teal teal-darken-4 white-text text-shadow">
+            <img src="{{ url_for('static', filename='images/ps_logo_transparent.png') }}"
+                alt="Pizza Stop! Craft Your Slice of Perfection" class="fourohfour-logo">
+            <h3>Sorry - The page you're looking for doesn't exist!</h3>
+            <h4>Get yourself back on track by clicking the button below</h4>
+            <a href="{{ url_for('home') }}" class="fourohfour-btn btn btn-radius green darken-4">Home</a>
+        </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+
 </html>

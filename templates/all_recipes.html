@@ -1,64 +1,64 @@
 {% extends "base.html" %}
 {% block content %}
-    <!-- Page Header -->
-        <div class="card-panel card-radius teal darken-3">
-            <h3 class="center-align white-text all-recipes-header">
-                All Recipes
-            </h3>
-        </div>
-        <!-- Search function -->
-        <div class="row card-panel teal lighten-3 card-radius s8 offset-s2 center">
-            <form action="{{ url_for('search') }}" method="post" class="col s12">
-                <div class="row valign-wrapper center-align search-box">
-                    <div class="input-field col s6 m8 l8">
-                        <i class="fa-solid fa-magnifying-glass prefix white-text text-shadow search-icon" title="Search"></i>
-                        <input type="text" name="query" id="query" minlength="2" class="validate" required>
-                        <label class="white-text search-label" for="query">SEARCH</label>
-                    </div>
-                    <div class="col s6 m4 l4">
-                        <button type="submit" class="btn-flat teal darken-4 text-shadow white-text btn-radius" title="Search">
-                            <i class="fa-solid fa-magnifying-glass-arrow-right"></i>
-                        </button>
-                        <a href="{{ url_for('get_recipes') }}" class="red darken-4 btn text-shadow btn-radius" title="Reset">
-                            <i class="fa-solid fa-rotate-left"></i>
-                        </a>
-                    </div>
-                </div>
-            </form>
-        </div>
-
-        <!-- Code to display each of the recipes as a card -->
-        {% if recipes|length > 0 %}
-            <div class="row">
-                {% for recipe in recipes|reverse %}
-                    <div class="col card-container align-right">
-                        <div class="card hoverable card-radius">
-                            <div class="card-image">
-                                <img src="{{ recipe.recipe_image }}" class="card-radius">
-                                <span class="card-title text-shadow"><strong>{{ recipe.recipe_name }}</strong></span>
-                            </div>
-                            <div class="card-content card-radius">
-                                <p><strong>Created By:</strong> {{ recipe.recipe_submitted_by.capitalize() }}</p>
-                                <p><strong>Category:</strong> {{ recipe.recipe_category }}</p>
-                                <p><strong>Serves:</strong> {{ recipe.recipe_serves }}</p>
-                            </div>
-                            <div class="card-action card-radius">
-                                <a class="waves-effect waves-teal blue accent-4 btn btn-radius left" title="View"
-                                    href="{{ url_for('view_recipe', recipe_repository_id=recipe._id) }}">
-                                    <i class="fa-solid fa-eye"></i>
-                                </a>
-                                <a class="waves-effect waves-teal red darken-4 btn btn-radius right" title="Add to Favorites"
-                                    href="{{ url_for('add_to_favorites', recipe_repository_id=recipe._id) }}">
-                                    <i class="fa-solid fa-heart"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                {% endfor %}
+<!-- Page Header -->
+<div class="card-panel card-radius teal darken-3">
+    <h3 class="center-align white-text all-recipes-header">
+        All Recipes
+    </h3>
+</div>
+<!-- Search function -->
+<div class="row card-panel teal lighten-3 card-radius s8 offset-s2 center">
+    <form action="{{ url_for('search') }}" method="post" class="col s12">
+        <div class="row valign-wrapper center-align search-box">
+            <div class="input-field col s6 m8 l8">
+                <i class="fa-solid fa-magnifying-glass prefix white-text text-shadow search-icon" title="Search"></i>
+                <input type="text" name="query" id="query" minlength="2" class="validate" required>
+                <label class="white-text search-label" for="query">SEARCH</label>
             </div>
-            {% else %}
-                <h3 class="center-align red-text text-darken-4">
-                    No Recipes Found
-                </h3>
-        {% endif %}
+            <div class="col s6 m4 l4">
+                <button type="submit" class="btn-flat teal darken-4 text-shadow white-text btn-radius" title="Search">
+                    <i class="fa-solid fa-magnifying-glass-arrow-right"></i>
+                </button>
+                <a href="{{ url_for('get_recipes') }}" class="red darken-4 btn text-shadow btn-radius" title="Reset">
+                    <i class="fa-solid fa-rotate-left"></i>
+                </a>
+            </div>
+        </div>
+    </form>
+</div>
+
+<!-- Code to display each of the recipes as a card -->
+{% if recipes|length > 0 %}
+<div class="row">
+    {% for recipe in recipes|reverse %}
+    <div class="col card-container align-right">
+        <div class="card hoverable card-radius">
+            <div class="card-image">
+                <img src="{{ recipe.recipe_image }}" class="card-radius">
+                <span class="card-title text-shadow"><strong>{{ recipe.recipe_name }}</strong></span>
+            </div>
+            <div class="card-content card-radius">
+                <p><strong>Created By:</strong> {{ recipe.recipe_submitted_by.capitalize() }}</p>
+                <p><strong>Category:</strong> {{ recipe.recipe_category }}</p>
+                <p><strong>Serves:</strong> {{ recipe.recipe_serves }}</p>
+            </div>
+            <div class="card-action card-radius">
+                <a class="waves-effect waves-teal blue accent-4 btn btn-radius left" title="View"
+                    href="{{ url_for('view_recipe', recipe_repository_id=recipe._id) }}">
+                    <i class="fa-solid fa-eye"></i>
+                </a>
+                <a class="waves-effect waves-teal red darken-4 btn btn-radius right" title="Add to Favorites"
+                    href="{{ url_for('add_to_favorites', recipe_repository_id=recipe._id) }}">
+                    <i class="fa-solid fa-heart"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% else %}
+<h3 class="center-align red-text text-darken-4">
+    No Recipes Found
+</h3>
+{% endif %}
 {% endblock %}
