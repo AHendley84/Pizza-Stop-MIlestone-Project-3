@@ -1,6 +1,9 @@
 $(document).ready(function () {
+    // Materialize side nav jQuery
     $(".sidenav").sidenav({ edge: "right" });
+    // Materialize select jQuery
     $('select').formSelect();
+    // Materialize modal jQuery
     $('.modal').modal();
     // Function to clear flashed messages after 5 seconds (5000 milliseconds)
     setTimeout(function () {
@@ -12,7 +15,7 @@ $(document).ready(function () {
     /*
     The JavaScript for validation of the Materialize drop down was based on the code from CI build along for the task manager mini-project.
     */
-   
+
     // Validation for Materialize drop down
     validateMaterializeSelect();
     function validateMaterializeSelect() {
@@ -50,6 +53,7 @@ The JavaScript for the addition button function is based on the code in the YouT
 https://raddy.dev/blog/how-to-build-a-recipe-blog-using-node-js-and-mongodb-express-ejs-mongoose-crud/
 I repurposed the code for the addition button to create the remove button
 */
+
 // JavaScript to operate the add and remove ingredient
 let addIngredientsBtn = document.getElementById('addIngredientsBtn');
 let ingredientList = document.querySelector('.ingredientList');
