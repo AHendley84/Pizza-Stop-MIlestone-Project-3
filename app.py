@@ -52,17 +52,18 @@ def search():
     Search all recipes and diplay the results to the user
     """
     query = request.form.get("query")
-    recipes = list(mongo.db.recipe_repository.find({"$text": {"$search": query}}))
+    recipes = list(mongo.db.recipe_repository.find({
+        "$text": {"$search": query}}))
     return render_template("all_recipes.html", recipes=recipes)
 
 
 @app.route("/register", methods=["GET", "post"])
 def register():
     """
-    Allow a user to register for a profile. Check conducted to determine 
+    Allow a user to register for a profile. Check conducted to determine
     if user already exists and notify the user. If the user doesn't
-    exist a new profile is created and the favorites array is emptied 
-    for the new profile. Once completed the new profile is put into the 
+    exist a new profile is created and the favorites array is emptied
+    for the new profile. Once completed the new profile is put into the
     session cookie
     """
     if request.method == "POST":
@@ -105,11 +106,11 @@ def login():
         if existing_user:
             # ensure hashed password matches user input
             if check_password_hash(
-                existing_user["password"], request.form.get("password")):
-                    session["user"] = request.form.get("username").lower()
-                    flash("Welcome, {}".format(
+                    existing_user["password"], request.form.get("password")):
+                session["user"] = request.form.get("username").lower()
+                flash("Welcome, {}".format(
                         request.form.get("username")))
-                    return redirect(url_for(
+                return redirect(url_for(
                         "profile", username=session["user"]))
             else:
                 # invalid password match
@@ -138,8 +139,9 @@ def profile(username):
 
     # count the number of recipes created by the user
     user = session["user"]
-    created_count = mongo.db.recipe_repository.count_documents({'recipe_submitted_by': user})
-    
+    created_count = mongo.db.recipe_repository.count_documents(
+        {'recipe_submitted_by': user})
+
     # load favorite recipes for session user
     fav = []
 
@@ -147,9 +149,11 @@ def profile(username):
         recipe = mongo.db.recipe_repository.find_one({"_id": obj})
         fav.append(recipe)
 
-
     if session["user"]:
-        return render_template("profile.html", username=username, fav=fav, fav_count=fav_count, created_count=created_count)
+        return render_template(
+            "profile.html", username=username,
+            fav=fav, fav_count=fav_count,
+            created_count=created_count)
 
     return redirect(url_for("login"))
 
@@ -179,7 +183,7 @@ def add_to_favorites(recipe_repository_id):
 @app.route('/delete_from_favorites/<recipe_repository_id>')
 def delete_from_favorites(recipe_repository_id):
     """
-    Remove a recipe from the users favorite array retained within 
+    Remove a recipe from the users favorite array retained within
     their user profile.
     """
     user_profile = mongo.db.users.find_one(
@@ -194,7 +198,7 @@ def delete_from_favorites(recipe_repository_id):
 @app.route("/logout")
 def logout():
     """
-    log the current user in session out and return them to the login 
+    log the current user in session out and return them to the login
     page.
     """
     flash("You have been successfully logged out")
@@ -233,25 +237,27 @@ def view_recipe(recipe_repository_id):
     """
     Allows single recipe to be displayed in full to the user
     """
-    recipe_id = mongo.db.recipe_repository.find_one({"_id": ObjectId(recipe_repository_id)})
+    recipe_id = mongo.db.recipe_repository.find_one(
+        {"_id": ObjectId(recipe_repository_id)})
     return render_template("view_recipe.html", recipe_id=recipe_id)
 
 
 @app.route("/edit_recipe/<recipe_repository_id>", methods=["GET", "POST"])
 def edit_recipe(recipe_repository_id):
     """
-    Allows an existing recipe created by the user to be edited. Checks 
+    Allows an existing recipe created by the user to be edited. Checks
     are conducted prior to determine if the user is the on who created it.
     If not the user is denied the ability to edit the recipe and advised
     they do not have permission.
     """
     if request.method == "POST":
-        recipe = mongo.db.recipe_repository.find_one({"_id": ObjectId(recipe_repository_id)})
-        
+        recipe = mongo.db.recipe_repository.find_one(
+            {"_id": ObjectId(recipe_repository_id)})
+
         if session.get("user") != recipe.get("recipe_submitted_by"):
             flash("You are not authorized to edit this recipe.")
             return redirect(request.referrer)
-        
+
         submit = {
             "recipe_name": request.form.get("recipe_name"),
             "recipe_category": request.form.get("recipe_category"),
@@ -265,17 +271,20 @@ def edit_recipe(recipe_repository_id):
             "recipe_submitted_by": session["user"]
         }
 
-        mongo.db.recipe_repository.replace_one({"_id": ObjectId(recipe_repository_id)}, submit)
+        mongo.db.recipe_repository.replace_one(
+            {"_id": ObjectId(recipe_repository_id)}, submit)
         flash("Recipe Successfully Updated")
         return redirect(request.referrer)
 
-    recipe = mongo.db.recipe_repository.find_one({"_id": ObjectId(recipe_repository_id)})
+    recipe = mongo.db.recipe_repository.find_one(
+        {"_id": ObjectId(recipe_repository_id)})
     if session.get("user") != recipe.get("recipe_submitted_by"):
         flash("You are not authorised to edit this recipe.")
         return redirect(request.referrer)
 
     categories = mongo.db.categories.find().sort("category_name", 1)
-    return render_template("edit_recipe.html", recipe_id=recipe, categories=categories)
+    return render_template(
+        "edit_recipe.html", recipe_id=recipe, categories=categories)
 
 
 @app.route("/delete_recipe/<recipe_repository_id>")
@@ -283,7 +292,8 @@ def delete_recipe(recipe_repository_id):
     """
     Selected user created recipe is deleteable from the db
     """
-    mongo.db.recipe_repository.delete_one({"_id": ObjectId(recipe_repository_id)})
+    mongo.db.recipe_repository.delete_one(
+        {"_id": ObjectId(recipe_repository_id)})
     flash("Recipe Successfully Removed")
     return redirect(request.referrer)
 
@@ -292,7 +302,7 @@ def delete_recipe(recipe_repository_id):
 @app.errorhandler(404)
 def page_not_found(e):
     """
-    Displays a 404 error page that redirects the user back 
+    Displays a 404 error page that redirects the user back
     to the home page.
     """
     return render_template("404.html"), 404
