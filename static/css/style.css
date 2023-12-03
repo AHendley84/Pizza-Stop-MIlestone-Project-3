@@ -55,7 +55,6 @@ body {
     font-family: 'Ubuntu', sans-serif;
     font-size: 16px;
 }
-
 /** End cards **/
 
 /** Base template **/
@@ -271,6 +270,28 @@ body {
     font-weight: bold;
 }
 /** End register **/
+
+/** 404 template **/
+.fourohfour-page h3 {
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.fourohfour-page h4 {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 20px;
+}
+
+.fourohfour-logo {
+    width: 50%;
+    height: 50%;
+}
+
+.fourohfour-btn {
+    margin-top: 15px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+}
+/** End 404 **/
 
 li {
     padding-left: 10px;

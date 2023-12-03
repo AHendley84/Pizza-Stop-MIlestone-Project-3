@@ -14,9 +14,12 @@
         <title>PIZZA STOP - Whoops!</title>
     </head>
     <body>
-        <main class="container 404-page">
-            <div class="card-panel card-radius">
-                <h1>Sorry - The page you're looking for doesn't exist!</h1>
+        <main class="container fourohfour-page center-align">
+            <div class="card-panel card-radius teal teal-darken-4 white-text text-shadow">
+                <img src="{{ url_for('static', filename='images/ps_logo_transparent.png') }}" alt="Pizza Stop! Craft Your Slice of Perfection" class="fourohfour-logo">
+                <h3>Sorry - The page you're looking for doesn't exist!</h3>
+                <h4>Get yourself back on track by clicking the button below</h4>
+                <a href="{{ url_for('home') }}" class="fourohfour-btn btn btn-radius green darken-4">Home</a>
             </div>
         </main>
         <script src="https://code.jquery.com/jquery-3.7.1.min.js" 
