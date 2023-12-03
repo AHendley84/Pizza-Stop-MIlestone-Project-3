@@ -1,14 +1,18 @@
-$(document).ready(function(){
-    $(".sidenav").sidenav({edge: "right"});
+$(document).ready(function () {
+    $(".sidenav").sidenav({ edge: "right" });
     $('select').formSelect();
     $('.modal').modal();
     // Function to clear flashed messages after 5 seconds (5000 milliseconds)
-    setTimeout(function() {
-        $('.flashes').fadeOut('slow', function() {
+    setTimeout(function () {
+        $('.flashes').fadeOut('slow', function () {
             $(this).remove();
         });
     }, 5000);
-
+    
+    /*
+    The JavaScript for validation of the Materialize drop down was based on the code from CI build along for the task manager mini-project.
+    */
+   
     // Validation for Materialize drop down
     validateMaterializeSelect();
     function validateMaterializeSelect() {
@@ -37,21 +41,28 @@ $(document).ready(function(){
             }
         });
     }
-  });
+});
 
+
+
+/*
+The JavaScript for the addition button function is based on the code in the YouTube video from Raddy:
+https://raddy.dev/blog/how-to-build-a-recipe-blog-using-node-js-and-mongodb-express-ejs-mongoose-crud/
+I repurposed the code for the addition button to create the remove button
+*/
 // JavaScript to operate the add and remove ingredient
 let addIngredientsBtn = document.getElementById('addIngredientsBtn');
 let ingredientList = document.querySelector('.ingredientList');
 let ingredientDiv = document.querySelectorAll('.ingredientDiv')[0];
 
-addIngredientsBtn.addEventListener('click', function(){
-  let newIngredients = ingredientDiv.cloneNode(true);
-  let inputIngredients = newIngredients.getElementsByTagName('input')[0];
-  inputIngredients.value = '';
-  ingredientList.appendChild(newIngredients);
+addIngredientsBtn.addEventListener('click', function () {
+    let newIngredients = ingredientDiv.cloneNode(true);
+    let inputIngredients = newIngredients.getElementsByTagName('input')[0];
+    inputIngredients.value = '';
+    ingredientList.appendChild(newIngredients);
 });
 
-removeIngredientsBtn.addEventListener('click', function(){
+removeIngredientsBtn.addEventListener('click', function () {
     let ingredients = ingredientList.querySelectorAll('.ingredientDiv');
     if (ingredients.length > 1) {
         ingredientList.removeChild(ingredients[ingredients.length - 1]);
@@ -63,14 +74,14 @@ let addMethodBtn = document.getElementById('addMethodBtn');
 let methodList = document.querySelector('.methodList');
 let methodDiv = document.querySelectorAll('.methodDiv')[0];
 
-addMethodBtn.addEventListener('click', function(){
-  let newMethod = methodDiv.cloneNode(true);
-  let inputMethod = newMethod.getElementsByTagName('input')[0];
-  inputMethod.value = '';
-  methodList.appendChild(newMethod);
+addMethodBtn.addEventListener('click', function () {
+    let newMethod = methodDiv.cloneNode(true);
+    let inputMethod = newMethod.getElementsByTagName('input')[0];
+    inputMethod.value = '';
+    methodList.appendChild(newMethod);
 });
 
-removeMethodBtn.addEventListener('click', function(){
+removeMethodBtn.addEventListener('click', function () {
     let methods = methodList.querySelectorAll('.methodDiv');
     if (methods.length > 1) {
         methodList.removeChild(methods[methods.length - 1]);
