@@ -64,62 +64,64 @@ Each link contains wireframes for mobile, tablet and desktop.
 ### Home Page
 The Home Page is the introduction to the website, providing an insight into its purpose and providing the user the option to login or register.
 
-![Home page image]()
+![Home page image](documentation/screenshots/home_screenshot.png)
 
 ### Nav bar
 The navigation bar is situated at the top of the page on all pages. It changes from a toggle button to a row of options on large screens. Once logged in more options are availabe to the user.
 
-![Nav Bar image]()
+![Nav Bar Logged Out image](documentation/screenshots/nav_bar_logged_out.png)
+![Nav Bar Logged In image](documentation/screenshots/nav_bar_logged_in.png)
 
 ### Footer
 The footer is present on each page displays the websites slogan and also displays the same menu options as the header with links to social media profiles.
 
-![Footer image]()
+![Footer Logged Out image](documentation/screenshots/footer_logged_out.png)
+![Footer Logged In image](documentation/screenshots/footer_logged_in.png)
 
 ### Register Page
 The Register page is where new users can go to sign up for an account.
 
-![Register page image]()
+![Register page image](documentation/screenshots/register_screenshot.png)
 
 ### Login Page
 Similar to the Register page in styling, the Login page allows an existing user to log into the service and then directs the user to the profile page.
 
-![Login page image]()
+![Login page image](documentation/screenshots/login_screenshot.png)
 
 ### Profile Page
 The Profile page displays the in session users name, the number of recipes they have favorited and the number of recipes they have created. It also shows each recipe favorited in card form
 
-![Profile page image]()
+![Profile page image](documentation/screenshots/profile_screenshot.png)
 
 ### Recipes Library page
 The Recipes Library page displays all recipes in the db in card form. Each card has two buttons, one to view the recipe in full and the other to add to the in session users favorite list.
 
-![Recipes Library page image]()
+![Recipes Library page image](documentation/screenshots/recipes_library_screenshot.png)
 
 ### Add Recipe page
 The Add Recipe page allows an active user that is signed in to submit their own recipes. They can input the title, assign it to one of the categories, provide times for preparation and cooking, number of people served, a description of the recipe, the ingredients with the option of adding or removing items as necessary, the method steps which also allows the option of adding or removing steps as necessary and the option to provide a web link to an image.
 
-![Add Recipe page image]()
+![Add Recipe page image](documentation/screenshots/submit_recipe_screenshot.png)
 
 ### My Recipes page
 The My Recipes page displays all user in session created recipes in card form with the same two buttons from the recipes library page, one to view the recipe in full and the other to add to the in session users favorite list.
 
-![My Recipes page image]()
+![My Recipes page image](documentation/screenshots/my_recipes_screenshot.png)
 
 ### View Recipe page
 The View Recipe page takes the recipe and displays it full screen for the user. If the user in session created the recipe, they can choose to edit the recipe or if so delete the recipe entierly. Prior to deletion the user is advised that this is nothing they can't undo this action before requiring user input before proceeding with or cancelling the request to delete.
 
-![View Recipe page image]()
+![View Recipe page image](documentation/screenshots/view_recipe_screenshot.png)
 
 ### Edit Recipe page
 THe Edit Recipe page allows the user who has created the recipe to be able to edit the recipe with the ability to amend each item within the db, similar to the create recipe page.
 
-![Edit Recipe page image]()
+![Edit Recipe page image](documentation/screenshots/edit_recipe_screenshot.png)
 
 ### 404 Page
 A custom 404 page has been created and assigned via GitHub to load whenever a non-existent page is requested.
 
-![404 page image]()
+![404 page image](documentation/screenshots/404_screenshot.png)
 
 ---
 ## Technologies Used
