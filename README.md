@@ -3,7 +3,7 @@
 
 For my third milestone project I have designed and developed a website using HTML, CSS and JavaScript, Python, Flask and MongoDB. The purpose of the site is to bring Pizza lovers together to share dough recipes, topping combinations and side dishes. Users are able to create a user profile to upload, amend and delete their own recipes whilst being able to add other users uploads to their recipe collection, but preventing them from deleting or amending them.
 
-![Visual Representation](static/documentation/visual-pizza-stop.png)
+![Visual Representation](documentation/visual-pizza-stop.png)
 
 [Live version of the site](https://pizza-stop-5bc4c092c1c7.herokuapp.com/)
 
@@ -30,7 +30,7 @@ For my third milestone project I have designed and developed a website using HTM
 ### Color Scheme
 The colors selected for the color palette are based on the Materialize color palette, specifically the teal palette:
 
-![Color Palette](static/documentation/color-palette.png)
+![Color Palette](documentation/color-palette.png)
 
 
 ### Typography
@@ -38,15 +38,26 @@ Google Fonts was used to import the 'Bebas Neue' and the 'Ubuntu' fonts into the
 
 ### Wireframes
 Each link contains wireframes for mobile, tablet and desktop.
-- [Home/Base]()
-- [Register]()
-- [Login]()
-- [Profile]()
-- [Recipes Library]()
-- [Add Recipe]()
-- [My Recipes]()
-- [View Recipe]()
-- [Edit Recipe]()
+- ### Home
+![Home](documentation/wireframes/home.png)
+- ### Register
+![Register](documentation/wireframes/register.png)
+- ### Login
+![Login](documentation/wireframes/login.png)
+- ### Profile
+![Profile](documentation/wireframes/profile.png)
+- ### Recipes Library
+![Recipes Library](documentation/wireframes/recipes_library.png)
+- ### Add Recipe
+![Add Recipe](documentation/wireframes/add_recipe.png)
+- ### My Recipes
+![My Recipes](documentation/wireframes/my_recipes.png)
+- ### View Recipe
+![View Recipe](documentation/wireframes/view_recipe.png)
+- ### Edit Recipe
+![Edit Recipe](documentation/wireframes/edit_recipe.png)
+- ### 404
+![404](documentation/wireframes/404.png)
 ---
 ## Features
 ---
