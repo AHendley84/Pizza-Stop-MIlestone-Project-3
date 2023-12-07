@@ -11,7 +11,7 @@
 </div>
 
 <!-- Code to display each of the user in session generated recipes -->
-<div class="row">
+<div class="row main-content">
     {% set user_recipes = [] %}
     {% for recipe in recipes|reverse %}
     {% if session.user|lower == recipe.recipe_submitted_by|lower %}
@@ -42,7 +42,7 @@
     {% endif %}
     {% endfor %}
     {% if user_recipes|length == 0 %}
-    <div class="row">
+    <div class="row main-content">
         <div class="card-panel red darken-4 card-radius profile-header">
             <h3 class="center-align white-text">
                 No Recipes Created

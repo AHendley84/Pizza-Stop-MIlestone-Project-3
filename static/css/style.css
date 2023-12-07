@@ -123,6 +123,16 @@ body {
     text-decoration: none;
     color: white;
 }
+
+.main-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.main-container {
+    width: 85%;
+}
 /** End base **/
 
 /** Home template **/
