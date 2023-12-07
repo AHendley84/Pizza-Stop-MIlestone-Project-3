@@ -280,7 +280,7 @@ def edit_recipe(recipe_repository_id):
         {"_id": ObjectId(recipe_repository_id)})
     if session.get("user") != recipe.get("recipe_submitted_by"):
         flash("You are not authorised to edit this recipe.")
-        return redirect(request.referrer)
+        return redirect(url_for("get_recipes"))
 
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template(
