@@ -19,9 +19,9 @@ For my third milestone project I have designed and developed a website using HTM
 
 - Returning Visitor
 
-    - As a returning visitor, I would like to be able to browse the recipes already added.
     - As a returning visitor, I would like to be able to add existing recipes to my own collection.
-    - As a returning visitor, I would like to be able to create, amend or delete recipes.
+    - As a returning visitor, I would like to view a recipe in full.
+    - As a returning visitor, I would like to be able to create a new recipe or amend and/or delete recipes I have created.
 
 - Website Administrator
 
@@ -183,14 +183,15 @@ Here is a table of the manual testing done on the site to determine if all featu
 |User Story|Screenshot|
 |---|---|
 |**First Time Visitor**|
-|As a first time visitor,  I want to get to understand the main purpose of the site.|![Index page](documentation/features/index_page.png)|
-|As a first time visitor,  I want to receive feedback on how I'm progressing in the game.|![Message board including scoreboard](documentation/features/scoreboard_messageboard.png)|
-|As a first time visitor,  I want to know if I've won or lost the game.|![Player Win page](documentation/features/player_win.png)![Computer Win page](documentation/features/computer_win.png)|
+|As a first time visitor, I would like to be able to understand the purpose of the website.|![Home page](documentation/screenshots/home_screenshot.png)|
+|As a first time visitor, I would like to register for a free account.|![Registration page](documentation/screenshots/register_screenshot.png)|
+|As a first time visitor, start browsing the existing recipes.|![Recipe Library page](documentation/screenshots/recipes_library_screenshot.png)|
 |**Returning Visitor**|
-|As a returning visitor, I want to be able to quickly jump back into another game if I've won or lost.|![Play again button](documentation/features/play_again.png)|
-|As a returning visitor, I want to be notified if I have tried to access a page that does not exist.|![404 error page](documentation/features/404.png)|
+|As a returning visitor, I would like to be able to add existing recipes to my own collection.|![Profile page](documentation/screenshots/profile_screenshot.png)|![Recipe Library page](documentation/screenshots/recipes_library_screenshot.png)|
+|As a returning visitor, I would like to view a recipe in full.|![View Recipe page](documentation/screenshots/view_recipe_screenshot.png)|
+|As a returning visitor, I would like to be able to create a new recipe or amend and/or delete recipes I have created.|![Submit Recipe page](documentation/screenshots/submit_recipe_screenshot.png)|![Edit Recipe page](documentation/screenshots/edit_recipe_screenshot.png)|![Delete Recipe prompt](documentation/screenshots/delete_recipe_prompt.png)|
 |**Website Administrator**|
-|As a website administrator, I want to provide links to my social media channels.|![Links to social media](documentation/features/footer.png)|
+|As the website administrator, I would like to be able to manage the list of users registered to the site.|At present this is done on the database server side![Image of user screen on db](documentation/screenshots/database_user_management.png)|
 
 ### Lighthouse Test
 |Page|Device|Lighthouse Result|
