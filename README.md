@@ -144,6 +144,7 @@ A custom 404 page has been created and assigned via GitHub to load whenever a no
 - [Flask](https://flask.palletsprojects.com/en/3.0.x/) the micro web framework written in Python.
 - [Jinja](https://jinja.palletsprojects.com/) the web template engine for the Python programming language
 - [Adobe Express](https://www.adobe.com/express/create/logo) used to produce the website image.
+- [TINYURL](https://tinyurl.com/app) used to shorten the default image used if no recipe image provided.
 
 ---
 ## Testing
