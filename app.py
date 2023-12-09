@@ -66,6 +66,11 @@ def register():
     for the new profile. Once completed the new profile is put into the
     session cookie
     """
+
+    if "user" in session:
+        flash("You are already registered.")
+        return redirect(url_for("profile", username=session["user"]))
+
     if request.method == "POST":
         # Check if the username already exists
         existing_user = mongo.db.users.find_one(
