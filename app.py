@@ -225,7 +225,7 @@ def submit_recipe():
         # Check if recipe_image is blank, if so, insert a default URL
         if not recipe_image:
             # Define a default image URL
-            default_image_url = "https://www.padstowkitchengarden.co.uk/wp-content/uploads/PORTABLE-GAS-ANTIQUE-RED-Lifestyle-20-scaled.jpg"
+            default_image_url = "https://tinyurl.com/5afmb7b6"
             recipe_image = default_image_url
 
             recipe = {
@@ -235,7 +235,8 @@ def submit_recipe():
                 "recipe_prep_time": request.form.get("recipe_prep_time"),
                 "recipe_cook_time": request.form.get("recipe_cook_time"),
                 "recipe_description": request.form.get("recipe_description"),
-                "recipe_ingredients": request.form.getlist("recipe_ingredients"),
+                "recipe_ingredients": request.form.getlist(
+                    "recipe_ingredients"),
                 "recipe_method": request.form.getlist("recipe_method"),
                 "recipe_image": recipe_image,
                 "recipe_submitted_by": session["user"]
@@ -278,7 +279,7 @@ def edit_recipe(recipe_repository_id):
         # Check if recipe_image is blank, if so, insert a default URL
         if not recipe_image:
             # Define a default image URL
-            default_image_url = "https://www.padstowkitchengarden.co.uk/wp-content/uploads/PORTABLE-GAS-ANTIQUE-RED-Lifestyle-20-scaled.jpg"
+            default_image_url = "https://tinyurl.com/5afmb7b6"
             recipe_image = default_image_url
 
         submit = {
