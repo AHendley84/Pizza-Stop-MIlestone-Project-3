@@ -297,7 +297,7 @@ def edit_recipe(recipe_repository_id):
         mongo.db.recipe_repository.replace_one(
             {"_id": ObjectId(recipe_repository_id)}, submit)
         flash("Recipe Successfully Updated")
-        return redirect(request.referrer)
+        return redirect(url_for("get_recipes"))
 
     recipe = mongo.db.recipe_repository.find_one(
         {"_id": ObjectId(recipe_repository_id)})
@@ -318,7 +318,7 @@ def delete_recipe(recipe_repository_id):
     mongo.db.recipe_repository.delete_one(
         {"_id": ObjectId(recipe_repository_id)})
     flash("Recipe Successfully Removed")
-    return redirect(request.referrer)
+    return redirect(url_for("get_recipes"))
 
 
 # Display custom 404 if page does not exist
