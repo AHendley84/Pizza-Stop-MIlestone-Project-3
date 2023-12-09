@@ -170,11 +170,11 @@ HTML Markup Validator results:
 - The Python used in this project has been tested on the [CI Python Linter](https://pep8ci.herokuapp.com/) to ensure it is PEP8 compliant.
 
 ### Browser Compatibility
-The site has been tested on the following browsers (latest builds as of 18/08/2023):
-- Google Chrome version Version 116.0.5845.96 (Official Build) (64-bit)
-- Mozilla Firefox Version 116.0.3 (64-bit)
-- Microsoft Edge Version 115.0.1901.203 (Official build) (64-bit)
-- Apple Safari (Latest build on iOS 16.6)
+The site has been tested on the following browsers (latest builds as of 09/12/2023):
+- Google Chrome version Version 120.0.6099.71 (Official Build) (64-bit)
+- Mozilla Firefox Version 120.0.1 (64-bit)
+- Microsoft Edge Version 119.0.2151.97 (Official build) (64-bit)
+- Apple Safari (Latest build on iOS 17.1)
 
 ### Manual Testing and Results
 Here is a table of the manual testing done on the site to determine if all features work as described and designed:
