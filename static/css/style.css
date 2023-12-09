@@ -131,7 +131,7 @@ body {
 }
 
 .main-container {
-    width: 85%;
+    width: 100%;
 }
 /** End base **/
 
@@ -187,6 +187,7 @@ body {
 
 .search-container {
     padding: 1px;
+    width: 90%;
 }
 
 .search-icon {
