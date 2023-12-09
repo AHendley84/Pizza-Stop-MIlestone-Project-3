@@ -196,14 +196,24 @@ Here is a table of the manual testing done on the site to determine if all featu
 ### Lighthouse Test
 |Page|Device|Lighthouse Result|
 |---|---|---|
-|Index|Mobile|![Index Mobile Results](documentation/lighthouse/index_mobile.png)|
-|Index|Desktop|![Index Desktop Results](documentation/lighthouse/index_desktop.png)|
-|Game|Mobile|![Game Mobile Results](documentation/lighthouse/game_mobile.png)|
-|Game|Desktop|![Game Desktop Results](documentation/lighthouse/game_desktop.png)|
-|Player Win|Mobile|![Player Win Mobile Results](documentation/lighthouse/player_win_mobile.png)|
-|Player Win|Desktop|![Player Win Desktop Results](documentation/lighthouse/player_win_desktop.png)|
-|Computer Win|Mobile|![Computer Win Mobile Results](documentation/lighthouse/computer_win_mobile.png)|
-|Computer Win|Desktop|![Computer Win Desktop Results](documentation/lighthouse/computer_win_desktop.png)|
+|Home|Mobile|![Index Mobile Results](documentation/lighthouse/index_mobile.png)|
+|Home|Desktop|![Index Desktop Results](documentation/lighthouse/index_desktop.png)|
+|Register|Mobile|![Game Mobile Results](documentation/lighthouse/game_mobile.png)|
+|Register|Desktop|![Game Desktop Results](documentation/lighthouse/game_desktop.png)|
+|Login|Mobile|![Player Win Mobile Results](documentation/lighthouse/player_win_mobile.png)|
+|Login|Desktop|![Player Win Desktop Results](documentation/lighthouse/player_win_desktop.png)|
+|Profile|Mobile|![Computer Win Mobile Results](documentation/lighthouse/computer_win_mobile.png)|
+|Profile|Desktop|![Computer Win Desktop Results](documentation/lighthouse/computer_win_desktop.png)|
+|Recipes Library|Mobile|![Computer Win Mobile Results](documentation/lighthouse/computer_win_mobile.png)|
+|Recipes Library|Desktop|![Computer Win Desktop Results](documentation/lighthouse/computer_win_desktop.png)|
+|Add Recipe|Mobile|![Computer Win Mobile Results](documentation/lighthouse/computer_win_mobile.png)|
+|Add Recipe|Desktop|![Computer Win Desktop Results](documentation/lighthouse/computer_win_desktop.png)|
+|My Recipes|Mobile|![Computer Win Mobile Results](documentation/lighthouse/computer_win_mobile.png)|
+|My Recipes|Desktop|![Computer Win Desktop Results](documentation/lighthouse/computer_win_desktop.png)|
+|View Recipe|Mobile|![Computer Win Mobile Results](documentation/lighthouse/computer_win_mobile.png)|
+|View Recipe|Desktop|![Computer Win Desktop Results](documentation/lighthouse/computer_win_desktop.png)|
+|Edit Recipe|Mobile|![Computer Win Mobile Results](documentation/lighthouse/computer_win_mobile.png)|
+|Edit Recipe|Desktop|![Computer Win Desktop Results](documentation/lighthouse/computer_win_desktop.png)|
 |404|Mobile|![404 Mobile Results](documentation/lighthouse/404_mobile.png)|
 |404|Desktop|![404 Desktop Results](documentation/lighthouse/404_desktop.png)|
 
