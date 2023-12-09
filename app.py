@@ -98,6 +98,10 @@ def login():
     to determine if the user exists and then ensure the password retained
     matches the user input. If it does not a message is displayed to the user.
     """
+    if "user" in session:
+        flash("You are already logged in.")
+        return redirect(url_for("profile", username=session["user"]))
+
     if request.method == "POST":
         # check to see if the user already exists in the db
         existing_user = mongo.db.users.find_one(
