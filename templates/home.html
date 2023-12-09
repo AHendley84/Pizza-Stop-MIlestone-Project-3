@@ -31,12 +31,15 @@
                 your go-to hub for everything pizza-related. So, what are you waiting for? Let's embark on a flavorful
                 journey together, one slice at a time!
             </p>
+            {% if session.user %}
+            {% else %}
             <div class="row center-align">
                 <a href="{{ url_for('login') }}"
                     class="btn btn-radius white-text green darken-4 center-align home-login">Login</a><br>
                 Not yet registered? <a href="{{ url_for('register') }}" class="teal-text text-darken-3">Register for an
                     account!</a>
             </div>
+            {% endif %}
         </div>
     </div>
 </div>
