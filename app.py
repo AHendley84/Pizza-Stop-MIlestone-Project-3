@@ -221,18 +221,25 @@ def submit_recipe():
     Submit a new recipe to the recipes repository within the db.
     """
     if request.method == "POST":
-        recipe = {
-            "recipe_name": request.form.get("recipe_name"),
-            "recipe_category": request.form.get("recipe_category"),
-            "recipe_serves": request.form.get("recipe_serves"),
-            "recipe_prep_time": request.form.get("recipe_prep_time"),
-            "recipe_cook_time": request.form.get("recipe_cook_time"),
-            "recipe_description": request.form.get("recipe_description"),
-            "recipe_ingredients": request.form.getlist("recipe_ingredients"),
-            "recipe_method": request.form.getlist("recipe_method"),
-            "recipe_image": request.form.get("recipe_image"),
-            "recipe_submitted_by": session["user"]
-        }
+        recipe_image = request.form.get("recipe_image")
+        # Check if recipe_image is blank, if so, insert a default URL
+        if not recipe_image:
+            # Define a default image URL
+            default_image_url = "https://www.padstowkitchengarden.co.uk/wp-content/uploads/PORTABLE-GAS-ANTIQUE-RED-Lifestyle-20-scaled.jpg"
+            recipe_image = default_image_url
+
+            recipe = {
+                "recipe_name": request.form.get("recipe_name"),
+                "recipe_category": request.form.get("recipe_category"),
+                "recipe_serves": request.form.get("recipe_serves"),
+                "recipe_prep_time": request.form.get("recipe_prep_time"),
+                "recipe_cook_time": request.form.get("recipe_cook_time"),
+                "recipe_description": request.form.get("recipe_description"),
+                "recipe_ingredients": request.form.getlist("recipe_ingredients"),
+                "recipe_method": request.form.getlist("recipe_method"),
+                "recipe_image": recipe_image,
+                "recipe_submitted_by": session["user"]
+            }
         mongo.db.recipe_repository.insert_one(recipe)
         flash("Recipe Successfully Added")
         return redirect(url_for("get_recipes"))
@@ -267,6 +274,13 @@ def edit_recipe(recipe_repository_id):
             flash("You are not authorized to edit this recipe.")
             return redirect(request.referrer)
 
+        recipe_image = request.form.get("recipe_image")
+        # Check if recipe_image is blank, if so, insert a default URL
+        if not recipe_image:
+            # Define a default image URL
+            default_image_url = "https://www.padstowkitchengarden.co.uk/wp-content/uploads/PORTABLE-GAS-ANTIQUE-RED-Lifestyle-20-scaled.jpg"
+            recipe_image = default_image_url
+
         submit = {
             "recipe_name": request.form.get("recipe_name"),
             "recipe_category": request.form.get("recipe_category"),
@@ -276,7 +290,7 @@ def edit_recipe(recipe_repository_id):
             "recipe_description": request.form.get("recipe_description"),
             "recipe_ingredients": request.form.getlist("recipe_ingredients"),
             "recipe_method": request.form.getlist("recipe_method"),
-            "recipe_image": request.form.get("recipe_image"),
+            "recipe_image": recipe_image,
             "recipe_submitted_by": session["user"]
         }
 

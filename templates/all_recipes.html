@@ -15,14 +15,14 @@
     <div class="col s12 m8 offset-m2">
         <form action="{{ url_for('search') }}" method="post" class="col card-panel teal lighten-3 card-radius s12">
             <div class="row valign-wrapper center-align search-box">
-                <div class="col s6">
+                <div class="col s7 m8 l9">
                     <div class="input-field">
                         <i class="fa-solid fa-magnifying-glass prefix white-text text-shadow search-icon" title="Search"></i>
                         <input type="text" name="query" id="query" minlength="2" class="validate" required>
                         <label class="white-text search-label" for="query">SEARCH</label>
                     </div>
                 </div>
-                <div class="col s6">
+                <div class="col s5 m4 l3">
                     <button type="submit" class="btn-flat teal darken-4 text-shadow white-text btn-radius" title="Search">
                         <i class="fa-solid fa-magnifying-glass-arrow-right"></i>
                     </button>
