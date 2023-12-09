@@ -180,18 +180,18 @@ Here is a table of the manual testing done on the site to determine if all featu
 
 
 ### User Story Testing
-|User Story|Screenshot|
-|---|---|
+|User Story|Screenshot|||
+|---|---|---|---|
 |**First Time Visitor**|
-|As a first time visitor, I would like to be able to understand the purpose of the website.|![Home page](documentation/screenshots/home_screenshot.png)|
-|As a first time visitor, I would like to register for a free account.|![Registration page](documentation/screenshots/register_screenshot.png)|
-|As a first time visitor, start browsing the existing recipes.|![Recipe Library page](documentation/screenshots/recipes_library_screenshot.png)|
+|As a first time visitor, I would like to be able to understand the purpose of the website.|![Home page](documentation/screenshots/home_screenshot.png)|||
+|As a first time visitor, I would like to register for a free account.|![Registration page](documentation/screenshots/register_screenshot.png)|||
+|As a first time visitor, start browsing the existing recipes.|![Recipe Library page](documentation/screenshots/recipes_library_screenshot.png)|||
 |**Returning Visitor**|
-|As a returning visitor, I would like to be able to add existing recipes to my own collection.|![Profile page](documentation/screenshots/profile_screenshot.png)|![Recipe Library page](documentation/screenshots/recipes_library_screenshot.png)|
-|As a returning visitor, I would like to view a recipe in full.|![View Recipe page](documentation/screenshots/view_recipe_screenshot.png)|
+|As a returning visitor, I would like to be able to add existing recipes to my own collection.|![Profile page](documentation/screenshots/profile_screenshot.png)|![Recipe Library page](documentation/screenshots/recipes_library_screenshot.png)||
+|As a returning visitor, I would like to view a recipe in full.|![View Recipe page](documentation/screenshots/view_recipe_screenshot.png)|||
 |As a returning visitor, I would like to be able to create a new recipe or amend and/or delete recipes I have created.|![Submit Recipe page](documentation/screenshots/submit_recipe_screenshot.png)|![Edit Recipe page](documentation/screenshots/edit_recipe_screenshot.png)|![Delete Recipe prompt](documentation/screenshots/delete_recipe_prompt.png)|
 |**Website Administrator**|
-|As the website administrator, I would like to be able to manage the list of users registered to the site.|At present this is done on the database server side![Image of user screen on db](documentation/screenshots/database_user_management.png)|
+|As the website administrator, I would like to be able to manage the list of users registered to the site.|At present this is done on the database server side|![Image of user screen on db](documentation/screenshots/database_user_management.png)||
 
 ### Lighthouse Test
 |Page|Device|Lighthouse Result|
