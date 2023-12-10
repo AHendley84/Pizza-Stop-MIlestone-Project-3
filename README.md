@@ -37,27 +37,7 @@ The colors selected for the color palette are based on the Materialize color pal
 Google Fonts was used to import the 'Bebas Neue' and the 'Ubuntu' fonts into the style.css file for use across all pages.
 
 ### Wireframes
-Each link contains wireframes for mobile, tablet and desktop.
-- ### Home
-![Home](documentation/wireframes/home.png)
-- ### Register
-![Register](documentation/wireframes/register.png)
-- ### Login
-![Login](documentation/wireframes/login.png)
-- ### Profile
-![Profile](documentation/wireframes/profile.png)
-- ### Recipes Library
-![Recipes Library](documentation/wireframes/recipes_library.png)
-- ### Add Recipe
-![Add Recipe](documentation/wireframes/add_recipe.png)
-- ### My Recipes
-![My Recipes](documentation/wireframes/my_recipes.png)
-- ### View Recipe
-![View Recipe](documentation/wireframes/view_recipe.png)
-- ### Edit Recipe
-![Edit Recipe](documentation/wireframes/edit_recipe.png)
-- ### 404
-![404](documentation/wireframes/404.png)
+For all wireframes please see [WIREFRAMES.md](WIREFRAMES.md)
 ---
 ## Features
 ---
@@ -176,10 +156,8 @@ The site has been tested on the following browsers (latest builds as of 09/12/20
 - Microsoft Edge Version 119.0.2151.97 (Official build) (64-bit)
 - Apple Safari (Latest build on iOS 17.1)
 
-### Manual Testing and Results
+### Manual Testing Results
 Here is a table of the manual testing done on the site to determine if all features work as described and designed:
-
-
 
 ### User Story Testing
 |User Story|Screenshot|||
@@ -194,6 +172,8 @@ Here is a table of the manual testing done on the site to determine if all featu
 |As a returning visitor, I would like to be able to create a new recipe or amend and/or delete recipes I have created.|![Submit Recipe page](documentation/screenshots/submit_recipe_screenshot.png)|![Edit Recipe page](documentation/screenshots/edit_recipe_screenshot.png)|![Delete Recipe prompt](documentation/screenshots/delete_recipe_prompt.png)|
 |**Website Administrator**|
 |As the website administrator, I would like to be able to manage the list of users registered to the site.|At present this is done on the database server side|![Image of user screen on db](documentation/screenshots/database_user_management.png)||
+
+### Feature Testing
 
 ### Lighthouse Test
 |Page|Device|Lighthouse Result|
