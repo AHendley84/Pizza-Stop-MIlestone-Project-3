@@ -38,9 +38,61 @@ Google Fonts was used to import the 'Bebas Neue' and the 'Ubuntu' fonts into the
 
 ### Wireframes
 For all wireframes please see [WIREFRAMES.md](WIREFRAMES.md)
----
+
+### Data Design
+As this is a data driven project I planned how the data would appear in the database and connect with each other and then via the user on the front end. This was done using a non-relational database.
+
+categories:
+
+```
+{
+    "_id": ObjectId,
+    "category_name": string
+}
+```
+
+
+recipe_repository:
+
+```
+{
+    "_id": ObjectId,
+    "recipe_name": string,
+    "recipe_category": [
+        // From categories
+        "category_name": string,
+    ],
+    "recipe_serves": string,
+    "recipe_prep_time": string,
+    "recipe_cook_time": string,
+    "recipe_description": string,
+    "recipe_ingredients": [
+        // Multiple strings held in an array
+    ],
+    "recipe_method": [
+        // Multiple strings held in an array
+    ],
+    "recipe_image": string,
+    "recipe_submitted_by": string
+}
+```
+
+users:
+```
+{
+    "_id": ObjectId,
+    "username": string,
+    "password": string,
+    "favorites":[
+        // From recipe_repository, array to hold mutiple items
+        "_id": ObjectId
+    ]
+}
+```
+
 ## Features
 ---
+
 ### Home Page
 The Home Page is the introduction to the website, providing an insight into its purpose and providing the user the option to login or register.
 
@@ -174,7 +226,7 @@ Once the extension is installed or you have it already, click --> [![Open in Git
 By forking the GitHub Repository, we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original owner's repository.
 You can fork this repository by using the following steps:
 
-1. Log in to GitHub and locate the [GitHub Repository](https://github.com/dougyb83/minesweeper)
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/AHendley84/Pizza-Stop-MIlestone-Project-3)
 2. At the top right of the repository but below the navbar, locate the "Fork" button.
 3. Once clicked, you should now have a copy of the original repository in your own GitHub account!
 
