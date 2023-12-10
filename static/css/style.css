@@ -252,6 +252,14 @@ body {
 .card-radius .row {
     margin: 0;
 }
+
+.button-bar, a {
+    margin: 16px;
+}
+
+.button-bar, button {
+    margin: 16px;
+}
 /** End view recipes **/
 
 /** Edit recipe template **/
@@ -317,9 +325,27 @@ li {
     .nav-wrapper .brand-logo {
         padding-left: 30px;
     }
+
+    .button-bar, a {
+        margin-left: 32px;
+        margin-right: 32px;
+    }
+    
+    .button-bar, button {
+        margin-left: 32px;
+        margin-right: 32px;
+    }
 }
 
 @media only screen and (max-width: 1200px) {
-
+    .button-bar, a {
+        margin-left: 48px;
+        margin-right: 48px;
+    }
+    
+    .button-bar, button {
+        margin-left: 48px;
+        margin-right: 48px;
+    }
 
 }

@@ -116,8 +116,6 @@ Here is a table of the manual testing done on the site to determine if all featu
 |**Website Administrator**|
 |As the website administrator, I would like to be able to manage the list of users registered to the site.|At present this is done on the database server side|![Image of user screen on db](documentation/screenshots/database_user_management.png)||
 
-### Feature Testing
-
 ### Lighthouse Test
 |Page|Device|Lighthouse Result|
 |---|---|---|
