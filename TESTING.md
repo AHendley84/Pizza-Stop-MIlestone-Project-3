@@ -3,16 +3,77 @@
 ### Validator Testing
 #### HTML
 HTML Markup Validator results:
-- [Home](documentation/lighthouse/index_mobile.png)
-- [Register](documentation/lighthouse/game_mobile.png)
-- [Login](documentation/lighthouse/player_win_mobile.png)
-- [Profile](documentation/lighthouse/computer_win_mobile.png)|
-- [Recipes Library](documentation/lighthouse/computer_win_mobile.png)|
-- [Add Recipe](documentation/lighthouse/computer_win_mobile.png)|
-- [My Recipes](documentation/lighthouse/computer_win_mobile.png)|
-- [View Recipe](documentation/lighthouse/computer_win_mobile.png)|
-- [Edit Recipe](documentation/lighthouse/computer_win_mobile.png)|
-- [404](documentation/lighthouse/404_mobile.png)|
+
+<details>
+<summary>Home</summary>
+
+![Home](documentation/lighthouse/index_mobile.png)
+
+</details>
+
+<details>
+<summary>Register</summary>
+
+![Register](documentation/lighthouse/game_mobile.png)
+
+</details>
+
+<details>
+<summary>login</summary>
+
+![Login](documentation/lighthouse/player_win_mobile.png)
+
+</details>
+
+<details>
+<summary>Profile</summary>
+
+![Profile](documentation/lighthouse/computer_win_mobile.png)
+
+</details>
+
+<details>
+<summary>Recipes Library</summary>
+
+![Recipes Library](documentation/lighthouse/computer_win_mobile.png)
+
+</details>
+
+<details>
+<summary>Add Recipe</summary>
+
+![Add Recipe](documentation/lighthouse/computer_win_mobile.png)
+
+</details>
+
+<details>
+<summary>My Recipes</summary>
+
+![My Recipes](documentation/lighthouse/computer_win_mobile.png)
+
+</details>
+
+<details>
+<summary>View Recipes</summary>
+
+![View Recipe](documentation/lighthouse/computer_win_mobile.png)
+
+</details>
+
+<details>
+<summary>Edit Recipe</summary>
+
+![Edit Recipe](documentation/lighthouse/computer_win_mobile.png)
+
+</details>
+
+<details>
+<summary>404</summary>
+
+![404](documentation/lighthouse/404_mobile.png)
+
+</details>
+
 
 
 #### CSS
