@@ -155,6 +155,8 @@ A custom 404 page has been created and assigned via GitHub to load whenever a no
 
 ![404 page image](documentation/screenshots/404_screenshot.png)
 
+## Future Features
+
 ---
 ## Technologies Used
 ---
@@ -229,6 +231,67 @@ You can fork this repository by using the following steps:
 1. Log in to GitHub and locate the [GitHub Repository](https://github.com/AHendley84/Pizza-Stop-MIlestone-Project-3)
 2. At the top right of the repository but below the navbar, locate the "Fork" button.
 3. Once clicked, you should now have a copy of the original repository in your own GitHub account!
+
+#### Requirements and env
+
+After cloning or forking the repo, the dependancies within the requirements.txt need to be installed using the command `pip3 install -r requirements.txt`
+
+Any other packages installed in the project after cloning or forking the repo can be added to the requirements.txt file by using the command `pip3 freeze --local > requirements.txt`
+
+An `env.py` file will also need to be created at root-level to contain environment variables that should not be pushed to GitHub, the `env.py` file is listed in the `.gitignore` file to ensure this.
+
+The local `env.py` file will look something like below but with values unique to the user where indicated, these will be covered in the [MongoDB](#mongodb) section.
+
+```
+import os
+
+os.environ.setdefault("IP", "0.0.0.0")
+os.environ.setdefault("PORT", "5000")
+os.environ.setdefault("SECRET_KEY", "any string value")
+os.environ.setdefault("MONGO_DBNAME", "name of user's mongoDB database")
+os.environ.setdefault("MONGO_URI", "user's mongoDB connection string")
+```
+
+#### MongoDB
+
+The project uses [MongoDB](https://www.mongodb.com/) non relational database. To connect your repo up to your own database, these are the steps to follow:
+
+1. Sign up for an account with MongoDB.
+2. Select a tier, cloud provider and locality (As I am in the UK, I selected Ireland)
+3. Select a Cluster Name or Leave default Cluster0 and click create.
+4. Navigate to Database Access and set up a new database user. 
+5. Select Password as the authentication method and input a username and password, these will be used in the connection string within the env.py file. Only use letters and numbers to avoid connection issues.
+6. Select a built in role of read and write to any database.
+7. Click Create. 
+8. Navigate to Network Access and click Add IP Address.
+9. Select whether to add a local IP address or to allow access from anywhere.
+10. Confirm.
+11. Navigate to Database and click on Browse Collections next to the name of the Cluster set up in step 3.
+12. Click Add My Own Data and add a database name and collection name. This database name should be added to the env.py file as the value for "MONGO_DBNAME".
+13. Click the plus sign next to the database name to add further collections - You will need a total of four collections within the database: users, recipes, categories and messages. Any different names would need to then be updated everywhere the collections are called in the app.py file.
+14. From the Overview tab in the Cluster, click the Connect button. 
+15. Follow the connection instructions for your preferred connection method (I chose to connect using the Python Driver)
+16. Copy the connection string to the env.py file as the value for "MONGO_URI".
+
+- NOTE: You will need to replace the ``<password>`` placeholder with the user password created in step 5.
+- NOTE: I experienced issues when connecting with the above method and found I had to add the database name created in step 12 to the connection string between the / and ? - after this, I experienced no further connection issues.
+
+#### Heroku
+
+To deploy your app on [Heroku](https://www.heroku.com/platform), these are the steps to follow: 
+
+1. Sign up for an account with Heroku.
+2. Click New button and select Create New App.
+3. Choose a name for your app. This must be unique.
+4. Select a region and click Create App.
+5. Choose your connection method, I used automatic deployment from GitHub repo. 
+6. Make sure your GitHub profile is displayed and search for the repository. You may need to connect to your GitHub account if not completed at registration.
+7. Once the repo is found, click connect.
+8. Navigate to Settings tab and click on Reveal Config Vars
+9. Each variable from the env.py file will need to be replicated here in key value pairs and without quotes e.g. key = ``PORT`` and value = ``5000``
+10. Once all config vars are added, you can now navigate back to the deploy tab and click Enable Automatic Deploys, select the branch to deploy and click Deploy.
+11. Once complete, you can click Open App to view the live site.
+- NOTE: The live site will now update any time changes are pushed to the connected GitHub repository.
 
 ---
 ## Credits & Acknowledgments
