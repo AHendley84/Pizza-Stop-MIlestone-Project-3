@@ -138,12 +138,12 @@ All elements of testing conducted, including user stories and function testing, 
 
 The site was deployed to GitHub Pages. The steps to deploy are as follows:
 
-- In the [GitHub repository](https://github.com/AHendley84/Formula-1-Card-Battles), navigate to the Settings tab
+- In the [GitHub repository](https://github.com/AHendley84/Pizza-Stop-MIlestone-Project-3), navigate to the Settings tab
 - Under the heading "Code and automation", select "Pages".
 - From the source section drop-down menu, select the Main Branch, then click "Save".
 - The page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
 
-The live link can be found [here](https://ahendley84.github.io/Formula-1-Card-Battles/)
+The live link can be found [here](https://pizza-stop-5bc4c092c1c7.herokuapp.com/)
 
 ### Local Deployment
 
@@ -153,13 +153,13 @@ This project can be cloned or forked in order to make a local copy on your own s
 
 You can clone the repository by following these steps:
 
-1. Go to the [GitHub repository](https://github.com/AHendley84/Formula-1-Card-Battles)
+1. Go to the [GitHub repository](https://github.com/AHendley84/Pizza-Stop-MIlestone-Project-3)
 2. Locate the Code button above the list of files and click it
 3. Select if you prefer to clone using HTTPS, SSH, or GitHub CLI, and click the copy button to copy the URL to your clipboard
 4. Open Git Bash or Terminal
 5. Change the current working directory to the one where you want the cloned directory
 6. In your IDE Terminal, type the following command to clone my repository:
-   - `git clone https://github.com/AHendley84/Formula-1-Card-Battles.git`
+   - `git clone https://github.com/AHendley84/Pizza-Stop-MIlestone-Project-3.git`
 7. Press Enter to create your local clone.
 
 Alternatively, if using Gitpod, you can click below to create your own workspace using this repository.
