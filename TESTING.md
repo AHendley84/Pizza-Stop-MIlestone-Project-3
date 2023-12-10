@@ -29,7 +29,7 @@ Identified an issue where by a section tag was causing an error on the base temp
 <details>
 <summary>Profile</summary>
 
-Identified that the ```alt``` tag was missing from the ```img``` attribute, this was easily rectified. The Profile page is failing the W3C check as it wasn't able to determine the user is logged in, causing a 500 error.
+Identified that the ```alt``` tag was missing from the ```img``` attribute, this was easily rectified. The Profile page is failing the W3C check as it wasn't able to  conduct the check with a user logged in, causing a 500 error. However, a direct code input validation, higlighted an erent ```i``` and  ```/div```.
 ![Profile](documentation/testing/html/profile_html.png)
 
 </details>
@@ -38,42 +38,45 @@ Identified that the ```alt``` tag was missing from the ```img``` attribute, this
 <summary>Recipes Library</summary>
 
 Identified that the ```alt``` tag was missing from the ```img``` attribute, this was easily rectified.
-![Recipes Library](documentation/lighthouse/computer_win_mobile.png)
+![Recipes Library](documentation/testing/html/recipes_library_html.png)
 
 </details>
 
 <details>
 <summary>Add Recipe</summary>
 
-![Add Recipe](documentation/lighthouse/computer_win_mobile.png)
+Identified two errors on the page, both in relation to the drop down menu for the category functions. Attempts to rectify this issue resulted in further errors. I've tested that the dropdown works as it should so the errors remain at present.
+![Add Recipe](documentation/testing/html/add_recipe_html.png)
 
 </details>
 
 <details>
 <summary>My Recipes</summary>
 
-![My Recipes](documentation/lighthouse/computer_win_mobile.png)
+![My Recipes](documentation/testing/html/my_recipes_html.png)
 
 </details>
 
 <details>
 <summary>View Recipe</summary>
 
-![View Recipe](documentation/lighthouse/computer_win_mobile.png)
+Identified that the ```alt``` tag was missing from the ```img``` attribute, this was easily rectified. 
+![View Recipe](documentation/testing/html/view_recipe_html.png)
 
 </details>
 
 <details>
 <summary>Edit Recipe</summary>
 
-![Edit Recipe](documentation/lighthouse/computer_win_mobile.png)
+![Edit Recipe](documentation/testing/html/edit_recipe_html.png)
 
 </details>
 
 <details>
 <summary>404</summary>
 
-![404](documentation/lighthouse/404_mobile.png)
+Due to the nature of the 404 error, I was unable to submit this through the URL check on W3C. However, I did submit the code via direct code input, and aside from the issues with the Jinja code and a trailing ```/``` on the font awesome link, there are no issues identified.
+![404](documentation/testing/html/404_html.png)
 
 </details>
 
