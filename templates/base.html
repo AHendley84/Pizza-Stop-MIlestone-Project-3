@@ -66,7 +66,7 @@
     </header>
 
     <!-- Area to display flash messages to the user -->
-    <section class="container bumper">
+    <div class="container bumper">
         {% with messages = get_flashed_messages() %}
         {% if messages %}
         {% for message in messages %}
@@ -76,7 +76,7 @@
         {% endfor %}
         {% endif %}
         {% endwith %}
-    </section>
+    </div>
 
     <!-- Main content area -->
     <main class="container main-container">
