@@ -7,34 +7,37 @@ HTML Markup Validator results:
 <details>
 <summary>Home</summary>
 
-![Home](documentation/lighthouse/index_mobile.png)
+Identified an issue where by a section tag was causing an error on the base template containing the nav bar, footer and flash messages. Changing this to a div tag resolved the error and resulted in no further warnings or errors.
+![Home](documentation/testing/html/home_html.png)
 
 </details>
 
 <details>
 <summary>Register</summary>
 
-![Register](documentation/lighthouse/game_mobile.png)
+![Register](documentation/testing/html/register_html.png)
 
 </details>
 
 <details>
 <summary>login</summary>
 
-![Login](documentation/lighthouse/player_win_mobile.png)
+![Login](documentation/testing/html/login_html.png)
 
 </details>
 
 <details>
 <summary>Profile</summary>
 
-![Profile](documentation/lighthouse/computer_win_mobile.png)
+Identified that the ```alt``` tag was missing from the ```img``` attribute, this was easily rectified. The Profile page is failing the W3C check as it wasn't able to determine the user is logged in, causing a 500 error.
+![Profile](documentation/testing/html/profile_html.png)
 
 </details>
 
 <details>
 <summary>Recipes Library</summary>
 
+Identified that the ```alt``` tag was missing from the ```img``` attribute, this was easily rectified.
 ![Recipes Library](documentation/lighthouse/computer_win_mobile.png)
 
 </details>
