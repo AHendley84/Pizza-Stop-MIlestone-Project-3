@@ -24,7 +24,7 @@
                         <div class="input-field col s12">
                             <i class="fa-solid fa-list prefix teal-text text-lighten-1"></i>
                             <select class="form-select form-control validate" name="recipe_category" required>
-                                <option disabled selected>Select A Category</option>
+                                <option disabled selected></option>
                                 {% for category in categories %}
                                 <option value="{{ category.category_name }}">{{ category.category_name }}</option>
                                 {% endfor %}
