@@ -54,7 +54,7 @@ HTML Markup Validator results:
 </details>
 
 <details>
-<summary>View Recipes</summary>
+<summary>View Recipe</summary>
 
 ![View Recipe](documentation/lighthouse/computer_win_mobile.png)
 
