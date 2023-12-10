@@ -2,10 +2,22 @@
 ---
 ### Validator Testing
 #### HTML
-Due to the use of Python, Flask and Jinja I haven't submitted the HTML for W3C testing as errors are detected due to the Flask/Jinja interaction with the Python app.
+HTML Markup Validator results:
+- [Home](documentation/lighthouse/index_mobile.png)
+- [Register](documentation/lighthouse/game_mobile.png)
+- [Login](documentation/lighthouse/player_win_mobile.png)
+- [Profile](documentation/lighthouse/computer_win_mobile.png)|
+- [Recipes Library](documentation/lighthouse/computer_win_mobile.png)|
+- [Add Recipe](documentation/lighthouse/computer_win_mobile.png)|
+- [My Recipes](documentation/lighthouse/computer_win_mobile.png)|
+- [View Recipe](documentation/lighthouse/computer_win_mobile.png)|
+- [Edit Recipe](documentation/lighthouse/computer_win_mobile.png)|
+- [404](documentation/lighthouse/404_mobile.png)|
+
 
 #### CSS
 - The CSS used in this project was tested with [W3c CSS Validation](https://jigsaw.w3.org/css-validator/#validate_by_input) with no concerns.
+
 
 #### JavaScript
 - The JavaScript used in this project has been tested on both [JSLint](https://www.jslint.com/) and [JSHint](https://jshint.com/) with no concerns.
