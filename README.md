@@ -161,6 +161,11 @@ A custom 404 page has been created and assigned via GitHub to load whenever a no
 
 ## Future Features
 
+Due to development time scales there were a few items I didn't include in this project, however, would consider adding into future builds. These are, but not limited to:
+- Admin user to control the number of categories and the ability to remove any and all recipes.
+- A list of utensils with links to an online marketplace to purchase the items.
+- Connection to an API like Cloudinary to upload user submitted image files.
+
 ---
 ## Technologies Used
 ---
