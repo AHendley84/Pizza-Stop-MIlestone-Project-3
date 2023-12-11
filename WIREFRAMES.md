@@ -1,5 +1,5 @@
 ### Wireframes
-Here are the initial designs in wireframe from created with [Balsamiq](https://balsamiq.com/). 
+Here are the initial designs in wireframe created with [Balsamiq](https://balsamiq.com/). 
 - ### Home
 ![Home](documentation/wireframes/home.png)
 - ### Register

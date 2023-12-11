@@ -36,6 +36,10 @@ The colors selected for the color palette are based on the Materialize color pal
 ### Typography
 Google Fonts was used to import the 'Bebas Neue' and the 'Ubuntu' fonts into the style.css file for use across all pages.
 
+![Bebas Neue Font](documentation/bebas_neue_font.png)
+
+![Ubuntu Font](documentation/ubuntu_font.png)
+
 ### Wireframes
 For all wireframes please see [WIREFRAMES.md](WIREFRAMES.md)
 
