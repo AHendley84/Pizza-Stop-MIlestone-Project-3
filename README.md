@@ -98,7 +98,7 @@ users:
 ---
 
 ### Home Page
-The Home Page is the introduction to the website, providing an insight into its purpose and providing the user the option to login or register.
+The Home Page is the introduction to the website, providing an insight into its purpose and providing the user the option to login or register. Once a user is logged in and returns to this page, the login button under the website introduction is hidden to prevent confusion.
 
 ![Home page image](documentation/screenshots/home_screenshot.png)
 
