@@ -54,7 +54,7 @@ https://raddy.dev/blog/how-to-build-a-recipe-blog-using-node-js-and-mongodb-expr
 I repurposed the code for the addition button to create the remove button
 */
 
-// JavaScript to operate the add and remove ingredient
+// JavaScript to operate the add/remove ingredient
 let addIngredientsBtn = document.getElementById('addIngredientsBtn');
 let ingredientList = document.querySelector('.ingredientList');
 let ingredientDiv = document.querySelectorAll('.ingredientDiv')[0];
@@ -73,7 +73,7 @@ removeIngredientsBtn.addEventListener('click', function () {
     }
 });
 
-// JavaScript to operate the and remove method
+// JavaScript to operate the add/remove method
 let addMethodBtn = document.getElementById('addMethodBtn');
 let methodList = document.querySelector('.methodList');
 let methodDiv = document.querySelectorAll('.methodDiv')[0];
