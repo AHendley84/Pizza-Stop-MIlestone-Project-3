@@ -172,7 +172,7 @@ A custom 404 page has been created and assigned via GitHub to load whenever a no
 
 ### Frameworks, Libraries and Programs Used
 - [Balsamiq](https://balsamiq.com/) was used for pre-visualisation of the pages.
-- [Google Fonts](https://fonts.google.com/) was used to import the the 'Russo One' and 'Exo 2' fonts into the style.css file.
+- [Google Fonts](https://fonts.google.com/) was used to import the the 'Bebas Neue' and 'Ubuntu' fonts into the style.css file.
 - [Font Awesome](https://fontawesome.com/) was utilised for icons used on the site for the social media icons.
 - [Materialize](https://materializecss.com/) was used for responsive grids, navigation elements, cards, CSS and button elements.
 - [Git](https://git-scm.com/) was used for version control. I utilised the CLI terminal in Visual Studio to commit and push to GitHub.
@@ -300,14 +300,16 @@ To deploy your app on [Heroku](https://www.heroku.com/platform), these are the s
 ---
 ## Credits & Acknowledgments
 ---
-- Massive thank you to [astral-g](https://github.com/astral-g) for his [Top Trumps Game](https://github.com/astral-g/Top-Trumps-Game) which allowed me to base and modify my own game on.
-- Driver and Team Logo images courtsey of skysports.com.
-- Driver stats and information courtsey of Formula1.com.
-- Carbon fibre background image courtsey of [Freepik.com](https://www.freepik.com/free-photos-vectors/carbon-fibre-texture).
-- Background image used in 404.html courtesy of [CNN.com](https://edition.cnn.com/2018/08/30/motorsport/formula-one-crashes-defined-sport-halo-spt-intl/index.html).
-- Background image used in player_win.html courtsey of [topgear.com](https://www.topgear.com/car-news/motorsport/tgs-five-favourite-f1-podium-celebrations).
-- Background image used in computer_win.html courtsey of [autosport.com](https://www.autosport.com/f1/news/lauda-slams-sabotage-talk-after-hamiltons-malaysian-gp-failure-5033191/5033191/).
-- Thanks to [Stack Overflow](https://stackoverflow.com/questions/4919076/outline-effect-to-text) for help on applying the text-shadow to the text on the 404, Player Win and Computer Win pages.
-- Credit to [W3 Schools](https://www.w3schools.com/jsref/prop_style_cursor.asp) for the cursor change property guidance.
-- Thanks to [GitHub](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-custom-404-page-for-your-github-pages-site) for this handy guide to adding your own custom 404 page.
-- Thank you to [Joy Zadan on Slack](https://code-institute-room.slack.com/archives/C7HD37Q1F/p1691322584027999) for helping me to resolve the second bug identified in my JavaScript code.
+- Firstly, a massive thank you to my mentor Mitko Bachvarov, for helping identify the issues I may have missed prior to submitting the project.
+- Fellow student Paul Woods for helping me with the favorite function and his readme for inspiration on how to produce mine.
+- Thanks to [Raddy](https://raddy.dev/blog/how-to-build-a-recipe-blog-using-node-js-and-mongodb-express-ejs-mongoose-crud/) for his recipe website tutorial that provided the JavaScript code for the add ingredient button.
+- Recipes and some images used courtsey of [Ooni](https://uk.ooni.com/blogs/recipes) apart from Pesto Mayo and American Hot which are my own.
+- Pesto Mayo image courtsey of [venturafoods.com](https://www.venturafoods.com/wp-content/uploads/2022/10/5c6b7558-42b9-4ebc-bed2-5c4a4da7a491.jpg).
+- Classic New York Grandma Pizza Dough image courtsey of [bonappetit.com](https://assets.bonappetit.com/photos/57ad327f1b334044149754b6/master/pass/grandma-style-pizza-dough.jpg).
+- Marinated Baby Bell Peppers image courtsey of [hearstapps.com](https://hips.hearstapps.com/thepioneerwoman/wp-content/uploads/2017/08/grilled-mini-sweet-peppers-with-goat-cheese-03.jpg).
+- American Hot image courtsey of [londonpizzadepot.co.uk](https://londonpizzadepot.co.uk/wp-content/uploads/2020/05/PizzaAmericanHot-new.jpg).
+- Classic Pizza Sauce image courtsey of [happymoneysaver.com](https://i0.wp.com/happymoneysaver.com/wp-content/uploads/2022/10/pizza-sauce-12.jpg).
+- Neapolitan Pizza Dough image courtsey of [foodandwine.com](https://www.foodandwine.com/thmb/6uJo_HZzAaU5_k7aU2wQRwT1mEQ=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/homemade-pizza-dough-FT-RECIPE0422-7d3aa2fbd4244e88afaff987753866d6.jpg).
+- Default Recipe image courtsey of [padstowkitchengarden.co.uk](https://www.padstowkitchengarden.co.uk/product/alfaforni-moderno-portable-gas-pizza-oven/).
+- [Neringa Bickmore](https://code-institute-room.slack.com/archives/C7JQY2RHC/p1604053578083400) for their post on checking if an object appears in someones favorites list.
+- [Stack Overflow](https://stackoverflow.com/) and [MDN Web Docs](https://developer.mozilla.org/en-US/) for helping me to refresh the aspects of HTML, CSS and JS I forgot in between projects!
