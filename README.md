@@ -305,8 +305,8 @@ To deploy your app on [Heroku](https://www.heroku.com/platform), these are the s
 ---
 ## Credits & Acknowledgments
 ---
-- Firstly, a massive thank you to my mentor Mitko Bachvarov, for helping identify the issues I may have missed prior to submitting the project.
-- Fellow student Paul Woods for helping me with the favorite function and his readme for inspiration on how to produce mine.
+- Firstly, a massive thank you to my mentor Mitko Bachvarov, for helping identify the issues I may have missed prior to submitting the project and for encouraging me to keep developing my project.
+- Fellow student Paul Woods for helping me with the favoritng recipes function and his readme for inspiration on how to produce mine.
 - Thanks to [Raddy](https://raddy.dev/blog/how-to-build-a-recipe-blog-using-node-js-and-mongodb-express-ejs-mongoose-crud/) for his recipe website tutorial that provided the JavaScript code for the add ingredient button.
 - Recipes and some images used courtsey of [Ooni](https://uk.ooni.com/blogs/recipes) apart from Pesto Mayo and American Hot which are my own.
 - Pesto Mayo image courtsey of [venturafoods.com](https://www.venturafoods.com/wp-content/uploads/2022/10/5c6b7558-42b9-4ebc-bed2-5c4a4da7a491.jpg).
