@@ -80,8 +80,6 @@ Due to the nature of the 404 error, I was unable to submit this through the URL 
 
 </details>
 
-
-
 #### CSS
 - The CSS used in this project was tested with [W3c CSS Validation](https://jigsaw.w3.org/css-validator/#validate_by_input) with no concerns.
 
@@ -119,26 +117,24 @@ Here is a table of the manual testing done on the site to determine if all featu
 ### Lighthouse Test
 |Page|Device|Lighthouse Result|
 |---|---|---|
-|Home|Mobile|![Index Mobile Results](documentation/lighthouse/index_mobile.png)|
-|Home|Desktop|![Index Desktop Results](documentation/lighthouse/index_desktop.png)|
-|Register|Mobile|![Game Mobile Results](documentation/lighthouse/game_mobile.png)|
-|Register|Desktop|![Game Desktop Results](documentation/lighthouse/game_desktop.png)|
-|Login|Mobile|![Player Win Mobile Results](documentation/lighthouse/player_win_mobile.png)|
-|Login|Desktop|![Player Win Desktop Results](documentation/lighthouse/player_win_desktop.png)|
-|Profile|Mobile|![Computer Win Mobile Results](documentation/lighthouse/computer_win_mobile.png)|
-|Profile|Desktop|![Computer Win Desktop Results](documentation/lighthouse/computer_win_desktop.png)|
-|Recipes Library|Mobile|![Computer Win Mobile Results](documentation/lighthouse/computer_win_mobile.png)|
-|Recipes Library|Desktop|![Computer Win Desktop Results](documentation/lighthouse/computer_win_desktop.png)|
-|Add Recipe|Mobile|![Computer Win Mobile Results](documentation/lighthouse/computer_win_mobile.png)|
-|Add Recipe|Desktop|![Computer Win Desktop Results](documentation/lighthouse/computer_win_desktop.png)|
-|My Recipes|Mobile|![Computer Win Mobile Results](documentation/lighthouse/computer_win_mobile.png)|
-|My Recipes|Desktop|![Computer Win Desktop Results](documentation/lighthouse/computer_win_desktop.png)|
-|View Recipe|Mobile|![Computer Win Mobile Results](documentation/lighthouse/computer_win_mobile.png)|
-|View Recipe|Desktop|![Computer Win Desktop Results](documentation/lighthouse/computer_win_desktop.png)|
-|Edit Recipe|Mobile|![Computer Win Mobile Results](documentation/lighthouse/computer_win_mobile.png)|
-|Edit Recipe|Desktop|![Computer Win Desktop Results](documentation/lighthouse/computer_win_desktop.png)|
-|404|Mobile|![404 Mobile Results](documentation/lighthouse/404_mobile.png)|
-|404|Desktop|![404 Desktop Results](documentation/lighthouse/404_desktop.png)|
+|Home|Mobile|![Home Mobile Results](documentation/lighthouse/home_mobile.png)|
+|Home|Desktop|![Home Desktop Results](documentation/lighthouse/home_desktop.png)|
+|Register|Mobile|![Register Mobile Results](documentation/lighthouse/register_mobile.png)|
+|Register|Desktop|![Register Desktop Results](documentation/lighthouse/register_desktop.png)|
+|Login|Mobile|![Login Mobile Results](documentation/lighthouse/login_mobile.png)|
+|Login|Desktop|![Login Desktop Results](documentation/lighthouse/login_desktop.png)|
+|Profile|Mobile|![Profile Mobile Results](documentation/lighthouse/profile_mobile.png)|
+|Profile|Desktop|![Profile Desktop Results](documentation/lighthouse/profile_desktop.png)|
+|Recipes Library|Mobile|![Recipes Library Mobile Results](documentation/lighthouse/recipes_library_mobile.png)|
+|Recipes Library|Desktop|![Recipes Library Desktop Results](documentation/lighthouse/recipes_library_desktop.png)|
+|Add Recipe|Mobile|![Add Recipe Mobile Results](documentation/lighthouse/add_recipe_mobile.png)|
+|Add Recipe|Desktop|![Add Recipe Desktop Results](documentation/lighthouse/add_recipe_desktop.png)|
+|My Recipes|Mobile|![My Recipes Mobile Results](documentation/lighthouse/my_recipes_mobile.png)|
+|My Recipes|Desktop|![My Recipes Desktop Results](documentation/lighthouse/my_recipes_desktop.png)|
+|View Recipe|Mobile|![View Recipe Mobile Results](documentation/lighthouse/view_recipe_mobile.png)|
+|View Recipe|Desktop|![View Recipe Desktop Results](documentation/lighthouse/view_recipe_desktop.png)|
+|Edit Recipe|Mobile|![Edit Recipe Mobile Results](documentation/lighthouse/edit_recipe_mobile.png)|
+|Edit Recipe|Desktop|![Edit Recipe Desktop Results](documentation/lighthouse/edit_recipe_desktop.png)|
 
 ### Resposiveness
 The website has been tested on multiple web browsers, including Google Chrome, Microsoft Edge and Mozilla Firefox. Google Chrome Developer Tools have been used to simulate multiple different device screen sizes such as iPhone SE, Pixel 5, iPad Air and iPad Mini. It has been tested physically on an iPhone 12 Pro, 3rd Gen iPad and on desktop screens 2560 x 1440 pixels and 1920 x 1080 pixels.
